@@ -8,7 +8,7 @@ ul {
 }
 a {
     text-decoration: none;
-    color: #555;
+    color: #000;
 }
 
 /* 모바일 ~ 649px + 공통 */
@@ -16,19 +16,22 @@ a {
 #wrap {
     font-family: 'Trebuchet MS',sans-serif;
 }
-header {
-    border-top: 8px solid #555;
+header .hd-line {
+    display: block;
+    border-top: 10px solid #000;
+    box-sizing: border-box;
+    margin-bottom: 30px;
 }
 .logo {
     text-align: center;
 }
 .logo:hover a {
-    color: #000;
+    color: #555;
 }
 .logo a {
     font-weight: bold;
     font-size: 24px;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 .gnb {
     margin: 10px 0;
@@ -39,10 +42,10 @@ header {
 .gnb li a {
     font-weight: bold;
     font-size: 14px;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 .gnb li:hover a {
-    color: #000;
+    color: #555;
 }
 .img-box li {
     position: relative;
@@ -85,6 +88,11 @@ footer .sns {
     justify-content: space-around;
     padding: 20px 0 40px;
 }
+footer .hd-line {
+    display: block;
+    border-bottom: 10px solid #000;
+    box-sizing: border-box;
+}
 
 /* 태블릿 650px ~ 1023px */
 @media screen and (min-width: 650px) {
@@ -93,6 +101,9 @@ footer .sns {
     }
     .logo a {
         font-size: 32px;
+    }
+    #content {
+        padding: 0 50px;
     }
     .gnb li {
         margin: 10px 0;
@@ -113,17 +124,24 @@ footer .sns {
         width: 100%;
         height: 100%;
     }
-
 }
+
 /* PC 1024px ~ */
 @media screen and (min-width: 1024px) {
+    .inner { 
+        max-width: 1480px;
+        margin: 0 auto;
+    }
+    header {
+        padding: 50px 0;
+    }
     header>.inner {
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-between;
+        padding-left: 70px;
     }
     .logo {
-        margin: 10px 0 0 10px
+        margin-top: -0.1%;
     }
     .gnb li {
         margin: 0 30px;
@@ -136,8 +154,12 @@ footer .sns {
     .img-box li {
         box-sizing: border-box;
         width: 33%;
-
+    }
+    footer .sns {
+        display: block;
+        text-align: right;
+    }
+    footer .sns a {
+        margin: 0 30px;
+    }
 }
-
-
-
