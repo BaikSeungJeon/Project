@@ -8,7 +8,7 @@ ul {
 }
 a {
     text-decoration: none;
-    color: #333;
+    color: #555;
 }
 
 /* 모바일 ~ 649px + 공통 */
@@ -17,14 +17,18 @@ a {
     font-family: 'Trebuchet MS',sans-serif;
 }
 header {
-    border-top: 8px solid #333;
+    border-top: 8px solid #555;
 }
 .logo {
     text-align: center;
 }
+.logo:hover a {
+    color: #000;
+}
 .logo a {
     font-weight: bold;
     font-size: 24px;
+    transition: 0.2s;
 }
 .gnb {
     margin: 10px 0;
@@ -38,7 +42,7 @@ header {
     transition: 0.2s;
 }
 .gnb li:hover a {
-    font-size: 15px;
+    color: #000;
 }
 .img-box li {
     position: relative;
@@ -96,9 +100,6 @@ footer .sns {
     .gnb li a {
         font-size: 18px;
     }
-    .gnb li:hover a {
-        font-size: 19px;
-    }
     .img-box {
         display: flex;
         flex-flow: row wrap;
@@ -107,7 +108,6 @@ footer .sns {
     .img-box li {
         box-sizing: border-box;
         width: 48%;
-        
     }
     .img-box img {
         width: 100%;
@@ -117,8 +117,27 @@ footer .sns {
 }
 /* PC 1024px ~ */
 @media screen and (min-width: 1024px) {
-    
+    header>.inner {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    .logo {
+        margin: 10px 0 0 10px
+    }
+    .gnb li {
+        margin: 0 30px;
+    }
+    .img-box {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    .img-box li {
+        box-sizing: border-box;
+        width: 33%;
 
 }
+
 
 
