@@ -40,6 +40,49 @@ header .hd-line {
     font-size: 24px;
     transition: 0.3s;
 }
+/* .gnb {
+    margin: 10px 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.gnb li a {
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+}
+.gnb li:hover a {
+    color: #555;
+} */
+.toggle {
+    position: absolute;
+    display: block;
+    width: 23px;
+    height: 3px;
+    top: 44px;
+    right: 30px;
+}
+.toggle span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+}
+.toggle span:nth-child(2) {
+    margin: 3px 0;
+}
+nav {
+    display: block; /*transition을 주기 위해 display를 block*/
+    opacity: 0; /*하지만 사진 뒤로 메뉴가 보이기 때문에 opacity를 0*/
+    height: 0;
+    transition: 0.5s; /*부드러운 동작을 위해 transition을 줬고, opacity와 height 둘 다 
+    transition을 주기 위해 all(생략)을 줌*/
+}
+nav.on {
+    opacity: 1;
+    display: block;
+    height: 40px;
+}
 .gnb {
     margin: 10px 0;
     display: flex;
@@ -110,11 +153,28 @@ footer .ft-line {
     .logo a {
         font-size: 32px;
     }
-    .gnb li {
+    nav {
+        display: block; 
+        height: 100%; /*height 0 준 거 다시 돌려놓는 작업*/
+        opacity: 1; /*opacity 0 준 거 다시 1로 돌려놓는 작업*/
+    }
+    .toggle {
+        display: none;
+    } /*태블릿 화면부턴 햄버거 메뉴가 사라져야 하므로*/
+    .gnb {
         margin: 10px 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
     }
     .gnb li a {
+        margin: 10px 0;
+        font-weight: bold;
         font-size: 18px;
+        transition: 0.3s;
+    }
+    .gnb li:hover a {
+        color: #555;
     }
     .img-box {
         display: flex;
