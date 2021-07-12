@@ -22,6 +22,9 @@ header .hd-line {
     box-sizing: border-box;
     margin-bottom: 30px;
 }
+#content {
+    padding: 0 50px;
+}
 .logo {
     text-align: center;
 }
@@ -88,7 +91,7 @@ footer .sns {
     justify-content: space-around;
     padding: 20px 0 40px;
 }
-footer .hd-line {
+footer .ft-line {
     display: block;
     border-bottom: 10px solid #000;
     box-sizing: border-box;
@@ -101,9 +104,6 @@ footer .hd-line {
     }
     .logo a {
         font-size: 32px;
-    }
-    #content {
-        padding: 0 50px;
     }
     .gnb li {
         margin: 10px 0;
@@ -135,6 +135,9 @@ footer .hd-line {
     header {
         padding: 50px 0;
     }
+    header .hd-line {
+        display: none;
+    }
     header>.inner {
         display: flex;
         flex-flow: row wrap;
@@ -161,5 +164,8 @@ footer .hd-line {
     }
     footer .sns a {
         margin: 0 30px;
+    }
+    footer .ft-line {
+        display: none;
     }
 }
