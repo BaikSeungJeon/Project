@@ -3,6 +3,9 @@
     margin: 0;
     padding: 0;
 }
+html {
+    scroll-behavior: smooth;
+}
 ul {
     list-style: none;
 }
@@ -27,6 +30,7 @@ header .hd-line {
 }
 .logo {
     text-align: center;
+    margin-top: -10px;
 }
 .logo:hover a {
     color: #555;
