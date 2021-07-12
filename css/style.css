@@ -167,6 +167,9 @@ footer .ft-line {
         flex-flow: row wrap;
         justify-content: space-around;
     }
+    .gnb li {
+        margin: 10px 0;
+    }
     .gnb li a {
         margin: 10px 0;
         font-weight: bold;
