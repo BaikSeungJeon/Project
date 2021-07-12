@@ -57,12 +57,18 @@ header .hd-line {
 .gnb li:hover a {
     color: #555;
 }
+.img-box {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
 .img-box li {
     position: relative;
     display: block;
-    width: 100%;
+    width: 49%;
     height: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
+    box-sizing: border-box;
 }
 .img-box li img {
     width: 100%;
@@ -80,7 +86,7 @@ header .hd-line {
     opacity: 0;
     transition: 0.5s;
     color: #eee;
-    font-size: 42px;
+    font-size: 3vw;
     font-weight: 700;
     display: flex;
     align-items: center;
@@ -125,7 +131,7 @@ footer .ft-line {
     }
     .img-box li {
         box-sizing: border-box;
-        width: 48%;
+        width: 33%;
     }
     .img-box img {
         width: 100%;
@@ -163,7 +169,8 @@ footer .ft-line {
     }
     .img-box li {
         box-sizing: border-box;
-        width: 33%;
+        width: 24%;
+        margin-bottom: 10px;
     }
     footer .sns {
         display: block;

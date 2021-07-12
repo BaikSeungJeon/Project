@@ -78,7 +78,7 @@ header .hd-line {
     opacity: 0;
     transition: 0.5s;
     color: #eee;
-    font-size: 42px;
+    font-size: 5vw;
     font-weight: 700;
     display: flex;
     align-items: center;
