@@ -112,10 +112,6 @@ footer .sns {
     justify-content: center;
     padding: 20px 0 40px;
 }
-footer .sns a {
-    border: 3px solid #000;
-    border-radius: 50%;
-}
 footer .sns a:nth-child(2) {
     margin: 0 20px;
 }

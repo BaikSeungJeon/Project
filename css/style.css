@@ -43,20 +43,6 @@ header .hd-line {
     font-size: 24px;
     transition: 0.3s;
 }
-/* .gnb {
-    margin: 10px 0;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-}
-.gnb li a {
-    font-weight: bold;
-    font-size: 14px;
-    transition: 0.3s;
-}
-.gnb li:hover a {
-    color: #555;
-} */
 .toggle {
     position: absolute;
     display: block;
@@ -147,10 +133,6 @@ footer .sns {
     justify-content: center;
     padding: 20px 0 40px;
 }
-footer .sns a {
-    border: 3px solid #000;
-    border-radius: 50%;
-}
 footer .sns a:nth-child(2) {
     margin: 0 20px;
 }
@@ -161,6 +143,7 @@ footer .ft-line {
 }
 
 /* 태블릿 650px ~ 1023px */
+
 @media screen and (min-width: 650px) {
     .logo {
         margin-top: 20px;
@@ -213,6 +196,7 @@ footer .ft-line {
 }
 
 /* PC 1024px ~ */
+
 @media screen and (min-width: 1024px) {
     /* .inner { 
         max-width: 1480px;
