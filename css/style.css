@@ -19,6 +19,9 @@ a {
 #wrap {
     font-family: 'Trebuchet MS',sans-serif;
 }
+.inner {
+    min-width: 350px;
+}
 header .hd-line {
     display: block;
     border-top: 10px solid #000;
@@ -87,7 +90,13 @@ nav.on {
     margin: 10px 0;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: center;
+}
+.gnb li {
+    margin: 0 10px;
+}
+.gnb .profile {
+    margin-top: -5px;
 }
 .gnb li a {
     font-weight: bold;
@@ -171,10 +180,13 @@ footer .ft-line {
         margin: 10px 0;
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-around;
+        justify-content: center;
     }
     .gnb li {
-        margin: 10px 0;
+        margin: 10px 40px;
+    }
+    .gnb .profile {
+        margin-top: 7px;
     }
     .gnb li a {
         margin: 10px 0;
@@ -202,10 +214,10 @@ footer .ft-line {
 
 /* PC 1024px ~ */
 @media screen and (min-width: 1024px) {
-    .inner { 
+    /* .inner { 
         max-width: 1480px;
         margin: 0 auto;
-    }
+    } */
     header {
         padding: 50px 0;
     }
@@ -222,6 +234,9 @@ footer .ft-line {
     }
     .gnb li {
         margin: 0 30px;
+    }
+    .gnb .profile {
+        margin-top: 0;
     }
     .img-box {
         display: flex;
