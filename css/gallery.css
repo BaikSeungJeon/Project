@@ -1,62 +1,4 @@
-@charset "utf-8";
-* {
-    margin: 0;
-    padding: 0;
-}
-html {
-    scroll-behavior: smooth;
-}
-ul {
-    list-style: none;
-}
-a {
-    text-decoration: none;
-    color: #000;
-}
-
 /* 모바일 ~ 649px + 공통 */
-
-#wrap {
-    font-family: 'Trebuchet MS',sans-serif;
-}
-header .hd-line {
-    display: block;
-    border-top: 10px solid #000;
-    box-sizing: border-box;
-    margin-bottom: 30px;
-}
-#content {
-    padding: 0 50px;
-}
-.logo {
-    text-align: center;
-    margin-top: -10px;
-}
-.logo:hover a {
-    color: #555;
-}
-.logo a {
-    font-weight: bold;
-    font-size: 24px;
-    transition: 0.3s;
-}
-.logo span {
-    font-size: 18px;
-}
-.gnb {
-    margin: 10px 0;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-}
-.gnb li a {
-    font-weight: bold;
-    font-size: 14px;
-    transition: 0.3s;
-}
-.gnb li:hover a {
-    color: #555;
-}
 .img-box {
     display: flex;
     flex-flow: row wrap;
@@ -97,35 +39,9 @@ header .hd-line {
 .img-box li:hover img {
     filter: grayscale(0);
 }
-footer .sns {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    padding: 20px 0 40px;
-}
-footer .sns a:nth-child(2) {
-    margin: 0 20px;
-}
-footer .ft-line {
-    display: block;
-    border-bottom: 10px solid #000;
-    box-sizing: border-box;
-}
 
 /* 태블릿 650px ~ 1023px */
 @media screen and (min-width: 650px) {
-    .logo {
-        margin-top: 20px;
-    }
-    .logo a {
-        font-size: 32px;
-    }
-    .gnb li {
-        margin: 10px 0;
-    }
-    .gnb li a {
-        font-size: 18px;
-    }
     .img-box {
         display: flex;
         flex-flow: row wrap;
@@ -143,27 +59,6 @@ footer .ft-line {
 
 /* PC 1024px ~ */
 @media screen and (min-width: 1024px) {
-    /* .inner { 
-        max-width: 1480px;
-        margin: 0 auto;
-    } */
-    header {
-        padding: 50px 0;
-    }
-    header .hd-line {
-        display: none;
-    }
-    header>.inner {
-        display: flex;
-        flex-flow: row wrap;
-        padding-left: 70px;
-    }
-    .logo {
-        margin-top: -0.1%;
-    }
-    .gnb li {
-        margin: 0 30px;
-    }
     .img-box {
         display: flex;
         flex-flow: row wrap;
@@ -172,8 +67,5 @@ footer .ft-line {
     .img-box li {
         box-sizing: border-box;
         width: 25%;
-    }
-    footer .ft-line {
-        display: none;
     }
 }

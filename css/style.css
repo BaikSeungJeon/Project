@@ -15,11 +15,8 @@ a {
 }
 
 /* 모바일 ~ 649px + 공통 */
-
 #wrap {
     font-family: 'Trebuchet MS',sans-serif;
-}
-.inner {
     min-width: 350px;
 }
 header .hd-line {
@@ -143,7 +140,6 @@ footer .ft-line {
 }
 
 /* 태블릿 650px ~ 1023px */
-
 @media screen and (min-width: 650px) {
     .logo {
         margin-top: 20px;
@@ -196,12 +192,11 @@ footer .ft-line {
 }
 
 /* PC 1024px ~ */
-
 @media screen and (min-width: 1024px) {
-    /* .inner { 
+    .inner { 
         max-width: 1480px;
         margin: 0 auto;
-    } */
+    }
     header {
         padding: 50px 0;
     }
