@@ -84,7 +84,10 @@ nav.on {
     height: 40px;
 }
 .site-introduce {
-    font-size: 18px
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100%;
 }
 .gnb {
     margin: 10px 0;
