@@ -32,7 +32,7 @@ header .hd-line {
     text-align: center;
     margin-top: -10px;
 }
-.logo:hover a {
+.logo a:hover {
     color: #555;
 }
 .logo a {
@@ -40,8 +40,48 @@ header .hd-line {
     font-size: 24px;
     transition: 0.3s;
 }
-.logo span {
-    font-size: 18px;
+/* .gnb {
+    margin: 10px 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.gnb li a {
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+}
+.gnb li:hover a {
+    color: #555;
+} */
+.toggle {
+    position: absolute;
+    display: block;
+    width: 23px;
+    height: 3px;
+    top: 44px;
+    right: 30px;
+}
+.toggle span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+}
+.toggle span:nth-child(2) {
+    margin: 3px 0;
+}
+nav {
+    display: block; /*transition을 주기 위해 display를 block*/
+    opacity: 0; /*하지만 사진 뒤로 메뉴가 보이기 때문에 opacity를 0*/
+    height: 0;
+    transition: 0.5s; /*부드러운 동작을 위해 transition을 줬고, opacity와 height 둘 다 
+    transition을 주기 위해 all(생략)을 줌*/
+}
+nav.on {
+    opacity: 1;
+    display: block;
+    height: 40px;
 }
 .gnb {
     margin: 10px 0;
@@ -57,52 +97,18 @@ header .hd-line {
 .gnb li:hover a {
     color: #555;
 }
-.img-box {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-}
-.img-box li {
-    position: relative;
-    display: block;
-    width: 49%;
-    height: 100%;
-    margin-bottom: 2px;
-    box-sizing: border-box;
-}
-.img-box li img {
-    width: 100%;
-    height: 100%;
-    filter: grayscale(100%);
-    transition: 0.5s;
-}
-.img-box .txt {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    transition: 0.5s;
-    color: #eee;
-    font-size: 3vw;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.img-box li:hover .txt {
-    opacity: 1;
-}
-.img-box li:hover img {
-    filter: grayscale(0);
-}
 footer .sns {
     text-align: center;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     padding: 20px 0 40px;
+}
+footer .sns a {
+    border: 3px solid #000;
+    border-radius: 50%;
+}
+footer .sns a:nth-child(2) {
+    margin: 0 20px;
 }
 footer .ft-line {
     display: block;
@@ -118,11 +124,31 @@ footer .ft-line {
     .logo a {
         font-size: 32px;
     }
+    nav {
+        display: block; 
+        height: 100%; /*height 0 준 거 다시 돌려놓는 작업*/
+        opacity: 1; /*opacity 0 준 거 다시 1로 돌려놓는 작업*/
+    }
+    .toggle {
+        display: none;
+    } /*태블릿 화면부턴 햄버거 메뉴가 사라져야 하므로*/
+    .gnb {
+        margin: 10px 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
     .gnb li {
         margin: 10px 0;
     }
     .gnb li a {
+        margin: 10px 0;
+        font-weight: bold;
         font-size: 18px;
+        transition: 0.3s;
+    }
+    .gnb li:hover a {
+        color: #555;
     }
     .img-box {
         display: flex;
@@ -131,7 +157,7 @@ footer .ft-line {
     }
     .img-box li {
         box-sizing: border-box;
-        width: 33%;
+        width: 48%;
     }
     .img-box img {
         width: 100%;
@@ -155,29 +181,6 @@ footer .ft-line {
         display: flex;
         flex-flow: row wrap;
         padding-left: 70px;
-    }
-    .logo {
-        margin-top: -0.1%;
-    }
-    .gnb li {
-        margin: 0 30px;
-    }
-    .img-box {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-    }
-    .img-box li {
-        box-sizing: border-box;
-        width: 24%;
-        margin-bottom: 10px;
-    }
-    footer .sns {
-        display: block;
-        text-align: right;
-    }
-    footer .sns a {
-        margin: 0 30px;
     }
     footer .ft-line {
         display: none;
