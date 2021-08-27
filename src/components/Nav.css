@@ -1,0 +1,39 @@
+.nav {
+    position: fixed;
+    bottom: 30px;
+    height: 50px;
+    background-color: #fff;
+    border-top: 1px solid #000;
+}
+.nav-menu {
+    width: 10%;
+    display: flex;
+    flex-flow: column;
+}
+.nav-menu img {
+    width: 70%;
+    margin: 0 auto;
+}
+.nav-menu p {
+    font-size: 12px;
+    color: #143776;
+    font-weight: 700;
+    margin: 0;
+}
+.gnb {
+    width: 90%;
+    display: flex;
+    flex-flow: row;
+    text-align: center;
+    padding: 0;
+}
+.gnb li {
+    width: 20%;
+    line-height: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    border-left: 1px solid #ccc;
+}
+.gnb li:hover {
+    color: #d12c7d;
+}

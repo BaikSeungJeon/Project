@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  /* iPhone X 고정 값 */
+  width: 375px;
+  height: 812px;
 }
 li {
   list-style: none;

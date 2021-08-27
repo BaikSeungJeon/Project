@@ -3,6 +3,7 @@
 import React, {useState} from 'react'; /* useState 쓰기 위해 import 해 오기 */
 import Price from './price.js'; /* Price import 해 오기 */
 import Stocks from './components/Stocks.js'; /* Stocks import 해 오기 */
+import './components/Home.css';
 
 function Home() {
 
@@ -13,21 +14,22 @@ function Home() {
     return (
         <div>
             <div className="section1">
-                <div className="sec1-hd">
+                <div className="setting-bar">
                     <img src="https://img.icons8.com/material-outlined/24/000000/appointment-reminders--v1.png"/>
-                    <div className="login">
-                        <img src="https://img.icons8.com/fluency-systems-regular/48/000000/shutdown.png"/>
-                        <img src="https://img.icons8.com/ios-filled/50/000000/settings.png"/>
+                    <div className="setting">
+                        <h3>초기화면설정</h3>
+                        <img src="https://img.icons8.com/fluency-systems-regular/24/000000/shutdown.png"/>
+                        <img src="https://img.icons8.com/ios-filled/24/000000/settings.png"/>
                     </div>
                 </div>
                     <ul className="first-tab">
-                        <li><h1>해외주식</h1></li>
-                        <li><h1>해외선물옵션</h1></li>
-                        <li><h1>FX마진</h1></li>
+                        <li>해외주식</li>
+                        <li>해외선물옵션</li>
+                        <li>FX마진</li>
                     </ul>    
-                    <ul className="secont-tab">
-                        <li><h3>관심종목</h3></li>
-                        <li><h3>최근조회종목</h3></li>
+                    <ul className="second-tab">
+                        <li>관심종목</li>
+                        <li>최근조회종목</li>
                     </ul>
 
                 <Stocks price={price[0]} />
@@ -42,15 +44,15 @@ function Home() {
                 </div>
                 <ul className="quick-menu">
                     <li>
-                        <h3>관심종목</h3>
+                        관심종목
                         <img src="https://img.icons8.com/ios-glyphs/30/000000/chevron-right.png"/>
                     </li>
                     <li>
-                        <h3>시세분석</h3>
+                        시세분석
                         <img src="https://img.icons8.com/ios-glyphs/30/000000/chevron-right.png"/>
                     </li>
                     <li>
-                        <h3>ETF시세</h3>
+                        ETF시세
                         <img src="https://img.icons8.com/ios-glyphs/30/000000/chevron-right.png"/>
                     </li>
                     </ul>

@@ -1,12 +1,11 @@
-import React from 'react'
+import React from 'react';
+import './Footer.css';
+// import { Nav, Navbar, Container } from 'react-bootstrap'; /* bootstrap */
 
 function Footer() {
     return (
-        <div div className="footer" style = {{
-            position : "fixed",
-            bottom : 0
-        }}>
-        
+        <div className="footer">
+            <span/>
         </div>
     )
 }
