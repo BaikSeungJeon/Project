@@ -46,7 +46,7 @@
     color: #999;
     cursor: pointer;
 }
-.first-tab li:visited {
+.first-tab li:hover {
     color: #000; /* 클릭해서 이동 했을 때 색 변경 */
 }
 .first-tab li:nth-of-type(1) {
@@ -66,8 +66,9 @@
     font-size: 14px;
     font-weight: 700;
     color: #999;
+    cursor: pointer;
 }
-.second-tab li:visited {
+.second-tab li:hover {
     color: #d12c7d;
 }
 .second-tab li:nth-of-type(1) {

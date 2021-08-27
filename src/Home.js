@@ -1,6 +1,7 @@
 /* eslint-disable */
 
 import React, {useState} from 'react'; /* useState 쓰기 위해 import 해 오기 */
+import styled from 'styled-components'; /* css */
 import Price from './price.js'; /* Price import 해 오기 */
 import Stocks from './components/Stocks.js'; /* Stocks import 해 오기 */
 import './components/Home.css';
@@ -32,10 +33,9 @@ function Home() {
                         <li>최근조회종목</li>
                     </ul>
 
-                <Stocks price={price[0]} />
-                <Stocks price={price[1]} />
-                <Stocks price={price[2]} />
-                <Stocks price={price[3]} />
+                
+                    <Stocks price={price}/>
+                
 
                 <div className="circle">
                     <img src="https://img.icons8.com/material-outlined/24/000000/circled.png"/>
@@ -69,25 +69,25 @@ function Home() {
                     </ul>
                 </div>
                 <div className="sec2-content">
-                    <ul className="stock-1">
+                    <ul className="sec2-con-stock-1">
                         <li><h3>애플</h3></li>
                         <li><h3>148.3600</h3></li>
                         <li>0.0000</li>
                         <li>0.00%</li>
                     </ul>
-                    <ul className="stock-2">
+                    <ul className="sec2-con-stock-2">
                         <li><h3>페이스북</h3></li>
                         <li><h3>368.3900</h3></li>
                         <li>0.0000</li>
                         <li>0.00%</li>
                     </ul>
-                    <ul className="stock-3">
+                    <ul className="sec2-con-stock-3">
                         <li><h3>아마존 닷컴</h3></li>
                         <li><h3>3,299.1800</h3></li>
                         <li>0.0000</li>
                         <li>0.00%</li>
                     </ul>
-                    <ul className="stock-4">
+                    <ul className="sec2-con-stock-4">
                         <li><h3>마이크로소프트</h3></li>
                         <li><h3>302.0100</h3></li>
                         <li>0.0000</li>
