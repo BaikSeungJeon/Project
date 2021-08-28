@@ -350,7 +350,38 @@ a {
     font-weight: 700;
     font-size: 32px;
 }
-/* timeline - 티스토리 */
+.project-tistory-skills-top {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    width: 300px;
+    height: 60px;
+}
+.project-tistory-skills-top p {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 60px;
+}
+.project-tistory-skills-top img {
+    margin-left: 10px;
+}
+.project-tistory-skills-btm {
+    display: flex;
+    flex-flow: row nowrap;
+}
+.project-tistory-skills-btm p {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 60px;
+}
+.project-tistory-skills-btm img {
+    height: 60px;
+    margin-left: 10px;
+}
+    
+    /* timeline - 티스토리 */
 
 .timeline-underarmour {
     height: 100vh;
@@ -493,9 +524,9 @@ a {
     margin: auto;
     text-align: center;
 }
-.
+
 /* top button */
-.top-btn {
+/* .top-btn {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -511,5 +542,5 @@ a {
     }
     100% {
         bottom: 30px;
-    }
+    } */
 }
