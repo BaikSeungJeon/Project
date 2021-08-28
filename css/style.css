@@ -354,7 +354,6 @@ a {
     display: flex;
     flex-flow: row nowrap;
     justify-content: start;
-    width: 300px;
     height: 60px;
 }
 .project-tistory-skills-top p {
@@ -369,6 +368,7 @@ a {
 .project-tistory-skills-btm {
     display: flex;
     flex-flow: row nowrap;
+    height: 60px;
 }
 .project-tistory-skills-btm p {
     font-size: 18px;
@@ -377,8 +377,8 @@ a {
     line-height: 60px;
 }
 .project-tistory-skills-btm img {
-    height: 60px;
     margin-left: 10px;
+    height: 60px;
 }
     
     /* timeline - 티스토리 */
@@ -402,6 +402,36 @@ a {
     font-weight: 700;
     font-size: 32px;
 }
+.project-underarmour-skills-top {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    height: 60px;
+}
+.project-underarmour-skills-top p {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 60px;
+}
+.project-underarmour-skills-top img {
+    margin-left: 10px;
+}
+.project-underarmour-skills-btm {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 60px;
+}
+.project-underarmour-skills-btm p {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 60px;
+}
+.project-underarmour-skills-btm img {
+    margin-left: 10px;
+    height: 60px;
+}
 /* timeline - 언더아머 */
 
 .timeline-github {
@@ -423,6 +453,36 @@ a {
     font-weight: 700;
     font-size: 32px;
 }
+.project-github-skills-top {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    height: 60px;
+}
+.project-github-skills-top p {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 60px;
+}
+.project-github-skills-top img {
+    margin-left: 10px;
+}
+.project-github-skills-btm {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 60px;
+}
+.project-github-skills-btm p {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 60px;
+}
+.project-github-skills-btm img {
+    margin-left: 10px;
+    height: 60px;
+}
 /* timeline - 깃허브 */
 
 .timeline-rwd {
@@ -443,6 +503,36 @@ a {
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 700;
     font-size: 32px;
+}
+.project-rwd-skills-top {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    height: 60px;
+}
+.project-rwd-skills-top p {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 60px;
+}
+.project-rwd-skills-top img {
+    margin-left: 10px;
+}
+.project-rwd-skills-btm {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 60px;
+}
+.project-rwd-skills-btm p {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 60px;
+}
+.project-rwd-skills-btm img {
+    margin-left: 10px;
+    height: 60px;
 }
 /* timeline - 반응형 */
 
@@ -466,6 +556,44 @@ a {
     font-weight: 700;
     font-size: 32px;
 }
+.project-js-skills-top {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    height: 60px;
+}
+.project-js-skills-top p {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 60px;
+}
+.project-js-skills-top img {
+    margin-left: 10px;
+}
+.project-js-skills-btm {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 60px;
+}
+.project-js-skills-btm p {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 60px;
+}
+.project-js-skills-btm img {
+    margin-left: 10px;
+    height: 60px;
+}
+.project-js-skills-btm-menu {
+    display: flex;
+    flex-direction: row;
+}
+.project-js-skills-btm-list {
+    display: flex;
+    flex-direction: row;
+}
 /* timeline - 자스 */
 
 
@@ -488,6 +616,36 @@ a {
     font-weight: 700;
     font-size: 32px;
 }
+.project-react-skills-top {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    height: 60px;
+}
+.project-react-skills-top p {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 60px;
+}
+.project-react-skills-top img {
+    margin-left: 10px;
+}
+.project-react-skills-btm {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 60px;
+}
+.project-react-skills-btm p {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 60px;
+}
+.project-react-skills-btm img {
+    margin-left: 10px;
+    height: 60px;
+}
 /* timeline - 리액트 */
 
 .timeline-portfolio {
@@ -508,6 +666,36 @@ a {
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 700;
     font-size: 32px;
+}
+.project-portfolio-skills-top {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    height: 60px;
+}
+.project-portfolio-skills-top p {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 60px;
+}
+.project-portfolio-skills-top img {
+    margin-left: 10px;
+}
+.project-portfolio-skills-btm {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 60px;
+}
+.project-portfolio-skills-btm p {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 60px;
+}
+.project-portfolio-skills-btm img {
+    margin-left: 10px;
+    height: 60px;
 }
 /* timeline - 포트폴리오 */
 
