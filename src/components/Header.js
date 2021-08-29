@@ -11,9 +11,9 @@ function Header() {
                 <p>22:50</p>
             </div>
             <div className="wifi">
-                <img src="https://img.icons8.com/ios-glyphs/18/000000/low-connection.png"/>
-                <img src="https://img.icons8.com/ios/18/000000/wifi--v1.png"/>
-                <img src="images/battery.png"/>
+            <img src="https://img.icons8.com/ios-glyphs/18/ffffff/low-connection.png"/> 
+                <img src="https://img.icons8.com/ios-glyphs/18/ffffff/wifi--v1.png"/>
+                <img src="https://img.icons8.com/ios-glyphs/20/ffffff/full-battery.png"/>
             </div>
         </div>
     )
