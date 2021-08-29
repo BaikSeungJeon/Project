@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-import React from 'react';
+import React, {useState} from 'react';
 import './Stocks.css';
 
 function Stocks(props) {

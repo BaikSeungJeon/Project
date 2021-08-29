@@ -9,7 +9,7 @@ import Price from '../price.js'; /* Price(홈 주식 가격) import 해 오기 *
 import './Order.css';
 
 
-function Order() {
+function Order(props) {
 
     let [price, priceChange] = useState(Price);
     let [askingPrice, askingPriceChange] = useState(AskingPrice); /* 호가, 호가 변경 state 해 오기*/
@@ -41,8 +41,11 @@ function Order() {
                         </ul>
                     </div>
                     <div className="order-ux-btm">
-                        <RecStocks Price={price[0]}/>
+                        <RecStocks price={price[0]}/>
                     </div>
+                </div>
+                <div className="order-nav-2">
+
                 </div>
             </div>
         </div>
