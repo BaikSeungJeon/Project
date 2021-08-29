@@ -2,7 +2,7 @@
 
 import React, {useState} from 'react'; /* useState 쓰기 위해 import 해 오기 */
 import styled from 'styled-components'; /* css */
-import Price from './price.js'; /* Price import 해 오기 */
+import Price from './price.js'; /* Price(홈 주식 가격) import 해 오기 */
 import Stocks from './components/Stocks.js'; /* Stocks import 해 오기 */
 import RecStocks from './components/RecStocks'; /* RecStocks import 해 오기 */
 import './components/Home.css';
@@ -77,7 +77,7 @@ function Home() {
                     <RecStocks price={price[2]}/>
                     <RecStocks price={price[3]}/>
 
-                    <div className="pick-stock">
+                    <div className="rec-more">
                         <h3> 추천 종목 더 보기 </h3>
                         <img src="https://img.icons8.com/fluency-systems-filled/48/000000/circled-chevron-right.png"/>
                     </div>

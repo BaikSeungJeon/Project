@@ -1,3 +1,10 @@
+li {
+    list-style: none;
+    color: #333;
+}
+a {
+    text-decoration: none;
+    }
 .nav {
     position: fixed;
     bottom: 30px;
@@ -27,14 +34,23 @@
     flex-flow: row;
     text-align: center;
     padding: 0;
+    overflow: auto;
+    /* overflow auto를 줌으로써 li 개수가 초과돼도 스크롤 만들기*/
 }
 .gnb li {
-    width: 20%;
-    line-height: 50px;
+    width: 60px; /* 60 * 50 */
+    line-height: 50px; /* 중간 배치 */
     font-weight: 700;
-    font-size: 14px;
+    font-size: 12px;
     border-left: 1px solid #ccc;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    
 }
 .gnb li:hover {
+    color: #d12c7d;
+}
+.gnb li:visited {
     color: #d12c7d;
 }

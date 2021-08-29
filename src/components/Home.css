@@ -137,6 +137,7 @@
 .section2 {
     background-color: rgb(233, 233, 233);
     padding: 20px 5px;
+    height: 100vh;
 }
 .sec2-hd {
     display: flex;
@@ -171,4 +172,24 @@
 .sec2-hd ul li:nth-of-type(1) {
     color: #d12c7d; /* 초기 색 설정해주기 */
     padding: 0;
+}
+
+.rec-more {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+.rec-more h3 {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    line-height: 20px;
+    color: #333;
+    font-weight: 700;
+}
+.rec-more img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
 }
