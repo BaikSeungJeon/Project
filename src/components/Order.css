@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.order-nav {
+    margin-top: 30px; /* header height 30px로부터 띄움 */
+    display: flex;
+    flex-direction: row;
+}
+.order-nav img {
+    width: 24px;
+    height: 24px;
+}
+.order-nav img:nth-of-type(1) {
+    width: 20px;
+    height : 20px;
+}
+.order-nav ul {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 30px;
+    margin: 0;
+    padding : 0;
+}
+.order-nav ul li {
+    width: 150px;
+    font-size: 16px;
+}

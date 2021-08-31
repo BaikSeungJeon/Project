@@ -38,16 +38,22 @@ function Order(props) {
 
     return (
         <div>
-            <ul className="order-nav">
-                <li>주식주문</li>
-                <li>주식미체결</li>
-                <li>주식잔고</li>
-                <li>예약주문/조회</li>
-                <li>쾌속주문</li>
-                <li>주식호가주문</li>
-                <li>미국주식 자동감시주문</li>
-            </ul>
+            <div className="order-nav">
+                <img src="https://img.icons8.com/ios/20/000000/back--v1.png"/>
+                <ul>
+                    <li>주식주문</li>
+                    <li>주식미체결</li>
+                    <li>주식잔고</li>
+                    <li>예약주문/조회</li>
+                    <li>쾌속주문</li>
+                    <li>주식호가주문</li>
+                    <li>미국주식 자동감시주문</li>
+                </ul>
+                <img src="https://img.icons8.com/ios/24/000000/more-than.png"/>
+                <img src="https://img.icons8.com/material-rounded/24/000000/menu-2.png"/>
+            </div>
             <div className="order-hd">
+                <img src="https://img.icons8.com/ios/20/000000/back--v1.png"/>
                 <div className="order-candel">
                     <img src="images/candle.png"/>
                 </div>
@@ -66,6 +72,7 @@ function Order(props) {
                         <RecStocks price={price[0]}/>
                     </div>
                 </div>
+                <img src="https://img.icons8.com/ios/24/000000/more-than.png"/>
                 <div className="order-nav-2">
                     <ul>
                         <li>매수</li>
@@ -77,10 +84,10 @@ function Order(props) {
                 </div>
                 <div className="order-main">
                     <div className="asking-price">
-                        <div>
-
+                        <div className="ap-chart">
+                            <img src="images/chart.png"/>
                         </div>
-                            <div className="sell">
+                        <div className="sell">
                             <div className="sell-left">
                                 <p>{askingPrice[0].usd}</p>
                                 <p>{askingPrice[0].krw}</p>
@@ -252,7 +259,7 @@ function Order(props) {
                             </div>
                         </div>
                     </div>
-                    <div className="order-account">
+                    <div className="order-tab">
                         <Select account={account} defaultValue={account[0]} isClearable />
                         <div className="order-pw">
                             <button> 설정 </button>
@@ -279,7 +286,38 @@ function Order(props) {
                                 <button>-</button>{askingPrice[4].usd}<button>+</button>
                             </dd>
                         </dl>
+                        <div className="exchange-rate">
+                            <div className="ex-top">
+                                <div>
+                                    환율
+                                </div>
+                                <div>
+                                    $
+                                </div>
+                                <div>
+                                    0.0000
+                                </div>
+                            </div>
+                            <div className="ex-btm">
+                                <div>
+                                    1,167.00
+                                </div>
+                                <div>
+                                    ￦
+                                </div>
+                                <div>
+                                    0
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <ul className="order-btn">
+                            <li>안내</li>
+                            <li>잔고</li>
+                            <li>환전</li>
+                            <li>주문번호</li>
+                            <li>매수 주문</li>
+                        </ul>
                 </div>
             </div>
         </div>
