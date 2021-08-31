@@ -21,7 +21,7 @@ body {
     border-radius: 5px; */
 }
 .text::before {
-    content: "2021년 5월 25일로 접속 중입니다....";
+    content: "테스트 중입니다.";
     position: absolute;
     top: 0;
     left: 0;
@@ -31,7 +31,7 @@ body {
     /* text-shadow: 5px 5px 5px #b2d3ff; */
     overflow: hidden;
     border-right: 3px solid #333;
-    animation: typing 5s steps(31) infinite;
+    animation: typing 2s steps(20);
 }
 @keyframes typing {
     0% {
