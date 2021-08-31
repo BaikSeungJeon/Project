@@ -16,15 +16,12 @@ function App() {
   return (
     <div className="App">
       <Header/>
-
       <Route exact path="/">
         <Home/>
       </Route>
-
       <Route path="/order">
         <Order/>
       </Route>
-
       <Nav/>
       <Footer/>
     </div>

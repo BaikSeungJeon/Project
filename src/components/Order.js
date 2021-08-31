@@ -39,23 +39,30 @@ function Order(props) {
     return (
         <div>
             <div className="order-nav">
-                <img src="https://img.icons8.com/ios/20/000000/back--v1.png"/>
-                <ul>
-                    <li>주식주문</li>
-                    <li>주식미체결</li>
-                    <li>주식잔고</li>
-                    <li>예약주문/조회</li>
-                    <li>쾌속주문</li>
-                    <li>주식호가주문</li>
-                    <li>미국주식 자동감시주문</li>
-                </ul>
-                <img src="https://img.icons8.com/ios/24/000000/more-than.png"/>
-                <img src="https://img.icons8.com/material-rounded/24/000000/menu-2.png"/>
+                <div className="order-nav-lbtn">
+                    <img src="https://img.icons8.com/ios/20/000000/back--v1.png"/>
+                </div>
+                <div className="order-nav-md">
+                    <ul>
+                        <Link to = "/"><li>주식주문</li></Link>
+                        <Link to = "/"><li>주식미체결</li></Link>
+                        <Link to = "/"><li>주식잔고</li></Link>
+                        <Link to = "/"><li>예약주문/조회</li></Link>
+                        <Link to = "/"><li>쾌속주문</li></Link>
+                        <Link to = "/"><li>주식호가주문</li></Link>
+                        <Link to = "/"><li>미국주식 자동감시주문</li></Link>
+                    </ul>
+                </div>
+                <div className="order-nav-rbtn">
+                    <img src="https://img.icons8.com/ios/24/000000/more-than.png"/>
+                    <img src="https://img.icons8.com/material-rounded/24/000000/menu-2.png"/>
+                </div>
             </div>
+
             <div className="order-hd">
-                <img src="https://img.icons8.com/ios/20/000000/back--v1.png"/>
-                <div className="order-candel">
-                    <img src="images/candle.png"/>
+                <div className="order-hd-lbtn">
+                    <img src="https://img.icons8.com/ios/16/000000/back--v1.png"/>
+                    <img src="https://img.icons8.com/officel/30/000000/candle-sticks.png"/>
                 </div>
                 <div className="order-ux">
                     <div className="order-ux-top">
@@ -72,48 +79,58 @@ function Order(props) {
                         <RecStocks price={price[0]}/>
                     </div>
                 </div>
-                <img src="https://img.icons8.com/ios/24/000000/more-than.png"/>
-                <div className="order-nav-2">
-                    <ul>
-                        <li>매수</li>
-                        <li>매도</li>
-                        <li>정정/취소</li>
-                        <li>잔고</li>
-                        <li>미체결</li>
-                    </ul>
+                <div className="order-hd-rbtn">
+                    <img src="https://img.icons8.com/ios/20/000000/more-than.png"/>
                 </div>
-                <div className="order-main">
-                    <div className="asking-price">
-                        <div className="ap-chart">
-                            <img src="images/chart.png"/>
+            </div>
+            
+            <div className="order-nav-2">
+                <ul>
+                    <li>매수</li>
+                    <li>매도</li>
+                    <li>정정/취소</li>
+                    <li>잔고</li>
+                    <li>미체결</li>
+                </ul>
+            </div>
+
+            <div className="order-main">
+                <div className="asking-price">
+                    <div className="ap-chart">
+                        <img src="images/chart.png"/>
+                        <div className="ap-btn">
+                            <button>호가</button>
+                            <button>잔량</button>
+                            <button>체결</button>
                         </div>
+                    </div>
+                    <div className="sell">
+                        <div className="sell-left">
+                            <p>{askingPrice[0].usd}</p>
+                            <p>{askingPrice[0].krw}</p>
+                        </div>
+                        <div className="sell-right">
+                            <p>{askingPrice[0].per}</p>
+                        </div>
+                    </div>
+                    <div className="sell">
+                        <div className="sell-left">
+                            <p>{askingPrice[1].usd}</p>
+                            <p>{askingPrice[1].krw}</p>
+                        </div>
+                        <div className="sell-right">
+                            <p>{askingPrice[1].per}</p>
+                        </div>
+                    </div>
                         <div className="sell">
-                            <div className="sell-left">
-                                <p>{askingPrice[0].usd}</p>
-                                <p>{askingPrice[0].krw}</p>
-                            </div>
-                            <div className="sell-right">
-                                <p>{askingPrice[0].per}</p>
-                            </div>
+                        <div className="sell-left">
+                            <p>{askingPrice[2].usd}</p>
+                            <p>{askingPrice[2].krw}</p>
                         </div>
-                        <div className="sell">
-                            <div className="sell-left">
-                                <p>{askingPrice[1].usd}</p>
-                                <p>{askingPrice[1].krw}</p>
-                            </div>
-                            <div className="sell-right">
-                                <p>{askingPrice[1].per}</p>
-                            </div>
+                        <div className="sell-right">
+                            <p>{askingPrice[2].per}</p>
                         </div>
-                        <div className="sell">
-                            <div className="sell-left">
-                                <p>{askingPrice[2].usd}</p>
-                                <p>{askingPrice[2].krw}</p>
-                            </div>
-                            <div className="sell-right">
-                                <p>{askingPrice[2].per}</p>
-                            </div>
-                        </div>
+                    </div>
                         <div className="sell">
                             <div className="sell-left">
                                 <p>{askingPrice[3].usd}</p>
@@ -259,6 +276,7 @@ function Order(props) {
                             </div>
                         </div>
                     </div>
+
                     <div className="order-tab">
                         <Select account={account} defaultValue={account[0]} isClearable />
                         <div className="order-pw">
@@ -311,15 +329,14 @@ function Order(props) {
                             </div>
                         </div>
                     </div>
-                    <ul className="order-btn">
-                            <li>안내</li>
-                            <li>잔고</li>
-                            <li>환전</li>
-                            <li>주문번호</li>
-                            <li>매수 주문</li>
-                        </ul>
-                </div>
             </div>
+            <ul className="order-btn">
+                    <li>안내</li>
+                    <li>잔고</li>
+                        <li>환전</li>
+                        <li>주문번호</li>
+                        <li>매수 주문</li>
+                </ul>
         </div>
     )
 }

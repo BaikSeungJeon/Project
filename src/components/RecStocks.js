@@ -2,6 +2,7 @@
 
 import React, {useState} from 'react';
 import './RecStocks.css';
+import './Order.css'; /* RecStocks 스타일 적용 위함 */
 
 function RecStocks(props) {
     return (

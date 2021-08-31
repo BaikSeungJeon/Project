@@ -3,27 +3,217 @@
     padding: 0;
 }
 .order-nav {
-    margin-top: 30px; /* header height 30px로부터 띄움 */
+    position: fixed;
+    top: 30px; /* header height 30px로부터 띄움 */
     display: flex;
     flex-direction: row;
+    width: 375px;
+    height: 40px;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
 }
-.order-nav img {
-    width: 24px;
-    height: 24px;
+.order-nav-lbtn {
+    width: 10%;
+    height: 40px;
 }
-.order-nav img:nth-of-type(1) {
+.order-nav-lbtn img {
     width: 20px;
     height : 20px;
+    /* prev */
+    margin-top: 10px;
 }
-.order-nav ul {
+.order-nav-rbtn {
+    width: 20%;
+}
+.order-nav-rbtn img {
+    width: 24px;
+    height: 24px;
+    /* next, vertical menu */
+    margin-top: 8px;
+}
+.order-nav-md {
+    width:70%;
+}
+.order-nav-md ul {
+    width: 100%;
     display: flex;
     flex-direction: row;
-    width: 80%;
-    height: 30px;
     margin: 0;
-    padding : 0;
+    padding: 0;
+    overflow: auto;
+    
 }
-.order-nav ul li {
-    width: 150px;
-    font-size: 16px;
+.order-nav-md ul li {
+    width: 100px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #999;
+    line-height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* ... 효과 */
+}
+.order-nav-md ul li:hover {
+    font-size: 15px;
+    color: #000;
+}
+.order-nav-md ul li .on {
+    border-bottom: 3px solid #143776;
+    /* hover 했을 때 on 클래스 붙이기 */
+}
+
+/* order-hd */
+.order-hd {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 375px;
+    height: 70px;
+}
+.order-hd-lbtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 10%;
+}
+.order-hd-lbtn img:nth-of-type(1) {
+    width: 16px;
+    height: 16px;
+    margin-top: 27px;
+    /* < btn */
+}
+.order-hd-lbtn img:nth-of-type(2) {
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+    /* candlestick */
+}
+.order-hd-rbtn {
+    width: 5%;
+}
+.order-hd-rbtn img {
+    width: 20px;
+    height: 20px;
+    margin-top: 25px; /* 중앙 배치 */
+    /* > btn */
+}
+.order-candle img {
+    width: 100%;
+}
+.order-ux {
+    display: flex;
+    flex-direction: column;
+}
+.order-ux-top {
+    padding-top: 10px;
+    height: 50%;
+}
+.order-ux-top ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin: 0;
+    padding: 0;
+}
+.order-ux-top ul li {
+    font-size: 11px;
+}
+.order-ux-top ul li:nth-of-type(1) {
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    color: #aaa;
+    display: block;
+    width: 50px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+}
+.order-ux-top ul li:nth-of-type(2) {
+    border: 1px solid rgb(182, 100, 199);
+    border-radius: 10px;
+    color: rgb(182, 100, 199);
+    width: 45px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    margin: 0 5px; /* 양 사이드에 마진 ('무료'랑 티커) */
+}
+.order-ux-top ul li:nth-of-type(3) {
+    color: #777;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 20px;
+}
+.order-ux-top ul li:nth-of-type(4) {
+    margin-left: 5px;
+}
+.order-ux-top ul li:nth-of-type(5) {
+    margin: 0 5px;
+}
+.order-ux-btm {
+    display: flex;
+    flex-direction: row;
+}
+
+/*order-ux-btm*/
+.order-ux-btm {
+    height: 50%; /* 높이 반반 먹기 */
+    width: 100%; /* 너비 다 주기 */
+    margin: 0;
+    padding: 0;
+}
+.sec2-content-rec {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin: 0;
+    padding: 0;
+}
+/* .sec2-content-rec p {
+    color: #385ad8;
+}
+.sec2-content-rec p:nth-of-type(1) {
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+}
+.sec2-content-rec p:nth-of-type(2) {
+    font-size: 17px;
+    font-weight: 700;
+    color : #385ad8;
+}
+.sec2-content-rec p:nth-of-type(3) {
+    text-align: right;
+}
+.sec2-content-rec p:nth-of-type(4) {
+    text-align: right;
+} */
+.order-nav-2 {
+    background-color: rgb(68, 94, 141);
+    height: 30px;
+}
+.order-nav-2 ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    height: 30px;
+}
+.order-nav-2 ul li {
+    font-size: 14px;
+    color: #ccc;
+    font-weight: 700;
+    height: 30px; /* on class 붙일 때 밑줄을 ul height와 같게 하려고 */
+    line-height: 30px; /* 세로 가운데 정렬 */
+}
+.order-nav-2 ul li:hover {
+    color: #fff;
+}
+.order-nav-2 ul li .on {
+    border-bottom: 3px solid #fff;
 }
