@@ -2,10 +2,10 @@
 
 import React, {useState} from 'react'; /* useState 쓰기 위해 import 해 오기 */
 import styled from 'styled-components'; /* css */
-import Price from './price.js'; /* Price(홈 주식 가격) import 해 오기 */
-import Stocks from './components/Stocks.js'; /* Stocks import 해 오기 */
-import RecStocks from './components/RecStocks'; /* RecStocks import 해 오기 */
-import './components/Home.css';
+import Price from '../../price.js'; /* Price(홈 주식 가격) import 해 오기 */
+import Stocks from './Stocks.js'; /* Stocks import 해 오기 */
+import RecStocks from './RecStocks'; /* RecStocks import 해 오기 */
+import './Home.css';
 
 function Home() {
 

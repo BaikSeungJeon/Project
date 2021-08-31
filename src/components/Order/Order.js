@@ -6,8 +6,8 @@ import styled from 'styled-components'; /* css */
 import { Link } from 'react-router-dom'; /* router dom */
 import Select from "react-select";  /* react-select */
 import AskingPrice from './askingPrice'; /* 호가 가격 import 해 오기 */
-import RecStocks from './RecStocks'; /* RecStocks import 해 오기 */
-import Price from '../price.js'; /* Price(홈 주식 가격) import 해 오기 */
+import TitleStocks from './TitleStocks.js'; /* RecStocks import 해 오기 */
+import Price from '../../price.js'; /* Price(홈 주식 가격) import 해 오기 */
 import './Order.css';
 
 
@@ -76,7 +76,7 @@ function Order(props) {
                         </ul>
                     </div>
                     <div className="order-ux-btm">
-                        <RecStocks price={price[0]}/>
+                        <TitleStocks price={price[0]}/>
                     </div>
                 </div>
                 <div className="order-hd-rbtn">
@@ -104,34 +104,35 @@ function Order(props) {
                             <button>체결</button>
                         </div>
                     </div>
-                    <div className="sell">
-                        <div className="sell-left">
-                            <p>{askingPrice[0].usd}</p>
-                            <p>{askingPrice[0].krw}</p>
+                    <div className="ap-box">
+                        <div className="sell-box">
+                            <div className="sell-left">
+                                <p>{askingPrice[0].usd}</p>
+                                <p>{askingPrice[0].krw}</p>
+                            </div>
+                            <div className="sell-right">
+                                <p>{askingPrice[0].per}</p>
+                            </div>
                         </div>
-                        <div className="sell-right">
-                            <p>{askingPrice[0].per}</p>
+                        <div className="sell-box">
+                            <div className="sell-left">
+                                <p>{askingPrice[1].usd}</p>
+                                <p>{askingPrice[1].krw}</p>
+                            </div>
+                            <div className="sell-right">
+                                <p>{askingPrice[1].per}</p>
+                            </div>
                         </div>
-                    </div>
-                    <div className="sell">
-                        <div className="sell-left">
-                            <p>{askingPrice[1].usd}</p>
-                            <p>{askingPrice[1].krw}</p>
+                        <div className="sell-box">
+                            <div className="sell-left">
+                                <p>{askingPrice[2].usd}</p>
+                                <p>{askingPrice[2].krw}</p>
+                            </div>
+                            <div className="sell-right">
+                                <p>{askingPrice[2].per}</p>
+                            </div>
                         </div>
-                        <div className="sell-right">
-                            <p>{askingPrice[1].per}</p>
-                        </div>
-                    </div>
-                        <div className="sell">
-                        <div className="sell-left">
-                            <p>{askingPrice[2].usd}</p>
-                            <p>{askingPrice[2].krw}</p>
-                        </div>
-                        <div className="sell-right">
-                            <p>{askingPrice[2].per}</p>
-                        </div>
-                    </div>
-                        <div className="sell">
+                        <div className="sell-box">
                             <div className="sell-left">
                                 <p>{askingPrice[3].usd}</p>
                                 <p>{askingPrice[3].krw}</p>
@@ -140,7 +141,7 @@ function Order(props) {
                                 <p>{askingPrice[3].per}</p>
                             </div>
                         </div>
-                        <div className="sell">
+                        <div className="sell-box">
                             <div className="sell-left">
                                 <p>{askingPrice[4].usd}</p>
                                 <p>{askingPrice[4].krw}</p>
@@ -149,7 +150,7 @@ function Order(props) {
                                 <p>{askingPrice[4].per}</p>
                             </div>
                         </div>
-                        <div className="sell">
+                        <div className="sell-box">
                             <div className="sell-left">
                                 <p>{askingPrice[5].usd}</p>
                                 <p>{askingPrice[5].krw}</p>
@@ -158,7 +159,7 @@ function Order(props) {
                                 <p>{askingPrice[5].per}</p>
                             </div>
                         </div>
-                        <div className="sell">
+                        <div className="sell-box">
                             <div className="sell-left">
                                 <p>{askingPrice[6].usd}</p>
                                 <p>{askingPrice[6].krw}</p>
@@ -167,7 +168,7 @@ function Order(props) {
                                 <p>{askingPrice[6].per}</p>
                             </div>
                         </div>
-                        <div className="sell">
+                        <div className="sell-box">
                             <div   div className="sell-left">
                                 <p>{askingPrice[8].usd}</p>
                                 <p>{askingPrice[8].krw}</p>
@@ -176,7 +177,7 @@ function Order(props) {
                                 <p>{askingPrice[8].per}</p>
                             </div>
                         </div>
-                        <div className="sell">
+                        <div className="sell-box">
                             <div className="sell-left">
                                 <p>{askingPrice[9].usd}</p>
                                 <p>{askingPrice[9].krw}</p>
@@ -185,7 +186,7 @@ function Order(props) {
                                 <p>{askingPrice[9].per}</p>
                             </div>
                         </div>
-                        <div className="buy">
+                        <div className="buy-box">
                             <div className="buy-left">
                                 <p>{askingPrice[0].usd}</p>
                                 <p>{askingPrice[0].krw}</p>
@@ -194,7 +195,7 @@ function Order(props) {
                                 <p>{askingPrice[0].per}</p>
                             </div>
                         </div>
-                        <div className="buy">
+                        <div className="buy-box">
                             <div className="buy-left">
                                 <p>{askingPrice[1].usd}</p>
                                 <p>{askingPrice[1].krw}</p>
@@ -203,7 +204,7 @@ function Order(props) {
                                 <p>{askingPrice[1].per}</p>
                             </div>
                         </div>
-                        <div className="buy">
+                        <div className="buy-box">
                             <div className="buy-left">
                                 <p>{askingPrice[2].usd}</p>
                                 <p>{askingPrice[2].krw}</p>
@@ -212,7 +213,7 @@ function Order(props) {
                                 <p>{askingPrice[2].per}</p>
                             </div>
                         </div>
-                        <div className="buy">
+                        <div className="buy-box">
                             <div className="buy-left">
                                 <p>{askingPrice[3].usd}</p>
                                 <p>{askingPrice[3].krw}</p>
@@ -221,8 +222,8 @@ function Order(props) {
                                 <p>{askingPrice[3].per}</p>
                             </div>
                         </div>
-                        <div className="buy">
-                            <div className="buy-left">
+                        <div className="buy-box">
+                                <div className="buy-left">
                                 <p>{askingPrice[4].usd}</p>
                                 <p>{askingPrice[4].krw}</p>
                             </div>
@@ -230,16 +231,16 @@ function Order(props) {
                                 <p>{askingPrice[4].per}</p>
                             </div>
                         </div>
-                        <div className="buy">
+                        <div className="buy-box">
                             <div className="buy-left">
                                 <p>{askingPrice[5].usd}</p>
                                 <p>{askingPrice[5].krw}</p>
                             </div>
-                            <div className="buy-right">
+                                <div className="buy-right">
                                 <p>{askingPrice[5].per}</p>
                             </div>
                         </div>
-                        <div className="buy">
+                        <div className="buy-box">
                             <div className="buy-left">
                                 <p>{askingPrice[6].usd}</p>
                                 <p>{askingPrice[6].krw}</p>
@@ -248,7 +249,7 @@ function Order(props) {
                                 <p>{askingPrice[6].per}</p>
                             </div>
                         </div>
-                        <div className="buy">
+                        <div className="buy-box">
                             <div className="buy-left">
                                 <p>{askingPrice[7].usd}</p>
                                 <p>{askingPrice[7].krw}</p>
@@ -257,7 +258,7 @@ function Order(props) {
                                 <p>{askingPrice[7].per}</p>
                             </div>
                         </div>
-                        <div className="buy">
+                        <div className="buy-box">
                             <div className="buy-left">
                                 <p>{askingPrice[8].usd}</p>
                                 <p>{askingPrice[8].krw}</p>
@@ -266,7 +267,7 @@ function Order(props) {
                                 <p>{askingPrice[8].per}</p>
                             </div>
                         </div>
-                        <div className="buy">
+                        <div className="buy-box">
                             <div className="buy-left">
                                 <p>{askingPrice[9].usd}</p>
                                 <p>{askingPrice[9].krw}</p>
@@ -276,6 +277,7 @@ function Order(props) {
                             </div>
                         </div>
                     </div>
+                </div>
 
                     <div className="order-tab">
                         <Select account={account} defaultValue={account[0]} isClearable />
@@ -330,6 +332,7 @@ function Order(props) {
                         </div>
                     </div>
             </div>
+
             <ul className="order-btn">
                     <li>안내</li>
                     <li>잔고</li>

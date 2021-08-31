@@ -12,6 +12,7 @@ a {
     height: 50px;
     background-color: #fff;
     border-top: 1px solid #000;
+    z-index: 99999;
 }
 .nav-menu {
     width: 10%;
