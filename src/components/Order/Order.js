@@ -188,92 +188,92 @@ function Order(props) {
                         </div>
                         <div className="buy-box">
                             <div className="buy-left">
-                                <p>{askingPrice[0].usd}</p>
-                                <p>{askingPrice[0].krw}</p>
+                                <p>{askingPrice[10].usd}</p>
+                                <p>{askingPrice[10].krw}</p>
                             </div>
                             <div className="buy-right">
-                                <p>{askingPrice[0].per}</p>
+                                <p>{askingPrice[10].per}</p>
                             </div>
                         </div>
                         <div className="buy-box">
                             <div className="buy-left">
-                                <p>{askingPrice[1].usd}</p>
-                                <p>{askingPrice[1].krw}</p>
+                                <p>{askingPrice[11].usd}</p>
+                                <p>{askingPrice[11].krw}</p>
                             </div>
                             <div className="buy-right">
-                                <p>{askingPrice[1].per}</p>
+                                <p>{askingPrice[11].per}</p>
                             </div>
                         </div>
                         <div className="buy-box">
                             <div className="buy-left">
-                                <p>{askingPrice[2].usd}</p>
-                                <p>{askingPrice[2].krw}</p>
+                                <p>{askingPrice[12].usd}</p>
+                                <p>{askingPrice[12].krw}</p>
                             </div>
                             <div className="buy-right">
-                                <p>{askingPrice[2].per}</p>
+                                <p>{askingPrice[12].per}</p>
                             </div>
                         </div>
                         <div className="buy-box">
                             <div className="buy-left">
-                                <p>{askingPrice[3].usd}</p>
-                                <p>{askingPrice[3].krw}</p>
+                                <p>{askingPrice[13].usd}</p>
+                                <p>{askingPrice[13].krw}</p>
                             </div>
                             <div className="buy-right">
-                                <p>{askingPrice[3].per}</p>
+                                <p>{askingPrice[13].per}</p>
                             </div>
                         </div>
                         <div className="buy-box">
                                 <div className="buy-left">
-                                <p>{askingPrice[4].usd}</p>
-                                <p>{askingPrice[4].krw}</p>
+                                <p>{askingPrice[14].usd}</p>
+                                <p>{askingPrice[14].krw}</p>
                             </div>
                             <div className="buy-right">
-                                <p>{askingPrice[4].per}</p>
+                                <p>{askingPrice[14].per}</p>
                             </div>
                         </div>
                         <div className="buy-box">
                             <div className="buy-left">
-                                <p>{askingPrice[5].usd}</p>
-                                <p>{askingPrice[5].krw}</p>
+                                <p>{askingPrice[15].usd}</p>
+                                <p>{askingPrice[15].krw}</p>
                             </div>
                                 <div className="buy-right">
-                                <p>{askingPrice[5].per}</p>
+                                <p>{askingPrice[15].per}</p>
                             </div>
                         </div>
                         <div className="buy-box">
                             <div className="buy-left">
-                                <p>{askingPrice[6].usd}</p>
-                                <p>{askingPrice[6].krw}</p>
+                                <p>{askingPrice[16].usd}</p>
+                                <p>{askingPrice[16].krw}</p>
                             </div>
                             <div className="buy-right">
-                                <p>{askingPrice[6].per}</p>
+                                <p>{askingPrice[16].per}</p>
                             </div>
                         </div>
                         <div className="buy-box">
                             <div className="buy-left">
-                                <p>{askingPrice[7].usd}</p>
-                                <p>{askingPrice[7].krw}</p>
+                                <p>{askingPrice[17].usd}</p>
+                                <p>{askingPrice[17].krw}</p>
                             </div>
                             <div className="buy-right">
-                                <p>{askingPrice[7].per}</p>
+                                <p>{askingPrice[17].per}</p>
                             </div>
                         </div>
                         <div className="buy-box">
                             <div className="buy-left">
-                                <p>{askingPrice[8].usd}</p>
-                                <p>{askingPrice[8].krw}</p>
+                                <p>{askingPrice[18].usd}</p>
+                                <p>{askingPrice[18].krw}</p>
                             </div>
                             <div className="buy-right">
-                                <p>{askingPrice[8].per}</p>
+                                <p>{askingPrice[18].per}</p>
                             </div>
                         </div>
                         <div className="buy-box">
                             <div className="buy-left">
-                                <p>{askingPrice[9].usd}</p>
-                                <p>{askingPrice[9].krw}</p>
+                                <p>{askingPrice[19].usd}</p>
+                                <p>{askingPrice[19].krw}</p>
                             </div>
                             <div className="buy-right">
-                                <p>{askingPrice[9].per}</p>
+                                <p>{askingPrice[19].per}</p>
                             </div>
                         </div>
                     </div>
@@ -288,29 +288,40 @@ function Order(props) {
                         <input type="password" placeholder="비밀번호"/>
                     </div>
 
-                    <dl className="order-input">
-                        <dt>종류</dt>
-                        <dd>
-                            <Select buy={buy} defaultValue={buy[0]} isClearable />
-                            <input type="checkbox"/> 미수
-                        </dd>
-                        <dt>수량(1주)</dt>
-
-                        <dd>
-                            <button>-</button><input type="number"></input><button>+</button>
-                            <Select buyCan={buyCan} defaultValue={buyCan[5]} isClearable />
-                        </dd>
-                        
-                        <dt>가격(USD)</dt>
-                        <dd>
-                            <button>-</button>{askingPrice[4].usd}<button>+</button>
-                        </dd>
-                        
-                        <dt>가격(KRW)</dt>
-                        <dd>
-                            <button>-</button>{askingPrice[4].usd}<button>+</button>
-                        </dd>
-                    </dl>
+                    <div className="order-input">
+                        <dl className="order-input-type">
+                            <dt>종류</dt>
+                            <dd>
+                                <Select buy={buy} defaultValue={buy[0]} isClearable />
+                                <label>
+                                    <input type="checkbox" />
+                                    미수
+                                </label>
+                            </dd>
+                        </dl>
+                        <dl className="order-input-vol">
+                            <dt>수량(1주)</dt>
+                            <dd>
+                                <button>-</button><input type="number"></input><button>+</button>
+                                <div className="order-input-can-btn">
+                                    <Select buyCan={buyCan} defaultValue={buyCan[5]} isClearable />
+                                    <button>미리 계산</button>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl className="order-input-usd">
+                            <dt>가격(USD)</dt>
+                            <dd>
+                                <button>-</button>{askingPrice[4].usd}<button>+</button>
+                            </dd>
+                        </dl>
+                        <dl className="order-input-krw">
+                            <dt>가격(KRW)</dt>
+                            <dd>
+                                <button>-</button>{askingPrice[4].usd}<button>+</button>
+                            </dd>
+                        </dl>
+                    </div>
 
                     <div className="exchange-rate">
                         <div className="ex-top">

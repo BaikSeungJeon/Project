@@ -136,8 +136,9 @@
 /* section2 */
 .section2 {
     background-color: rgb(233, 233, 233);
-    padding: 20px 5px;
-    height: 100vh;
+    padding: 25px 5px;
+    /* height: 100vh; */ /* 812짜리에 100vh 줘서 812px만큼 또 생겼네 */
+    
 }
 .sec2-hd {
     display: flex;
