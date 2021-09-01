@@ -279,66 +279,73 @@ function Order(props) {
                     </div>
                 </div>
 
-                    <div className="order-tab">
+                <div className="order-tab">
+                    <div className="order-select-account">
                         <Select account={account} defaultValue={account[0]} isClearable />
-                        <div className="order-pw">
-                            <button> 설정 </button>
-                            <input type="password" placeholder="비밀번호"/>
+                    </div>
+                    <div className="order-pw">
+                        <button> 설정 </button>
+                        <input type="password" placeholder="비밀번호"/>
+                    </div>
+
+                    <dl className="order-input">
+                        <dt>종류</dt>
+                        <dd>
+                            <Select buy={buy} defaultValue={buy[0]} isClearable />
+                            <input type="checkbox"/> 미수
+                        </dd>
+                        <dt>수량(1주)</dt>
+
+                        <dd>
+                            <button>-</button><input type="number"></input><button>+</button>
+                            <Select buyCan={buyCan} defaultValue={buyCan[5]} isClearable />
+                        </dd>
+                        
+                        <dt>가격(USD)</dt>
+                        <dd>
+                            <button>-</button>{askingPrice[4].usd}<button>+</button>
+                        </dd>
+                        
+                        <dt>가격(KRW)</dt>
+                        <dd>
+                            <button>-</button>{askingPrice[4].usd}<button>+</button>
+                        </dd>
+                    </dl>
+
+                    <div className="exchange-rate">
+                        <div className="ex-top">
+                            <div>
+                                환율
+                            </div>
+                            <div>
+                                $
+                            </div>
+                            <div>
+                                0.0000
+                            </div>
                         </div>
 
-                        <dl className="order-input">
-                            <dt>종류</dt>
-                            <dd>
-                                <Select buy={buy} defaultValue={buy[0]} isClearable />
-                                <input type="checkbox"/> 미수
-                            </dd>
-                            <dt>수량(1주)</dt>
-                            <dd>
-                                <button>-</button><input type="number"></input><button>+</button>
-                                <Select buyCan={buyCan} defaultValue={buyCan[5]} isClearable />
-                            </dd>
-                            <dt>가격(USD)</dt>
-                            <dd>
-                                <button>-</button>{askingPrice[4].usd}<button>+</button>
-                            </dd>
-                            <dt>가격(KRW)</dt>
-                            <dd>
-                                <button>-</button>{askingPrice[4].usd}<button>+</button>
-                            </dd>
-                        </dl>
-                        <div className="exchange-rate">
-                            <div className="ex-top">
-                                <div>
-                                    환율
-                                </div>
-                                <div>
-                                    $
-                                </div>
-                                <div>
-                                    0.0000
-                                </div>
+                        <div className="ex-btm">
+                            <div>
+                                1,167.00
                             </div>
-                            <div className="ex-btm">
-                                <div>
-                                    1,167.00
-                                </div>
-                                <div>
-                                    ￦
-                                </div>
-                                <div>
-                                    0
-                                </div>
+                            <div>
+                                ￦
+                            </div>
+                            <div>
+                                0
                             </div>
                         </div>
                     </div>
+                </div>
             </div>
 
-            <ul className="order-btn">
+            <ul className="order-btn-bar">
                     <li>안내</li>
                     <li>잔고</li>
-                        <li>환전</li>
-                        <li>주문번호</li>
-                        <li>매수 주문</li>
+                    <li>환전</li>
+                    <li>주문번호</li>
+                    <li>매수 주문</li>
                 </ul>
         </div>
     )

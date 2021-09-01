@@ -227,20 +227,16 @@
     flex-direction: row;
     margin: 0;
     padding: 0;
-    padding-top: 10px;
     width: 100%;
-    height: 70%;
+    height: 100%;
 }
 .asking-price {
     width: 40%; /* 호가창 40%만 주기 */
     border: 1px solid #eee;
     padding-right: 1px;
 }
-.order-tab {
-    width: 59%; /* 주문창 59%*/
-    padding-left: 10px;
-}
 .ap-chart {
+    height: 11%;
     text-align: center;
 }
 .ap-chart img {
@@ -272,7 +268,7 @@
     overflow: auto;
 }
 .sell-box {
-    background-color: rgb(230, 241, 255);
+    background-color: rgb(238, 245, 255);
     display: flex;
     flex-direction: row;
     margin: 2px 0;
@@ -297,7 +293,7 @@
     font-size: 11px;
 }
 .buy-box {
-    background-color: rgb(255, 234, 234);
+    background-color: rgb(255, 242, 242);
     display: flex;
     flex-direction: row;
     margin: 2px 0;
@@ -309,7 +305,7 @@
 }
 .buy-box p {
     font-size: 16px;
-    color: #d13f81;
+    color: #385ad8;
     font-weight: 700;
 }
 .buy-box p:nth-of-type(2) {
@@ -323,4 +319,71 @@
 .buy-right p {
     font-size: 11px;
     line-height: 30px;
+}
+
+/* order input과 button */
+.order-tab {
+    width: 60%; /* 주문창 60%*/
+    padding: 10px;
+}
+.order-select-account {
+    margin-bottom: 10px;
+}
+.order-pw {
+    display: flex;
+    flex-direction: row;
+}
+.order-pw button {
+    width: 30%;
+    border: 1px solid #385ad8;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    color: #385ad8;
+}
+.order-pw input {
+    width: 70%;
+}
+
+
+
+
+
+
+/* order 하단 매수 주문 버튼 바 */
+.order-btn-bar {
+    width: 100%;
+    height: 40px; /* height를 50px 줄 건데, padding 위 아래 5px 주고 높이는 40px로 줘서 맞추기 */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: fixed; /* 매매 시 멋대로 움직이면 안되니까 고정시켜 주기 */
+    bottom: 80px; /* bottom으로부터 80px 띄우기 */
+    background-color: #e9b7ce;
+    margin: 0; /* 여백 제거 */
+    padding: 5px 0; /* 위 아래 5px padding 줘서 합 10px 주기 */
+    line-height: 30px; /* height 40 - padding 10 = 30px 주기 */
+}
+.order-btn-bar li {
+    padding: 0 8px;
+    color: rgb(84, 84, 131);
+    border: 2px solid rgb(84, 84, 131);
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+}
+.order-btn-bar li:nth-of-type(4) {
+    padding: 0 12px;
+    color: #999;
+    border: 2px solid #ccc;
+    background-color: #eee;
+}
+.order-btn-bar li:nth-of-type(5) {
+    padding: 0 18px;
+    color: #fff;
+    border: none;
+    background-color: rgb(228, 81, 154);
+    font-size: 17px;
+    font-weight: 700;
+    
 }
