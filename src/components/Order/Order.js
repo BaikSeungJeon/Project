@@ -12,27 +12,7 @@ import './Order.css';
 
 
 function Order(props) {
-
-    // const account = useMemo(
-    //     () => [
-    //         { value : "acount1", label : "1234-5678[종합]" },
-    //         { value : "acount2", label : "1357-2468[주식]" },
-    //     ],[]);
-    // const buy = useMemo(
-    //     () => [
-    //         { value : "buy1", label : "지정가"},
-    //         { value : "buy2", label : "시장가"},
-    //         { value : "buy3", label : "LOC"},
-    //     ], []);
-    // const buyCan = useMemo(
-    //     () => [
-    //         { value : "10%", label : "10%" },
-    //         { value : "25%", label : "25%" },
-    //         { value : "50%", label : "50%" },
-    //         { value : "75%", label : "75%" },
-    //         { value : "90%", label : "90%" },
-    //         { value : "100%", label : "전부" },
-    //     ],[]);    
+   
     let [price, priceChange] = useState(Price);
     let [askingPrice, askingPriceChange] = useState(AskingPrice); /* 호가, 호가 변경 state 해 오기*/
 
@@ -281,7 +261,6 @@ function Order(props) {
 
                 <div className="order-tab">
                     <div className="order-select-account">
-                        {/* <Select account={account} defaultValue={account[0]} isClearable /> */}
                         <select defaultValue="1234-5678[종합]">
                             <option value="1">1234-5678[종합]</option>
                             <option value="2">1357-2468[주식]</option>
@@ -296,23 +275,22 @@ function Order(props) {
                         <dl className="order-input-type">
                             <dt>종류</dt>
                             <dd>
-                                {/* <Select buy={buy} defaultValue={buy[0]} isClearable /> */}
                                 <select defaultValue="지정가">
                                     <option value="3">지정가</option>
                                     <option value="4">시장가</option>
                                     <option value="5">LOC</option>
                                 </select>
-                                <input type="order-input-checkbox" />
+                                <input type="checkbox" />
                                 미수
                                 
                             </dd>
                         </dl>
                         <dl className="order-input-vol">
-                            <dt>수량(1주)</dt>
+                            <dt>수량<br/>(1주)</dt>
                             <dd>
                                 <button>-</button><input type="number"></input><button>+</button>
                                 <div className="order-input-can-btn">
-                                    {/* <Select buyCan={buyCan} defaultValue={buyCan[5]} isClearable /> */}
+                                    
                                     <select defaultValue="가능">
                                         <option>25%</option>
                                         <option>50%</option>
