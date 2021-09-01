@@ -282,15 +282,14 @@ function Order(props) {
                                 </select>
                                 <input type="checkbox" />
                                 미수
-                                
                             </dd>
                         </dl>
                         <dl className="order-input-vol">
-                            <dt>수량<br/>(1주)</dt>
+                            <dt>수량</dt>
                             <dd>
                                 <button>-</button><input type="number"></input><button>+</button>
+
                                 <div className="order-input-can-btn">
-                                    
                                     <select defaultValue="가능">
                                         <option>25%</option>
                                         <option>50%</option>
@@ -298,20 +297,24 @@ function Order(props) {
                                         <option>100%</option>
                                         <option>가능</option>
                                     </select>
-                                    <button>미리 계산</button>
+                                    <button>계산</button>
                                 </div>
                             </dd>
                         </dl>
                         <dl className="order-input-usd">
                             <dt>가격(USD)</dt>
                             <dd>
-                                <button>-</button>{askingPrice[4].usd}<button>+</button>
+                                <button>-</button>
+                                <input type="number" defaultValue="148.4300"/>
+                                <button>+</button>
                             </dd>
                         </dl>
                         <dl className="order-input-krw">
                             <dt>가격(KRW)</dt>
                             <dd>
-                                <button>-</button>{askingPrice[4].usd}<button>+</button>
+                                <button>-</button>
+                                <input type="number" defaultValue="173,136"/>
+                                <button>+</button>
                             </dd>
                         </dl>
                     </div>

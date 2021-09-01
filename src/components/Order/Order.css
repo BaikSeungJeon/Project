@@ -346,7 +346,7 @@
 }
 .order-select-account select {
     width: 100%;
-    border: 1px solid #999;
+    border: 1px solid #ccc;
     font-size: 14px;
     height: 30px;
     line-height: 30px;
@@ -368,7 +368,7 @@
 }
 .order-pw input {
     width: 70%;
-    border: 1px solid #999;
+    border: 1px solid #ccc;
 }
 
 /* 지정가 등 종류 */
@@ -379,6 +379,7 @@
 .order-input dt {
     width: 25%;
     text-align: left;
+    font-size: 12px;
 }
 .order-input dd {
     width: 71%; /* 위에 비밀번호 input이랑 사이즈 맞추기 */
@@ -407,7 +408,7 @@
 .order-input-type dd select {
     width: 70%;
     height: 30px;
-    border: 1px solid #999;
+    border: 1px solid #ccc;
     font-size: 12px; /* 지정가 font size */
 }
 .order-input-type dd input {
@@ -419,38 +420,114 @@
 .order-input-vol {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 .order-input-vol dt {
     line-height: 38px;
     text-align: left;
 }
+.order-input-vol dd {
+    margin: 0;
+    padding: 0;
+}
 .order-input-vol input {
-    width: 50%;
+    width: 70%;
     height: 30px; /* order - input 박스 통일 height */
     border: 1px solid #ccc;
+    border-left: none; /* 수량 + - 사이 겹치는 부분 일정한 두께 주는 디테일함 */
+    border-right: none; /* 수량 + - 사이 겹치는 부분 일정한 두께 주는 디테일함 */
 }
-.order-input-vol dd button {
+.order-input-vol dd>button {
     width: 15%;
+    height: 30px;
     border: 1px solid #ccc;
     color: #999;
-    font-size: 18px;
+    font-size: 13px;
     font-weight: 700;
 }
+
+/* input 수량 밑에 가능 */
 .order-input-can-btn {
-    width: 165px;
     margin-top: 10px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
-.order-input-can-btn button {
-    width: 40px;
+.order-input-can-btn select {
+    width: 50%;
+    border: 1px solid #ccc;
+}
+.order-input-can-btn>button {
+    width: 40%;
     height: 30px;
-    font-size: 8px;
+    padding: 0 32px;
+    background-color: #fff;
+    border: 1px solid #495faf;
+    color: #495faf;
+    text-align: left;
 }
 
 /* order input usd 가격 */
-/* order input usd 가격 */
+.order-input-usd {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.order-input-usd dt {
+    text-align: left;
+}
+.order-input-usd dd {
+    display: flex;
+    flex-direction: row;
+}
+.order-input-usd dd input {
+    width: 70%;
+    height: 30px;
+    background-color: #f5f2c9;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-right: none;
+    line-height: 30px;
+    text-align: center;
+    color: #143776;
+    font-weight: 700;
+}
+.order-input-usd dd button {
+    width: 15%;
+    height: 30px;
+    border: 1px solid #ccc;
+}
 
+/* order input krw 가격 */
+.order-input-krw {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.order-input-krw dt {
+    text-align: left;
+}
+.order-input-krw dd {
+    display: flex;
+    flex-direction: row;
+}
+.order-input-krw dd input {
+    width: 70%;
+    height: 30px;
+    background-color: #f5f2c9;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-right: none;
+    line-height: 30px;
+    text-align: center;
+    color: #143776;
+    font-weight: 700;
+}
+.order-input-krw dd button {
+    width: 15%;
+    height: 30px;
+    border: 1px solid #ccc;
+}
 
 
 
