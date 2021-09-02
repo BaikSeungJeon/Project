@@ -287,12 +287,11 @@ a {
 
 /* timeline */
 #sec4 {
-    height: 700vh;
+    height: 490vh; /* 7개 * 70vh */
     position: relative;
 }
 .timeline {
     scroll-snap-type: y mandatory;
-    height: 100vh;
 }
 .timeline h1 {
     font-weight: 700;
@@ -302,13 +301,13 @@ a {
 }
 .timeline-tistory {
     /* tistory */
-    height: 100vh;
+    height: 70vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 .project-tistory-img {
-    width: 30%; /* vw에서 % 단위로 변경 */ /* 풀 페이지 너무 커서 30% 30%씩 주기 */
+    width: 40%; /* vw에서 % 단위로 변경 */ /* 풀 페이지 너무 커서 30% 30%씩 주기 */
 }
 .project-tistory-img>img {
     width: 100%; /* 이미지 꽉 채우기 */
@@ -356,13 +355,13 @@ a {
     /* timeline - 티스토리 */
 
 .timeline-underarmour {
-    height: 100vh;
+    height: 70vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 .project-underarmour-img {
-    width: 30%;
+    width: 40%;
 }
 .project-underarmour-img>img {
     width: 100%;
@@ -409,13 +408,13 @@ a {
 /* timeline - 언더아머 */
 
 .timeline-github {
-    height: 100vh;
+    height: 70vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 .project-github-img {
-    width: 30%;
+    width: 40%;
 }
 .project-github-img>img {
     width: 100%;
@@ -462,13 +461,13 @@ a {
 /* timeline - 깃허브 */
 
 .timeline-rwd {
-    height: 100vh;
+    height: 70vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 .project-rwd-img {
-    width: 30%;
+    width: 40%;
 }
 .project-rwd-img>img {
     width: 100%;
@@ -515,14 +514,13 @@ a {
 /* timeline - 반응형 */
 
 .timeline-js {
-    height: 100vh;
+    height: 70vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 .project-js-img {
-    width: 30%;
-    text-align: center;
+    width: 40%;
 }
 .project-js-img>img {
     width: 100%; /* 이미지가 프로젝트 설명과 많이 붙어서 살짝 작게 줌 */
@@ -578,14 +576,14 @@ a {
 
 
 .timeline-react {
-    height: 100vh;
+    height: 70vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 .project-react-img {
-    width: 30%;
-    text-align: center;
+    width: 40%;
+    text-align: right;
 }
 .project-react-img>img {
     width: 50%;
@@ -633,13 +631,13 @@ a {
 /* timeline - 리액트 */
 
 .timeline-portfolio {
-    height: 100vh;
+    height: 70vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 .project-portfolio-img {
-    width: 30%;
+    width: 40%;
 }
 .project-portfolio-img>img {
     width: 100%;
