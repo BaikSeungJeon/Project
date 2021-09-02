@@ -262,7 +262,7 @@
 }
 .ap-box {
     width: 100%;
-    height: 80%;
+    height: 75%;
     overflow: auto;
 }
 .sell-box {
@@ -344,7 +344,7 @@
 .order-select-account {
     margin-bottom: 10px; /* 아래 여백 */
 }
-.order-select-account select {
+.order-select-account>select {
     width: 100%;
     border: 1px solid #ccc;
     font-size: 14px;
@@ -359,14 +359,14 @@
     height: 30px;
     font-size: 12px; /* placeholder font size 작게 */
 }
-.order-pw button {
+.order-pw>input:nth-of-type(1) {
     width: 25%;
     border: 1px solid #495faf;
     background-color: #fff;
     font-size: 15px;
     color: #495faf;
 }
-.order-pw input {
+.order-pw>input:nth-of-type(2) {
     width: 70%;
     border: 1px solid #ccc;
 }
@@ -430,14 +430,22 @@
     margin: 0;
     padding: 0;
 }
-.order-input-vol input {
+.order-input-vol dd>input:nth-of-type(1) {
+    width: 15%;
+    height: 30px;
+    border: 1px solid #ccc;
+    color: #999;
+    font-size: 13px;
+    font-weight: 700;
+}
+.order-input-vol dd>input:nth-of-type(2) {
     width: 70%;
     height: 30px; /* order - input 박스 통일 height */
     border: 1px solid #ccc;
     border-left: none; /* 수량 + - 사이 겹치는 부분 일정한 두께 주는 디테일함 */
     border-right: none; /* 수량 + - 사이 겹치는 부분 일정한 두께 주는 디테일함 */
 }
-.order-input-vol dd>button {
+.order-input-vol dd>input:nth-of-type(3) {
     width: 15%;
     height: 30px;
     border: 1px solid #ccc;
@@ -457,14 +465,14 @@
     width: 50%;
     border: 1px solid #ccc;
 }
-.order-input-can-btn>button {
+.order-input-can-btn input {
     width: 40%;
     height: 30px;
     padding: 0 32px;
     background-color: #fff;
     border: 1px solid #495faf;
     color: #495faf;
-    text-align: left;
+    
 }
 
 /* order input usd 가격 */
@@ -480,7 +488,12 @@
     display: flex;
     flex-direction: row;
 }
-.order-input-usd dd input {
+.order-input-usd dd>input:nth-of-type(1) {
+    width: 15%;
+    height: 30px;
+    border: 1px solid #ccc;
+}
+.order-input-usd dd>input:nth-of-type(2) {
     width: 70%;
     height: 30px;
     background-color: #f5f2c9;
@@ -492,7 +505,7 @@
     color: #143776;
     font-weight: 700;
 }
-.order-input-usd dd button {
+.order-input-usd dd>input:nth-of-type(3) {
     width: 15%;
     height: 30px;
     border: 1px solid #ccc;
@@ -511,7 +524,12 @@
     display: flex;
     flex-direction: row;
 }
-.order-input-krw dd input {
+.order-input-krw dd>input:nth-of-type(1) {
+    width: 15%;
+    height: 30px;
+    border: 1px solid #ccc;
+}
+.order-input-krw dd>input:nth-of-type(2) {
     width: 70%;
     height: 30px;
     background-color: #f5f2c9;
@@ -523,7 +541,7 @@
     color: #143776;
     font-weight: 700;
 }
-.order-input-krw dd button {
+.order-input-krw dd>input:nth-of-type(3) {
     width: 15%;
     height: 30px;
     border: 1px solid #ccc;
@@ -605,7 +623,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     position: fixed; /* 매매 시 멋대로 움직이면 안되니까 고정시켜 주기 */
-    bottom: 80px; /* bottom으로부터 80px 띄우기 */
+    top: 692px; /* top으로부터 692px 띄우기 */
     background-color: #e9b7ce;
     margin: 0; /* 여백 제거 */
     padding: 5px 0; /* 위 아래 5px padding 줘서 합 10px 주기 */

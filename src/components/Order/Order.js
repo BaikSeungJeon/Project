@@ -12,7 +12,7 @@ import './Order.css';
 
 
 function Order(props) {
-   
+    
     let [price, priceChange] = useState(Price);
     let [askingPrice, askingPriceChange] = useState(AskingPrice); /* 호가, 호가 변경 state 해 오기*/
 
@@ -267,7 +267,7 @@ function Order(props) {
                         </select>
                     </div>
                     <div className="order-pw">
-                        <button> 설정 </button>
+                        <input type="button" value="설정" />
                         <input type="password" placeholder="비밀번호"/>
                     </div>
 
@@ -287,7 +287,9 @@ function Order(props) {
                         <dl className="order-input-vol">
                             <dt>수량</dt>
                             <dd>
-                                <button>-</button><input type="number"></input><button>+</button>
+                                <input type="button" value="-" />
+                                <input type="number"></input>
+                                <input type="button" value="+" />
 
                                 <div className="order-input-can-btn">
                                     <select defaultValue="가능">
@@ -297,24 +299,24 @@ function Order(props) {
                                         <option>100%</option>
                                         <option>가능</option>
                                     </select>
-                                    <button>계산</button>
+                                    <input type="button" value="가능"/> 
                                 </div>
                             </dd>
                         </dl>
                         <dl className="order-input-usd">
                             <dt>가격(USD)</dt>
                             <dd>
-                                <button>-</button>
+                                <input type="button" value="-" />
                                 <input type="number" defaultValue="148.4300"/>
-                                <button>+</button>
+                                <input type="button" value="+" />
                             </dd>
                         </dl>
                         <dl className="order-input-krw">
                             <dt>가격(KRW)</dt>
                             <dd>
-                                <button>-</button>
+                                <input type="button" value="-" />
                                 <input type="number" defaultValue="173,136"/>
-                                <button>+</button>
+                                <input type="button" value="+" />
                             </dd>
                         </dl>
                     </div>

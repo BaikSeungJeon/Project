@@ -5,6 +5,7 @@
   height: 812px;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 li {
   list-style: none;
