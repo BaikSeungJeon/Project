@@ -40,7 +40,7 @@ a {
     z-index: 999; /* 우선 순위 */
 }
 .gnb {
-    font-weight: 800;
+    font-weight: 700;
     display: flex;
     flex-direction: row;
 }
@@ -56,7 +56,7 @@ a {
     position: relative;
 }
 .introduce {
-    text-align: center;
+    text-align: center; /* 가로 가운데 정렬 */
     position: absolute; /* 여기서부터 중앙 배치 */
     top: 50%;
     left: 50%;
@@ -65,7 +65,7 @@ a {
 .introduce h1 {
     font-weight: 700;
     font-size: 48px;
-    margin: auto;
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -96,11 +96,10 @@ a {
 }
 .photo {
     width: 450px; /* 사진 크기는 안 변하니 고정값 450px */
-    border-radius: 10px;
 }
 .photo img {
     width: 100%; /* 사진 부모 박스에 다 채우기 */
-    border-radius: 10px;
+    border-radius: 20px;
 }
 .information {
     padding-left: 50px;
@@ -145,33 +144,30 @@ a {
     justify-content: center;
 }
 .skills-left {
-    width: 50%; 
-    box-sizing: border-box;
+    width: 40%;
 }
 .skills-left h3 {
-    font-weight: 800;
+    font-weight: 700;
     color: #333;
     width: 150px;
-    /* border-bottom: 2px solid red; */
     letter-spacing: 5px;
     cursor: pointer;
     transition: 0.2s;
     margin-left: 20px;
 }
-/* .skills-left h3:hover {
-    color: red;
-} */
 .developer {
     width: 100%;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row wrap; /* 자격증 section은 flex-flow 사용 */
+    justify-content: start;
+    margin: 0;
+    padding: 0;
 }
 .developer li {
     width: 60px;
     height: 127px;
     padding: 10px;
-    /* border: 1px solid #333; */ /* 보더 지우고 쉐도우 넣기 */
-    box-shadow: 1px 1px 5px 1px #ccc;
+    box-shadow: 1px 1px 5px 1px #777;
     border-radius: 20px;
     margin: 0 20px 20px 0;
     cursor: pointer;
@@ -192,13 +188,12 @@ a {
     text-align: center;
 }
 .skills-right {
-    width: 50%;
-    box-sizing: border-box;
+    width: 40%;
     display: flex;
     flex-direction: column;
 }
 .skills-right-top h3 {
-    font-weight: 800;
+    font-weight: 700;
     color: #333;
     width: 200px;
     letter-spacing: 5px;
@@ -207,7 +202,7 @@ a {
     margin-left: 20px;
 }
 .skills-right-btm h3 {
-    font-weight: 800;
+    font-weight: 700;
     color: #333;
     width: 120px;
     letter-spacing: 5px;
@@ -215,24 +210,19 @@ a {
     transition: 0.2s;
     margin-left: 20px;
 }
-/* .skills-right-top h3:hover {
-    color: blue;
-}
-.skills-right-btm h3:hover {
-    color: green;
-} */
 .communicator {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: start;
+    margin: 0;
+    padding: 0;
 }
 .communicator li {
     width: 60px;
     height: 127px;
     padding: 10px;
-    /* border: 1px solid #333; */ /* 보더 지우고 쉐도우 넣기 */
-    box-shadow: 1px 1px 5px 1px #ccc;
+    box-shadow: 1px 1px 5px 1px #777;
     border-radius: 20px;
     margin: 0 20px 20px 0;
     cursor: pointer;
@@ -258,13 +248,14 @@ a {
     display: flex;
     flex-flow: row wrap;
     justify-content: start;
+    margin: 0;
+    padding: 0;
 }
 .license li {
     width: 60px;
     height: 127px;
     padding: 10px;
-    /* border: 1px solid #333; */ /* 보더 지우고 쉐도우 넣기 */
-    box-shadow: 1px 1px 5px 1px #ccc;
+    box-shadow: 1px 1px 5px 1px #777;
     border-radius: 20px;
     margin: 0 20px 20px 0;
     cursor: pointer;
@@ -287,7 +278,7 @@ a {
 
 /* timeline */
 #sec4 {
-    height: 490vh; /* 7개 * 70vh */
+    height: 420vh; /* 7개 * 60vh */
     position: relative;
 }
 .timeline {
@@ -301,7 +292,7 @@ a {
 }
 .timeline-tistory {
     /* tistory */
-    height: 70vh;
+    height: 60vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -321,16 +312,19 @@ a {
     margin: 0;
     padding: 0; /* 제목의 여백 제거 */
 }
+.project-tistory-skills-since p {
+    font-weight: 700;
+}
 .project-tistory-skills-top {
     display: flex;
-    flex-flow: row nowrap;
+    flex-direction: row;
     justify-content: start;
     height: 60px;
 }
 .project-tistory-skills-top p {
-    font-size: 18px;
     font-weight: 700;
     margin: 0;
+    padding: 0;
     line-height: 60px;
 }
 .project-tistory-skills-top img {
@@ -338,7 +332,7 @@ a {
 }
 .project-tistory-skills-btm {
     display: flex;
-    flex-flow: row nowrap;
+    flex-direction: row;
     height: 60px;
 }
 .project-tistory-skills-btm p {
@@ -355,7 +349,7 @@ a {
     /* timeline - 티스토리 */
 
 .timeline-underarmour {
-    height: 70vh;
+    height: 60vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -375,9 +369,12 @@ a {
     margin: 0;
     padding: 0; /* 제목의 여백 제거 */
 }
+.project-underarmour-skills-since p {
+    font-weight: 700;
+}
 .project-underarmour-skills-top {
     display: flex;
-    flex-flow: row nowrap;
+    flex-direction: row;
     justify-content: start;
     height: 60px;
 }
@@ -392,7 +389,7 @@ a {
 }
 .project-underarmour-skills-btm {
     display: flex;
-    flex-flow: row nowrap;
+    flex-direction: row;
     height: 60px;
 }
 .project-underarmour-skills-btm p {
@@ -408,7 +405,7 @@ a {
 /* timeline - 언더아머 */
 
 .timeline-github {
-    height: 70vh;
+    height: 60vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -428,9 +425,12 @@ a {
     margin: 0;
     padding: 0; /* 제목의 여백 제거 */
 }
+.project-github-skills-since p {
+    font-weight: 700;
+}
 .project-github-skills-top {
     display: flex;
-    flex-flow: row nowrap;
+    flex-direction: row;
     justify-content: start;
     height: 60px;
 }
@@ -445,7 +445,7 @@ a {
 }
 .project-github-skills-btm {
     display: flex;
-    flex-flow: row nowrap;
+    flex-direction: row;
     height: 60px;
 }
 .project-github-skills-btm p {
@@ -461,7 +461,7 @@ a {
 /* timeline - 깃허브 */
 
 .timeline-rwd {
-    height: 70vh;
+    height: 60vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -481,9 +481,12 @@ a {
     margin: 0;
     padding: 0; /* 제목의 여백 제거 */
 }
+.project-rwd-skills-since p {
+    font-weight: 700;
+}
 .project-rwd-skills-top {
     display: flex;
-    flex-flow: row nowrap;
+    flex-direction: row;
     justify-content: start;
     height: 60px;
 }
@@ -498,7 +501,7 @@ a {
 }
 .project-rwd-skills-btm {
     display: flex;
-    flex-flow: row nowrap;
+    flex-direction: row;
     height: 60px;
 }
 .project-rwd-skills-btm p {
@@ -514,16 +517,17 @@ a {
 /* timeline - 반응형 */
 
 .timeline-js {
-    height: 70vh;
+    height: 60vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 .project-js-img {
     width: 40%;
+    text-align: center; /* 살짝 이미지 작게 주고 가로 가운데 정렬 */
 }
 .project-js-img>img {
-    width: 100%; /* 이미지가 프로젝트 설명과 많이 붙어서 살짝 작게 줌 */
+    width: 90%; /* 이미지가 프로젝트 설명과 많이 붙어서 살짝 작게 줌 */
 }
 .project-js-content {
     width: 30%;
@@ -534,9 +538,12 @@ a {
     margin: 0;
     padding: 0; /* 제목의 여백 제거 */
 }
+.project-js-skills-since p {
+    font-weight: 700;
+}
 .project-js-skills-top {
     display: flex;
-    flex-flow: row nowrap;
+    flex-direction: row;
     justify-content: start;
     height: 60px;
 }
@@ -551,8 +558,7 @@ a {
 }
 .project-js-skills-btm {
     display: flex;
-    flex-flow: column nowrap;
-    height: 60px;
+    flex-direction: row;
 }
 .project-js-skills-btm p {
     font-size: 18px;
@@ -576,17 +582,17 @@ a {
 
 
 .timeline-react {
-    height: 70vh;
+    height: 60vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 .project-react-img {
     width: 40%;
-    text-align: right;
+    text-align: center;
 }
 .project-react-img>img {
-    width: 50%;
+    width: 45%;
     
 }
 .project-react-content {
@@ -598,9 +604,12 @@ a {
     margin: 0;
     padding: 0; /* 제목의 여백 제거 */
 }
+.project-react-skills-since p {
+    font-weight: 700;
+}
 .project-react-skills-top {
     display: flex;
-    flex-flow: row nowrap;
+    flex-direction: row;
     justify-content: start;
     height: 60px;
 }
@@ -615,7 +624,7 @@ a {
 }
 .project-react-skills-btm {
     display: flex;
-    flex-flow: row nowrap;
+    flex-direction: row;
     height: 60px;
 }
 .project-react-skills-btm p {
@@ -631,7 +640,7 @@ a {
 /* timeline - 리액트 */
 
 .timeline-portfolio {
-    height: 70vh;
+    height: 60vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -651,9 +660,12 @@ a {
     margin: 0;
     padding: 0; /* 제목의 여백 제거 */
 }
+.project-portfolio-skills-since p {
+    font-weight: 700;
+}
 .project-portfolio-skills-top {
     display: flex;
-    flex-flow: row nowrap;
+    flex-direction: row;
     justify-content: start;
     height: 60px;
 }
@@ -668,7 +680,7 @@ a {
 }
 .project-portfolio-skills-btm {
     display: flex;
-    flex-flow: row nowrap;
+    flex-direction: row;
     height: 60px;
 }
 .project-portfolio-skills-btm p {
@@ -686,15 +698,47 @@ a {
 
 #sec5 {
     height: 100vh;
-    /* background-color: rgb(182, 211, 255); */
     position: relative;
+}
+.contact {
+    text-align: center; /* 가로 가운데 정렬 */
+    position: absolute; /* 여기서부터 중앙 배치 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 .contact h1 {
     font-weight: 700;
     font-size: 48px;
-    margin: auto;
+    margin: 0 auto;
+    margin-bottom: 50px; /* 여백 */
     text-align: center;
 }
+.contact p {
+    margin-bottom: 50px;
+}
+.contact-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.contact-email {
+    width: 45%;
+}
+.contact-email img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px 1px #777;
+}
+.contact-curriculum {
+    width: 45%;
+}
+.contact-curriculum img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px 1px #777;
+}
+
 
 /* top button */
 /* .top-btn {
@@ -713,5 +757,5 @@ a {
     }
     100% {
         bottom: 30px;
-    } */
-}
+    }
+}*/
