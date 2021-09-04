@@ -1,7 +1,8 @@
 @charset "utf-8";
 
 html {
-    scroll-behavior: smooth; /* 스크롤 이동 부드럽게 */
+    scroll-behavior: smooth;
+    /* scroll-snap-type: y mandatory;*/ /* 스크롤 스냅 */
 }
 body {
     color: #000; /*default #000 #fff 중에서 왔다갔다*/
@@ -9,13 +10,9 @@ body {
     font-weight: 400; /* deafault 400 700*/
     min-width: 1480px;
 }
-#wrap {
-    /* 스크롤 스냅 */
-    scroll-snap-type: y mandatory;
-}
 .section {
     display: block;
-    scroll-snap-align: center;
+    /* scroll-snap-align: start;*/ /* timeline의 start 부분부터 보여줘야 해서 */
 }
 .clear::after {
     content: "";
@@ -183,6 +180,8 @@ a {
     font-size: 12px;
     color: #333;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 /* communicator */
@@ -223,6 +222,8 @@ a {
     font-size: 12px;
     color: #333;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 /* license */
@@ -263,15 +264,14 @@ a {
     font-size: 11px;
     color: #333;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 /* timeline */
 #sec4 {
     height: 420vh; /* 7개 * 60vh */
     position: relative;
-}
-.timeline {
-    scroll-snap-type: y mandatory;
 }
 .timeline h1 {
     font-weight: 700;
@@ -281,13 +281,14 @@ a {
 }
 .timeline-tistory {
     /* tistory */
+    scroll-snap-align: start;
     height: 60vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 .project-tistory-img {
-    width: 40%; /* vw에서 % 단위로 변경 */ /* 풀 페이지 너무 커서 30% 30%씩 주기 */
+    width: 30%; /* vw에서 % 단위로 변경 */ /* 풀 페이지 너무 커서 30% 30%씩 주기 */
 }
 .project-tistory-img>img {
     width: 100%; /* 이미지 꽉 채우기 */
@@ -338,13 +339,14 @@ a {
     /* timeline - 티스토리 */
 
 .timeline-underarmour {
+    scroll-snap-align: start;
     height: 60vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 .project-underarmour-img {
-    width: 40%;
+    width: 30%;
 }
 .project-underarmour-img>img {
     width: 100%;
@@ -394,13 +396,14 @@ a {
 /* timeline - 언더아머 */
 
 .timeline-github {
+    scroll-snap-align: start;
     height: 60vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 .project-github-img {
-    width: 40%;
+    width: 30%;
 }
 .project-github-img>img {
     width: 100%;
@@ -450,13 +453,14 @@ a {
 /* timeline - 깃허브 */
 
 .timeline-rwd {
+    scroll-snap-align: start;
     height: 60vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 .project-rwd-img {
-    width: 40%;
+    width: 30%;
 }
 .project-rwd-img>img {
     width: 100%;
@@ -506,13 +510,14 @@ a {
 /* timeline - 반응형 */
 
 .timeline-js {
+    scroll-snap-align: start;
     height: 60vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 .project-js-img {
-    width: 40%;
+    width: 30%;
     text-align: center; /* 살짝 이미지 작게 주고 가로 가운데 정렬 */
 }
 .project-js-img>img {
@@ -571,13 +576,14 @@ a {
 
 
 .timeline-react {
+    scroll-snap-align: start;
     height: 60vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 .project-react-img {
-    width: 40%;
+    width: 30%;
     text-align: center;
 }
 .project-react-img>img {
@@ -629,13 +635,14 @@ a {
 /* timeline - 리액트 */
 
 .timeline-portfolio {
+    scroll-snap-align: start;
     height: 60vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 .project-portfolio-img {
-    width: 40%;
+    width: 30%;
 }
 .project-portfolio-img>img {
     width: 100%;
