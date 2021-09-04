@@ -9,6 +9,8 @@ body {
     font-size: 18px; /*default 18px 24px 48px*/
     font-weight: 400; /* deafault 400 700*/
     min-width: 1480px;
+    padding: 0;
+    margin: 0;
 }
 .section {
     display: block;
@@ -297,13 +299,21 @@ a {
     width: 30%; 
 }
 .project-tistory-title {
-    font-weight: 700;
-    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    border-bottom: 2px solid #000;
+    width: 350px;
+}
+.project-tistory-title h3 {
     margin: 0;
     padding: 0; /* 제목의 여백 제거 */
-}
-.project-tistory-skills-since p {
     font-weight: 700;
+    font-size: 24px; 
+}
+.project-tistory-title p {
+    font-size: 22px;
+    margin: 0 0 0 20px;
 }
 .project-tistory-skills-top {
     display: flex;
@@ -313,12 +323,9 @@ a {
 }
 .project-tistory-skills-top p {
     font-weight: 700;
-    margin: 0;
+    margin: 0 10px 0 0;
     padding: 0;
     line-height: 60px;
-}
-.project-tistory-skills-top img {
-    margin-left: 10px;
 }
 .project-tistory-skills-btm {
     display: flex;
@@ -328,11 +335,10 @@ a {
 .project-tistory-skills-btm p {
     font-size: 18px;
     font-weight: 700;
-    margin: 0;
+    margin: 0 25px 0 0;
     line-height: 60px;
 }
 .project-tistory-skills-btm img {
-    margin-left: 10px;
     height: 60px;
 }
     
@@ -355,13 +361,21 @@ a {
     width: 30%;
 }
 .project-underarmour-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 500px;
+    border-bottom: 2px solid #000;
+}
+.project-underarmour-title h3{
     font-weight: 700;
     font-size: 24px;
     margin: 0;
     padding: 0; /* 제목의 여백 제거 */
 }
-.project-underarmour-skills-since p {
-    font-weight: 700;
+.project-underarmour-title p {
+    font-size: 22px;
+    margin: 0 0 0 20px;
 }
 .project-underarmour-skills-top {
     display: flex;
@@ -372,11 +386,8 @@ a {
 .project-underarmour-skills-top p {
     font-size: 18px;
     font-weight: 700;
-    margin: 0;
+    margin: 0 10px 0 0;
     line-height: 60px;
-}
-.project-underarmour-skills-top img {
-    margin-left: 10px;
 }
 .project-underarmour-skills-btm {
     display: flex;
@@ -386,11 +397,10 @@ a {
 .project-underarmour-skills-btm p {
     font-size: 18px;
     font-weight: 700;
-    margin: 0;
+    margin: 0 25px 0 0;
     line-height: 60px;
 }
 .project-underarmour-skills-btm img {
-    margin-left: 10px;
     height: 60px;
 }
 /* timeline - 언더아머 */
@@ -412,13 +422,21 @@ a {
     width: 30%;
 }
 .project-github-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 350px;
+    border-bottom: 2px solid #000;
+}
+.project-github-title h3{
     font-weight: 700;
     font-size: 24px;
     margin: 0;
     padding: 0; /* 제목의 여백 제거 */
 }
-.project-github-skills-since p {
-    font-weight: 700;
+.project-github-title p {
+    font-size: 22px;
+    margin: 0 0 0 20px;
 }
 .project-github-skills-top {
     display: flex;
@@ -429,11 +447,8 @@ a {
 .project-github-skills-top p {
     font-size: 18px;
     font-weight: 700;
-    margin: 0;
+    margin: 0 10px 0 0;
     line-height: 60px;
-}
-.project-github-skills-top img {
-    margin-left: 10px;
 }
 .project-github-skills-btm {
     display: flex;
@@ -443,11 +458,10 @@ a {
 .project-github-skills-btm p {
     font-size: 18px;
     font-weight: 700;
-    margin: 0;
+    margin: 0 25px 0 0;
     line-height: 60px;
 }
 .project-github-skills-btm img {
-    margin-left: 10px;
     height: 60px;
 }
 /* timeline - 깃허브 */
@@ -469,13 +483,21 @@ a {
     width: 30%;
 }
 .project-rwd-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 500px;
+    border-bottom: 2px solid #000;
+}
+.project-rwd-title h3 {
     font-weight: 700;
     font-size: 24px;
     margin: 0;
     padding: 0; /* 제목의 여백 제거 */
 }
-.project-rwd-skills-since p {
-    font-weight: 700;
+.project-rwd-title p {
+    font-size: 22px;
+    margin: 0 0 0 20px;
 }
 .project-rwd-skills-top {
     display: flex;
@@ -486,11 +508,8 @@ a {
 .project-rwd-skills-top p {
     font-size: 18px;
     font-weight: 700;
-    margin: 0;
+    margin: 0 10px 0 0;
     line-height: 60px;
-}
-.project-rwd-skills-top img {
-    margin-left: 10px;
 }
 .project-rwd-skills-btm {
     display: flex;
@@ -500,11 +519,10 @@ a {
 .project-rwd-skills-btm p {
     font-size: 18px;
     font-weight: 700;
-    margin: 0;
+    margin: 0 25px 0 0;
     line-height: 60px;
 }
 .project-rwd-skills-btm img {
-    margin-left: 10px;
     height: 60px;
 }
 /* timeline - 반응형 */
@@ -527,13 +545,21 @@ a {
     width: 30%;
 }
 .project-js-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 500px;
+    border-bottom: 2px solid #000;
+}
+.project-js-title h3 {
     font-weight: 700;
     font-size: 24px;
     margin: 0;
     padding: 0; /* 제목의 여백 제거 */
 }
-.project-js-skills-since p {
-    font-weight: 700;
+.project-js-title p {
+    font-size: 22px;
+    margin: 0 0 0 20px;
 }
 .project-js-skills-top {
     display: flex;
@@ -544,11 +570,8 @@ a {
 .project-js-skills-top p {
     font-size: 18px;
     font-weight: 700;
-    margin: 0;
+    margin: 0 10px 0 0;
     line-height: 60px;
-}
-.project-js-skills-top img {
-    margin-left: 10px;
 }
 .project-js-skills-btm {
     display: flex;
@@ -557,11 +580,10 @@ a {
 .project-js-skills-btm p {
     font-size: 18px;
     font-weight: 700;
-    margin: 0;
+    margin: 0 25px 0 0;
     line-height: 60px;
 }
 .project-js-skills-btm img {
-    margin-left: 10px;
     height: 60px;
 }
 .project-js-skills-btm-menu {
@@ -594,13 +616,21 @@ a {
     width: 30%;
 }
 .project-react-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 550px;
+    border-bottom: 2px solid #000;
+}
+.project-react-title h3 {
     font-weight: 700;
     font-size: 24px;
     margin: 0;
     padding: 0; /* 제목의 여백 제거 */
 }
-.project-react-skills-since p {
-    font-weight: 700;
+.project-react-title p {
+    font-size: 22px;
+    margin: 0 0 0 20px;
 }
 .project-react-skills-top {
     display: flex;
@@ -611,11 +641,8 @@ a {
 .project-react-skills-top p {
     font-size: 18px;
     font-weight: 700;
-    margin: 0;
+    margin: 0 10px 0 0;
     line-height: 60px;
-}
-.project-react-skills-top img {
-    margin-left: 10px;
 }
 .project-react-skills-btm {
     display: flex;
@@ -625,11 +652,10 @@ a {
 .project-react-skills-btm p {
     font-size: 18px;
     font-weight: 700;
-    margin: 0;
+    margin: 0 25px 0 0;
     line-height: 60px;
 }
 .project-react-skills-btm img {
-    margin-left: 10px;
     height: 60px;
 }
 /* timeline - 리액트 */
@@ -651,13 +677,21 @@ a {
     width: 30%;
 }
 .project-portfolio-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 500px;
+    border-bottom: 2px solid #000;
+}
+.project-portfolio-title h3 {
     font-weight: 700;
     font-size: 24px;
     margin: 0;
     padding: 0; /* 제목의 여백 제거 */
 }
-.project-portfolio-skills-since p {
-    font-weight: 700;
+.project-portfolio-title p {
+    font-size: 22px;
+    margin: 0 0 0 20px;
 }
 .project-portfolio-skills-top {
     display: flex;
@@ -668,11 +702,8 @@ a {
 .project-portfolio-skills-top p {
     font-size: 18px;
     font-weight: 700;
-    margin: 0;
+    margin: 0 10px 0 0;
     line-height: 60px;
-}
-.project-portfolio-skills-top img {
-    margin-left: 10px;
 }
 .project-portfolio-skills-btm {
     display: flex;
@@ -682,18 +713,17 @@ a {
 .project-portfolio-skills-btm p {
     font-size: 18px;
     font-weight: 700;
-    margin: 0;
+    margin: 0 25px 0 0;
     line-height: 60px;
 }
 .project-portfolio-skills-btm img {
-    margin-left: 10px;
     height: 60px;
 }
 /* timeline - 포트폴리오 */
 
 
 #sec5 {
-    height: 100vh;
+    height: 70vh; /* footer랑 같이 보이게끔 */
     position: relative;
 }
 .contact {
@@ -715,39 +745,59 @@ a {
     margin-bottom: 50px;
 }
 .contact-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.contact-content input {
-    border: none;
-    background-color: #0071e3;
-    color: #fff;
-    margin-top: 50px;
-    padding: 0 20px;
-    height: 60px;
-    border-radius: 20px;
-    transition: 0.2s;
-}
-.contact-content input:hover {
-    transform: scale(1.05);
+    
 }
 .contact-email {
-    width: 45%;
+    margin: 0 auto;
+    width: 50%;
 }
 .contact-email img {
     width: 100%;
     border-radius: 20px;
     box-shadow: 1px 1px 10px 1px #999;
 }
-.contact-curriculum {
-    width: 45%;
-}
-.contact-curriculum img {
-    width: 100%;
+.contact-email input {
+    border: none;
+    background-color: #0071e3;
+    color: #fff;
+    margin-top: 30px;
+    padding: 0 20px;
+    height: 60px;
     border-radius: 20px;
-    box-shadow: 1px 1px 10px 1px #999;
+    transition: 0.2s;
 }
+.contact-email input:hover {
+    transform: scale(1.05);
+}
+footer {
+    height: 20vh;
+    background-color: #ddd;
+    text-align: center;
+    position: relative;
+}
+.footer_content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.footer_content p {
+    font-size: 12px;
+    color: #333;
+    margin: 0 0 30px 0;
+    padding: 0;
+}
+.footer_content a {
+    font-size: 12px;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    transition: .2s;
+}
+.footer_content a:hover {
+    color: #0071e3;
+}
+
 
 
 
