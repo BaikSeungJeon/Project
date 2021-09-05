@@ -3,7 +3,7 @@
   /* iPhone X 고정 값 */
   width: 375px;
   height: 812px;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   position: relative;
 }

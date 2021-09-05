@@ -9,12 +9,14 @@ import AskingPrice from './askingPrice'; /* 호가 가격 import 해 오기 */
 import TitleStocks from './TitleStocks.js'; /* RecStocks import 해 오기 */
 import Price from '../../price.js'; /* Price(홈 주식 가격) import 해 오기 */
 import './Order.css';
+import Modal from './Modal'; /* modal import 해 오기 */
 
 
 function Order(props) {
     
     let [price, priceChange] = useState(Price);
     let [askingPrice, askingPriceChange] = useState(AskingPrice); /* 호가, 호가 변경 state 해 오기*/
+    let [modal, modalChange] = useState(false);
 
     return (
         <div>
@@ -350,12 +352,18 @@ function Order(props) {
             </div>
 
             <ul className="order-btn-bar">
-                    <li>안내</li>
-                    <li>잔고</li>
-                    <li>환전</li>
-                    <li>주문번호</li>
-                    <li>매수 주문</li>
-                </ul>
+                <li>안내</li>
+                <li>잔고</li>
+                <li>환전</li>
+                <li>주문번호</li>
+                <li onClick={() => { modalChange(true)}}>매수 주문</li>
+            </ul>
+
+            {
+                modal === true
+                ? <Modal></Modal>
+                : null
+            }
         </div>
     )
 }

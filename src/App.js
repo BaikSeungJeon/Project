@@ -10,19 +10,28 @@ import Home from './components/Home/Home.js'; /* 메인 화면(Home) import 해 
 import Order from './components/Order/Order.js'; /* 주문창 Order import 해 오기 */
 import Nav from './components/Nav/Nav.js';
 import Footer from './components/Footer/Footer.js'; /* Footer import 해 오기 */
+import Modal from './components/Order/Modal';
 
 function App() {
+
+  
 
   return (
     <div className="App">
       <Header/>
+
+      
+
       <Route exact path="/">
-        <Home/>
+      <Home/>
       </Route>
+
       <Route path="/order">
-        <Order/>
+      <Order/>
       </Route>
+
       <Nav/>
+
       <Footer/>
     </div>
   );

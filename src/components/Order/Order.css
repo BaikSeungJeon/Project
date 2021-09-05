@@ -468,11 +468,9 @@
 .order-input-can-btn input {
     width: 40%;
     height: 30px;
-    padding: 0 32px;
     background-color: #fff;
     border: 1px solid #495faf;
     color: #495faf;
-    
 }
 
 /* order input usd 가격 */
