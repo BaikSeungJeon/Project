@@ -271,21 +271,72 @@ a {
     padding: 0;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* timeline */
 #sec4 {
-    height: 420vh; /* 7개 * 60vh */
+    width: 700%;
+    height: 100vh;
     position: relative;
 }
 .timeline h1 {
     font-weight: 700;
     font-size: 48px;
-    text-align: center;
     margin-bottom: 50px; /* 포트폴리오로부터 떨어뜨리기 */
+}
+.timeline-wrap {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: start;
 }
 .timeline-tistory {
     /* tistory */
     scroll-snap-align: start;
-    height: 60vh;
+    width: 100%; /* 7등분 해서 먹기 */
+    height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -347,7 +398,8 @@ a {
 
 .timeline-underarmour {
     scroll-snap-align: start;
-    height: 60vh;
+    width: 100%; /* 7등분 해서 먹기 */
+    height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -408,7 +460,8 @@ a {
 
 .timeline-github {
     scroll-snap-align: start;
-    height: 60vh;
+    width: 100%; /* 7등분 해서 먹기 */
+    height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -469,7 +522,8 @@ a {
 
 .timeline-rwd {
     scroll-snap-align: start;
-    height: 60vh;
+    width: 100%; /* 7등분 해서 먹기 */
+    height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -530,7 +584,8 @@ a {
 
 .timeline-js {
     scroll-snap-align: start;
-    height: 60vh;
+    width: 100%; /* 7등분 해서 먹기 */
+    height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -600,7 +655,8 @@ a {
 
 .timeline-react {
     scroll-snap-align: start;
-    height: 60vh;
+    width: 100%; /* 7등분 해서 먹기 */
+    height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -663,7 +719,8 @@ a {
 
 .timeline-portfolio {
     scroll-snap-align: start;
-    height: 60vh;
+    width: 100%; /* 7등분 해서 먹기 */
+    height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
