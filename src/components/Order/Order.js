@@ -356,12 +356,14 @@ function Order(props) {
                 <li>잔고</li>
                 <li>환전</li>
                 <li>주문번호</li>
-                <li onClick={() => { modalChange(true)}}>매수 주문</li>
+                <li onClick={() => {
+                    modalChange(true)
+                    }}>매수 주문</li>
             </ul>
 
             {
                 modal === true
-                ? <Modal></Modal>
+                ? <Modal/>
                 : null
             }
         </div>
