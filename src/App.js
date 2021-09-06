@@ -13,17 +13,17 @@ import Footer from './components/Footer/Footer.js'; /* Footer import 해 오기 
 
 function App() {
 
-  
+  const repository = "/clonecoding-react-mts";
 
   return (
     <div className="App">
       <Header/>
 
-      <Route exact path="clonecoding-react-mts/">
+      <Route exact path={repository + "/"}>
       <Home/>
       </Route>
 
-      <Route path="clonecoding-react-mts/order">
+      <Route path={repository + "/order"}>
       <Order/>
       </Route>
 
