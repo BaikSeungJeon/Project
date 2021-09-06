@@ -734,20 +734,114 @@ a {
     left: 50%;
     transform: translate(-50%,-50%);
 }
-.contact h1 {
+.contact>h1 {
     font-weight: 700;
     font-size: 48px;
     margin: 0 auto;
     margin-bottom: 50px; /* 여백 */
     text-align: center;
 }
-.contact p {
-    color: #333;
-    margin-bottom: 50px;
+
+.contact-card {
+    width: 543px; /* 1087px 반 */
+    height: 307px; /* 614px 반 */
+    perspective: 1000px; /* 카드 플립 애니메이션, 원근감 줌 */
 }
-.contact-content {
-    
+.contact-card-front {
+    width: 543px;
+    height: 307px;
+    background-color: #333;
+    position: relative;
+    backface-visibility: hidden; /* 카드 플립 애니메이션, 뒷면 안 보이게 처리 */
+    transition: 1s; /* 카드 플립 애니메이션 */
 }
+.contact-card-front-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+}
+.contact-card-front-content p {
+    font-size: 20px;
+    font-weight: 100;
+    color: #eee;
+    margin: 0;
+    padding: 0;
+    border-bottom: 2px solid #eee;
+}
+.contact-card-front-content p:nth-of-type(2) {
+    font-size: 14px;
+    margin: 0;
+    padding: 0 0 0 5px;
+    line-height: 34px;
+}
+.contact-card-back {
+    width: 543px;
+    height: 307px;
+    background-color: #333;
+    position: relative;
+    backface-visibility: hidden; /* 카드 플립 애니메이션, 뒷면 안 보이게 처리 */
+    transition: 1s; /* 카드 플립 애니메이션 */
+}
+.contact-card-back-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.contact-card-back-left {
+    width: 50%;
+    padding-top: 19px;
+}
+.contact-card-back-left p {
+    font-size: 20px;
+    font-weight: 100; /* 얇게 */
+    color: #eee;
+    margin: 0;
+    padding: 0;
+}
+.contact-card-back-left p:nth-of-type(2) {
+    font-size: 14px;
+}
+.contact-card-back-right {
+    width: 50%;
+}
+.contact-card-back-right a {
+    margin: 0;
+    padding: 0;
+    color: #eee;
+    font-size: 14px;
+    font-weight: 100;
+    float: left;
+    line-height: 28px;
+    transition: 0.2s;
+}
+.contact-card-back-right a:hover {
+    color: #0071e3;
+}
+
+/* 여기서부턴 카드 플립 애니메이션 */
+.front {
+    position: absolute; /* 카드 띄우는 거임 */
+    transform: rotateY(0deg);
+}
+.contact-card:hover .contact-card-front.front {
+    transform: rotateY(180deg);
+}
+.contact-card-back.back {
+    transform: rotateY(-180deg); /* y축 중심으로 -180도 */
+}
+.contact-card:hover .contact-card-back.back {
+    transform: rotateY(0deg);
+}
+/* 여기서부턴 카드 플립 애니메이션 */
+
 .contact-email {
     margin: 0 auto;
     width: 50%;
@@ -761,7 +855,7 @@ a {
     border: none;
     background-color: #0071e3;
     color: #fff;
-    margin-top: 30px;
+    margin-top: 50px;
     padding: 0 20px;
     height: 60px;
     border-radius: 20px;
@@ -785,8 +879,6 @@ footer {
 .footer_content p {
     font-size: 12px;
     color: #333;
-    margin: 0 0 30px 0;
-    padding: 0;
 }
 .footer_content a {
     font-size: 12px;
