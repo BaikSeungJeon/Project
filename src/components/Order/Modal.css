@@ -4,13 +4,14 @@
     z-index: 99999; /* order-nav가 9999이니, 걔보다 위인 99999 주기 */
     margin: 0;
     padding: 0;
-    width: 100%;
+    width: 375px;
     height: 30px;
     line-height: 30px; 
     font-size: 14px;
     font-weight: 700;
     color: #000;
     background-color: rgba(0,0,0,0.1 );
+    overflow: hidden;
 }
 .order-modal p {
     animation: move 6s linear;
