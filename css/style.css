@@ -273,19 +273,19 @@ a {
 
 /* timeline */
 #sec4 {
-    width: 700%;
+    width: 100%;
     height: 100vh;
     position: relative;
+    overflow: hidden; /* 100% 넘는 거는 가려버리기 */
 }
 .timeline {
-    width: 100%; /* = width 700% */
+    width: 700%; /* = width 700% */
     display: flex;
     flex-flow: row;
     justify-content: start; /* 여기서 모든 프로젝트들 다 가로로 flex */
 }
 .timeline-tistory {
     /* tistory */
-    scroll-snap-align: start;
     width: 100%; /* 7등분 해서 먹기 */
     height: 100vh;
     position: relative;
