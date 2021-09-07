@@ -300,6 +300,7 @@ a {
     height: 20px;
     transition: all .3s;
 }
+
 /* timeline btn */
 .timeline-slide {
     width: 700vw; /* = width 700% */
@@ -383,8 +384,7 @@ a {
     height: 60px;
 }
     
-    /* timeline - 티스토리 */
-
+/* timeline - 티스토리 */
 .timeline-underarmour {
     width: 100%; /* 7등분 해서 먹기 */
     height: 100vh;
@@ -670,7 +670,6 @@ a {
 }
 /* timeline - 자스 */
 
-
 .timeline-react {
     width: 100%; /* 7등분 해서 먹기 */
     height: 100vh;
@@ -927,7 +926,7 @@ a {
 .contact-card:hover .contact-card-back.back {
     transform: rotateY(0deg);
 }
-/* 여기서부턴 카드 플립 애니메이션 */
+/* 여기까지 카드 플립 애니메이션 */
 
 .contact-email {
     margin: 0 auto;
@@ -951,6 +950,8 @@ a {
 .contact-email input:hover {
     transform: scale(1.05);
 }
+
+/* footer */
 footer {
     height: 100px;
     background-color: #ddd;
