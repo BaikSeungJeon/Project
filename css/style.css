@@ -13,7 +13,6 @@ body {
     margin: 0;
 }
 .section {
-    display: block;
     scroll-snap-align: start; /* timeline의 start 부분부터 보여줘야 해서 */
 }
 .clear::after {
@@ -276,21 +275,13 @@ a {
     width: 100%;
     height: 100vh;
     position: relative;
-    overflow: hidden; /* 100% 넘는 거는 가려버리기 */
+    overflow: hidden;
 }
 .timeline {
-    width: 700%; /* = width 700% */
-    display: flex;
-    flex-flow: row;
-    justify-content: start; /* 여기서 모든 프로젝트들 다 가로로 flex */
-}
-.timeline-tistory {
-    /* tistory */
-    width: 100%; /* 7등분 해서 먹기 */
-    height: 100vh;
+    width: 100%;
     position: relative;
 }
-.timeline-tistory h1 {
+.timeline h1 {
     position: absolute;
     top: 20%;
     left: 50%;
@@ -298,7 +289,33 @@ a {
     font-weight: 700;
     font-size: 48px;
 }
-.timeline-tistory-wrap {
+.slide-btn-box {
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    transform: translate(-50%, -20%);
+}
+.slide-btn-box input {
+    width: 20px;
+    height: 20px;
+    transition: all .3s;
+}
+/* timeline btn */
+.timeline-slide {
+    width: 700vw; /* = width 700% */
+    height: 100vh;
+    display: flex;
+    flex-flow: row;
+    justify-content: start; /* 여기서 모든 프로젝트들 다 가로로 flex */
+    transition: all 1s; /* slide 애니메이션 */
+}
+.timeline-tistory {
+    width: 100%; /* 7등분 해서 먹기 */
+    height: 100vh;
+    position: relative;
+    
+}
+.timeline-tistory-box {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -307,8 +324,9 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    
 }
-.timeline-tistory-wrap h1 {
+.timeline-tistory-box h1 {
     font-weight: 700;
     font-size: 48px;
 }
@@ -372,7 +390,7 @@ a {
     height: 100vh;
     position: relative;
 }
-.timeline-underarmour-wrap {
+.timeline-underarmour-box {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -441,7 +459,7 @@ a {
     height: 100vh;
     position: relative;
 }
-.timeline-github-wrap {
+.timeline-github-box {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -511,7 +529,7 @@ a {
     height: 100vh;
     position: relative;
 }
-.timeline-rwd-wrap {
+.timeline-rwd-box {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -580,7 +598,7 @@ a {
     height: 100vh;
     position: relative;
 }
-.timeline-js-wrap {
+.timeline-js-box {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -658,7 +676,7 @@ a {
     height: 100vh;
     position: relative;
 }
-.timeline-react-wrap {
+.timeline-react-box {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -729,7 +747,7 @@ a {
     height: 100vh;
     position: relative;
 }
-.timeline-portfolio-wrap {
+.timeline-portfolio-box {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -793,9 +811,8 @@ a {
 }
 /* timeline - 포트폴리오 */
 
-
 #sec5 {
-    height: 70vh; /* footer랑 같이 보이게끔 */
+    height: 90vh; /* footer랑 같이 보이게끔 */
     position: relative;
 }
 .contact {
@@ -812,7 +829,6 @@ a {
     margin-bottom: 50px; /* 여백 */
     text-align: center;
 }
-
 .contact-card {
     width: 543px; /* 1087px 반 */
     height: 307px; /* 614px 반 */
@@ -936,7 +952,7 @@ a {
     transform: scale(1.05);
 }
 footer {
-    height: 20vh;
+    height: 100px;
     background-color: #ddd;
     text-align: center;
     position: relative;
@@ -961,26 +977,3 @@ footer {
 .footer_content a:hover {
     color: #0071e3;
 }
-
-
-
-
-/* top button */
-/* .top-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    animation: motion 0.5s infinite ease alternate;
-}
-.top-btn a {
-    font-size: 32px;
-    z-index: 999;
-}
-@keyframes motion {
-    0% {
-        bottom: 10px;
-    }
-    100% {
-        bottom: 30px;
-    }
-}*/
