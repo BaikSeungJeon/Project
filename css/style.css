@@ -2,7 +2,7 @@
 
 html {
     scroll-behavior: smooth;
-    /* scroll-snap-type: y mandatory;*/ /* 스크롤 스냅 */
+    scroll-snap-type: y mandatory; /*스크롤 스냅*/
 }
 body {
     color: #000; /*default #000 #fff 중에서 왔다갔다*/
@@ -14,7 +14,7 @@ body {
 }
 .section {
     display: block;
-    /* scroll-snap-align: start;*/ /* timeline의 start 부분부터 보여줘야 해서 */
+    scroll-snap-align: start; /* timeline의 start 부분부터 보여줘야 해서 */
 }
 .clear::after {
     content: "";
@@ -271,78 +271,49 @@ a {
     padding: 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* timeline */
 #sec4 {
     width: 700%;
     height: 100vh;
     position: relative;
 }
-.timeline h1 {
-    font-weight: 700;
-    font-size: 48px;
-    margin-bottom: 50px; /* 포트폴리오로부터 떨어뜨리기 */
-}
-.timeline-wrap {
-    width: 100%;
+.timeline {
+    width: 100%; /* = width 700% */
     display: flex;
     flex-flow: row;
-    justify-content: start;
+    justify-content: start; /* 여기서 모든 프로젝트들 다 가로로 flex */
 }
 .timeline-tistory {
     /* tistory */
     scroll-snap-align: start;
     width: 100%; /* 7등분 해서 먹기 */
     height: 100vh;
+    position: relative;
+}
+.timeline-tistory h1 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%); /* 가로 세로니, left, top 순서 */
+    font-weight: 700;
+    font-size: 48px;
+}
+.timeline-tistory-wrap {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.timeline-tistory-wrap h1 {
+    font-weight: 700;
+    font-size: 48px;
 }
 .project-tistory-img {
-    width: 30%; /* vw에서 % 단위로 변경 */ /* 풀 페이지 너무 커서 30% 30%씩 주기 */
+    width: 30%; 
 }
 .project-tistory-img>img {
     width: 100%; /* 이미지 꽉 채우기 */
@@ -397,12 +368,19 @@ a {
     /* timeline - 티스토리 */
 
 .timeline-underarmour {
-    scroll-snap-align: start;
     width: 100%; /* 7등분 해서 먹기 */
     height: 100vh;
+    position: relative;
+}
+.timeline-underarmour-wrap {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .project-underarmour-img {
     width: 30%;
@@ -459,12 +437,19 @@ a {
 /* timeline - 언더아머 */
 
 .timeline-github {
-    scroll-snap-align: start;
     width: 100%; /* 7등분 해서 먹기 */
     height: 100vh;
+    position: relative;
+}
+.timeline-github-wrap {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .project-github-img {
     width: 30%;
@@ -524,9 +509,17 @@ a {
     scroll-snap-align: start;
     width: 100%; /* 7등분 해서 먹기 */
     height: 100vh;
+    position: relative;
+}
+.timeline-rwd-wrap {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .project-rwd-img {
     width: 30%;
@@ -583,12 +576,19 @@ a {
 /* timeline - 반응형 */
 
 .timeline-js {
-    scroll-snap-align: start;
     width: 100%; /* 7등분 해서 먹기 */
     height: 100vh;
+    position: relative;
+}
+.timeline-js-wrap {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .project-js-img {
     width: 30%;
@@ -654,12 +654,19 @@ a {
 
 
 .timeline-react {
-    scroll-snap-align: start;
     width: 100%; /* 7등분 해서 먹기 */
     height: 100vh;
+    position: relative;
+}
+.timeline-react-wrap {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .project-react-img {
     width: 30%;
@@ -718,12 +725,19 @@ a {
 /* timeline - 리액트 */
 
 .timeline-portfolio {
-    scroll-snap-align: start;
     width: 100%; /* 7등분 해서 먹기 */
     height: 100vh;
+    position: relative;
+}
+.timeline-portfolio-wrap {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .project-portfolio-img {
     width: 30%;
