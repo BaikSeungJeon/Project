@@ -286,9 +286,9 @@ a {
 }
 .timeline h1 {
     position: absolute;
-    top: 20%;
+    top: 10%;
     left: 50%;
-    transform: translate(-50%, -5%); /* 가로 세로니, left, top 순서 */
+    transform: translate(-50%, -10%); /* 가로 세로니, left, top 순서 */
     font-weight: 700;
     font-size: 48px;
 }
