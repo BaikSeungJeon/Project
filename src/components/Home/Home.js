@@ -38,7 +38,6 @@ function Home() {
                 
                 <Stocks price={price}/>
                 
-
                 <div className="page-icon">
                     <div>.</div>
                     <div>.</div>
