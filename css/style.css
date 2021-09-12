@@ -1,14 +1,14 @@
 @charset "utf-8";
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* nav 눌렀을 때 스크롤 부드럽게 */
     scroll-snap-type: y mandatory; /*스크롤 스냅*/
 }
 body {
     color: #000; /*default #000 #fff 중에서 왔다갔다*/
     font-size: 18px; /*default 18px 24px 48px*/
     font-weight: 400; /* deafault 400 700*/
-    min-width: 1480px;
+    min-width: 1480px; /* 반응형 말고 적응형으로 감 */
     padding: 0;
     margin: 0;
 }
@@ -27,13 +27,12 @@ a {
     text-decoration: none;
     color: #000;
 }
-
 /* nav */
 .navbar {
     position: fixed;
     top: 10px;
     right: 10px; /* position fixed로 위치 고정, 오른쪽 상단에 위치시키기*/
-    z-index: 999; /* 우선 순위 */
+    z-index: 99999; /* 우선 순위 */
 }
 .gnb {
     font-weight: 700;
@@ -48,10 +47,9 @@ a {
 .gnb li:hover {
     color: #0071e3;
 }
-
-/*introduce*/
+/*section1 introduce*/
 #sec1 {
-    min-width: 1480px;
+    min-width: 1480px;  /* 1480px 이상 안 줄어들게끔 */
     height: 100vh; /* 무조건 한 페이지 높이 다 가져가게끔 */
     position: relative;
 }
@@ -64,7 +62,7 @@ a {
 }
 .introduce h1 {
     font-weight: 700;
-    font-size: 48px;
+    font-size: 36px;
     margin: 0 auto;
     margin-bottom: 50px;
     text-align: center;
@@ -72,10 +70,9 @@ a {
 .introduce-content {
     color: #333;
 }
-
-/*profle*/
+/* section2 profle*/
 #sec2 {
-    min-width: 1480px;
+    min-width: 1480px; /* 1480px 이상 안 줄어들게끔 */
     height: 100vh;
     position: relative;
 }
@@ -87,7 +84,7 @@ a {
 }
 .profile h1 {
     font-weight: 700;
-    font-size: 48px;
+    font-size: 36px;
     margin: auto;
     text-align: center;
     margin-bottom: 30px; /* 프로필과 간격 두기 */
@@ -99,34 +96,33 @@ a {
     padding-left: 20px;
     
 }
-.photo {
+.profile-photo {
     width: 450px; /* 사진 크기는 안 변하니 고정값 450px */
 }
-.photo img {
+.profile-photo img {
     width: 100%; /* 사진 부모 박스에 다 채우기 */
     border-radius: 20px;
 }
-.information {
+.profile-information {
     padding-left: 50px;
 }
-.information dl {
+.profile-information dl {
     line-height: 70px;
     width: 150%; /* 한 줄에 다 들어갈 수 있도록 */
 }
-.information dt {
+.profile-information dt {
     font-weight: 700;
     font-size: 24px;
     color: #000;
     float: left;
 }
-.information dd {
+.profile-information dd {
     margin-left: 150px;
     color: #333;
 }
-
-/*skills*/
+/* section3 skills*/
 #sec3 {
-    min-width: 1480px;
+    min-width: 1480px; /* 1480px 이상 안 줄어들게끔 */
     height: 100vh;
     position: relative;
 }
@@ -138,12 +134,12 @@ a {
 }
 .skills h1 {
     font-weight: 700;
-    font-size: 48px;
+    font-size: 36px;
     margin: auto;
     text-align: center;
     margin-bottom: 30px;
 }
-.skills-box {
+.skills-content {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -157,7 +153,8 @@ a {
     cursor: pointer;
     transition: 0.2s;
 }
-.developer {
+/* developer */
+.skills-developer {
     width: 100%;
     display: flex;
     flex-flow: row wrap; /* 자격증 section은 flex-flow 사용 */
@@ -165,7 +162,7 @@ a {
     margin: 0;
     padding: 0;
 }
-.developer li {
+.skills-developer li {
     width: 60px;
     height: 100px;
     padding: 10px;
@@ -174,21 +171,20 @@ a {
     margin: 0 20px 20px 0;
     cursor: pointer;
 }
-.developer li:hover img {
+.skills-developer li:hover img {
     transform: scale(1.1);
 }
-.developer li>img {
+.skills-developer li>img {
     width: 100%;
     transition: 0.2s;
 }
-.developer li>p {
+.skills-developer li>p {
     font-size: 12px;
     color: #333;
     text-align: center;
     margin: 0;
     padding: 0;
 }
-
 /* communicator */
 .skills-mid {
     width: 380px; /* 줄어들면서 section을 밀어 다른 section을 침범하기 때문에, 33% 비율인, 380px씩 분배 */
@@ -199,7 +195,7 @@ a {
     cursor: pointer;
     transition: 0.2s;
 }
-.communicator {
+.skills-communicator {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
@@ -207,7 +203,7 @@ a {
     margin: 0;
     padding: 0;
 }
-.communicator li {
+.skills-communicator li {
     width: 60px;
     height: 100px;
     padding: 10px;
@@ -216,21 +212,20 @@ a {
     margin: 0 20px 20px 0;
     cursor: pointer;
 }
-.communicator li:hover img {
+.skills-communicator li:hover img {
     transform: scale(1.1);
 }
-.communicator li>img {
+.skills-communicator li>img {
     width: 100%;
     transition: 0.2s;
 }
-.communicator li>p {
+.skills-communicator li>p {
     font-size: 12px;
     color: #333;
     text-align: center;
     margin: 0;
     padding: 0;
 }
-
 /* license */
 .skills-right {
     width: 380px; /* 줄어들면서 section을 밀어 다른 section을 침범하기 때문에, 33% 비율인, 380px씩 분배 */
@@ -241,7 +236,7 @@ a {
     cursor: pointer;
     transition: 0.2s;
 }
-.license {
+.skills-license {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
@@ -249,7 +244,7 @@ a {
     margin: 0;
     padding: 0;
 }
-.license li {
+.skills-license li {
     width: 60px;
     height: 100px;
     padding: 10px;
@@ -258,24 +253,23 @@ a {
     margin: 0 20px 20px 0;
     cursor: pointer;
 }
-.license li:hover img {
+.skills-license li:hover img {
     transform: scale(1.1);
 }
-.license li>img {
+.skills-license li>img {
     width: 100%;
     transition: 0.2s;
 }
-.license li>p {
+.skills-license li>p {
     font-size: 11px;
     color: #333;
     text-align: center;
     margin: 0;
     padding: 0;
 }
-
-/* timeline */
+/* section4 timeline */
 #sec4 {
-    min-width: 1480px;
+    min-width: 1480px; /* 1480px 이상 안 줄어들게끔 */
     height: 100vh;
     position: relative;
     overflow: hidden;
@@ -285,12 +279,13 @@ a {
     position: relative;
 }
 .timeline h1 {
+    /* section4만 가로로 길게 슬라이드가 들어가서 제목이 상위에 있음 */
     position: absolute;
-    top: 10%;
+    top: 20%;
     left: 50%;
-    transform: translate(-50%, -10%); /* 가로 세로니, left, top 순서 */
+    transform: translate(-50%, -20%); /* 가로 세로니, left, top 순서 */
     font-weight: 700;
-    font-size: 48px;
+    font-size: 36px;
 }
 .slide-btn-box {
     position: absolute;
@@ -303,7 +298,6 @@ a {
     height: 20px;
     transition: all .3s;
 }
-
 /* timeline btn */
 .timeline-slide {
     width: 700vw; /* = width 700% */
@@ -317,7 +311,6 @@ a {
     width: 100%; /* 7등분 해서 먹기 */
     height: 100vh;
     position: relative;
-    
 }
 .timeline-tistory-box {
     width: 100%;
@@ -333,7 +326,7 @@ a {
 }
 .timeline-tistory-box h1 {
     font-weight: 700;
-    font-size: 48px;
+    font-size: 36px;
 }
 .project-tistory-img {
     width: 30%; 
@@ -464,7 +457,6 @@ a {
     width: 60px; /* 너비 60px 고정해야 안 퍼짐 */
 }
 /* timeline - 언더아머 */
-
 .timeline-github {
     width: 100%; /* 7등분 해서 먹기 */
     height: 100vh;
@@ -537,7 +529,6 @@ a {
     width: 60px; /* 너비 60px 고정해야 안 퍼짐 */
 }
 /* timeline - 깃허브 */
-
 .timeline-rwd {
     scroll-snap-align: start;
     width: 100%; /* 7등분 해서 먹기 */
@@ -611,7 +602,6 @@ a {
     width: 60px; /* 너비 60px 고정해야 안 퍼짐 */
 }
 /* timeline - 반응형 */
-
 .timeline-js {
     width: 100%; /* 7등분 해서 먹기 */
     height: 100vh;
@@ -692,7 +682,6 @@ a {
     flex-direction: row;
 }
 /* timeline - 자스 */
-
 .timeline-react {
     width: 100%; /* 7등분 해서 먹기 */
     height: 100vh;
@@ -767,7 +756,6 @@ a {
     width: 60px; /* 너비 60px 고정해야 안 퍼짐 */
 }
 /* timeline - 리액트 */
-
 .timeline-portfolio {
     width: 100%; /* 7등분 해서 먹기 */
     height: 100vh;
@@ -840,9 +828,9 @@ a {
     width: 60px; /* 너비 60px 고정해야 안 퍼짐 */
 }
 /* timeline - 포트폴리오 */
-
+/* section5 contact */
 #sec5 {
-    min-width: 1480px;
+    min-width: 1480px; /* 1480px 이상 안 줄어들게끔 */
     height: 90vh; /* footer랑 같이 보이게끔 */
     position: relative;
 }
@@ -855,7 +843,7 @@ a {
 }
 .contact>h1 {
     font-weight: 700;
-    font-size: 48px;
+    font-size: 36px;
     margin: 0 auto;
     margin-bottom: 50px; /* 여백 */
     text-align: center;
@@ -985,28 +973,28 @@ a {
 
 /* footer */
 footer {
-    height: 100px;
+    height: 100px; /* 100px 고정값 */
     background-color: #ddd;
     text-align: center;
     position: relative;
 }
-.footer_content {
+.footer-content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.footer_content p {
+.footer-content p {
     font-size: 12px;
     color: #333;
 }
-.footer_content a {
+.footer-content a {
     font-size: 12px;
     color: #333;
     margin: 0;
     padding: 0;
     transition: .2s;
 }
-.footer_content a:hover {
+.footer-content a:hover {
     color: #0071e3;
 }
