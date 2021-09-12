@@ -1,24 +1,10 @@
 @charset "utf-8";
-/*
-    클래스명 통일 > ok
-    마크업 불필요한 띄어쓰기 줄바꿈 없애기 > ok
-    h1 폰트 사이즈 통일
-    nav profile h3 등 폰트 사이즈 통일
-    p 태그들 폰트 사이즈 통일
-    깃허브랑 포폴 skills 내용 통일
-    프로젝트 부분은 안 건드려도 될 듯
-    (아이디어나 퀄리티나 평타 이상임..)
-    일단 추가 프로젝트 하기 전에 지금 거 그대로 써도 되긴 할 듯
-    이력서랑 깃리드미 때매 너무 과하겐 안 들어가고 심플하게 쳐낼 거 다 쳐내도 될 듯
-*/
+
 html {
     scroll-behavior: smooth; /* nav 눌렀을 때 스크롤 부드럽게 */
     scroll-snap-type: y mandatory; /*스크롤 스냅*/
 }
 body {
-    color: #000; /*default #000 #fff 중에서 왔다갔다*/
-    font-size: 18px; /*default 18px 24px 48px*/
-    font-weight: 400; /* deafault 400 700*/
     min-width: 1480px; /* 반응형 말고 적응형으로 감 */
     padding: 0;
     margin: 0;
@@ -104,7 +90,6 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-left: 20px;
     
 }
 .profile-photo {
@@ -118,12 +103,12 @@ a {
     padding-left: 50px;
 }
 .profile-information dl {
-    line-height: 70px;
+    line-height: 52px;
     width: 150%; /* 한 줄에 다 들어갈 수 있도록 */
+    margin: 0;
+    padding: 0;
 }
 .profile-information dt {
-    font-weight: 700;
-    font-size: 24px;
     color: #000;
     float: left;
 }
@@ -159,8 +144,7 @@ a {
     width: 380px; /* 줄어들면서 section을 밀어 다른 section을 침범하기 때문에, 33% 비율인, 380px씩 분배 */
 }
 .skills-left h3 {
-    font-weight: 700;
-    width: 150px;
+    font-weight: 400;
     cursor: pointer;
     transition: 0.2s;
 }
@@ -179,7 +163,7 @@ a {
     padding: 10px;
     box-shadow: 1px 1px 10px 1px #ddd;
     border-radius: 20px;
-    margin: 0 20px 20px 0;
+    margin: 0 20px 20px 0; /* 스택들 사이 간격 */
     cursor: pointer;
 }
 .skills-developer li:hover img {
@@ -201,8 +185,7 @@ a {
     width: 380px; /* 줄어들면서 section을 밀어 다른 section을 침범하기 때문에, 33% 비율인, 380px씩 분배 */
 }
 .skills-mid h3 {
-    font-weight: 700;
-    width: 200px;
+    font-weight: 400;
     cursor: pointer;
     transition: 0.2s;
 }
@@ -242,8 +225,7 @@ a {
     width: 380px; /* 줄어들면서 section을 밀어 다른 section을 침범하기 때문에, 33% 비율인, 380px씩 분배 */
 }
 .skills-right h3 {
-    font-weight: 700;
-    width: 120px;
+    font-weight: 400;
     cursor: pointer;
     transition: 0.2s;
 }
@@ -340,13 +322,15 @@ a {
     font-size: 36px;
 }
 .project-tistory-img {
-    width: 30%; 
+    width: 30%; /* 이미지와 내용이 30%씩 가져갈 건데, */
+    min-width: 630px; /* 모니터에 따라 계속 작아져서 min-width 주기 */
 }
 .project-tistory-img>img {
     width: 100%; /* 이미지 꽉 채우기 */
 }
 .project-tistory-content {
     width: 30%;
+    min-width: 630px; /* 모니터에 따라 계속 작아져서 min-width 주기 */
 }
 .project-tistory-title {
     display: flex;
@@ -356,13 +340,12 @@ a {
     width: 350px;
 }
 .project-tistory-title h3 {
+    font-weight: 700;
     margin: 0;
     padding: 0; /* 제목의 여백 제거 */
-    font-weight: 700;
-    font-size: 24px; 
 }
 .project-tistory-title p {
-    font-size: 22px;
+    font-size: 20px; /* 날짜 높이 맞추기 */
     margin: 0 0 0 20px;
 }
 .project-tistory-skills-top {
@@ -372,7 +355,6 @@ a {
     height: 60px;
 }
 .project-tistory-skills-top p {
-    font-weight: 700;
     margin: 0 10px 0 0;
     padding: 0;
     line-height: 60px;
@@ -386,8 +368,6 @@ a {
     height: 60px;
 }
 .project-tistory-skills-btm p {
-    font-size: 18px;
-    font-weight: 700;
     margin: 0 25px 0 0;
     line-height: 60px;
 }
@@ -413,13 +393,15 @@ a {
     transform: translate(-50%, -50%);
 }
 .project-underarmour-img {
-    width: 30%;
+    width: 30%; /* 이미지와 내용이 30%씩 가져갈 건데, */
+    min-width: 630px; /* 모니터에 따라 계속 작아져서 min-width 주기 */
 }
 .project-underarmour-img>img {
     width: 100%;
 }
 .project-underarmour-content {
     width: 30%;
+    min-width: 630px; /* 모니터에 따라 계속 작아져서 min-width 주기 */
 }
 .project-underarmour-title {
     display: flex;
@@ -430,12 +412,11 @@ a {
 }
 .project-underarmour-title h3{
     font-weight: 700;
-    font-size: 24px;
     margin: 0;
     padding: 0; /* 제목의 여백 제거 */
 }
 .project-underarmour-title p {
-    font-size: 22px;
+    font-size: 20px; /* 날짜 높이 맞추기 */
     margin: 0 0 0 20px;
 }
 .project-underarmour-skills-top {
@@ -445,8 +426,6 @@ a {
     height: 60px;
 }
 .project-underarmour-skills-top p {
-    font-size: 18px;
-    font-weight: 700;
     margin: 0 10px 0 0;
     line-height: 60px;
 }
@@ -459,8 +438,6 @@ a {
     height: 60px;
 }
 .project-underarmour-skills-btm p {
-    font-size: 18px;
-    font-weight: 700;
     margin: 0 25px 0 0;
     line-height: 60px;
 }
@@ -485,13 +462,15 @@ a {
     transform: translate(-50%, -50%);
 }
 .project-github-img {
-    width: 30%;
+    width: 30%; /* 이미지와 내용이 30%씩 가져갈 건데, */
+    min-width: 630px; /* 모니터에 따라 계속 작아져서 min-width 주기 */
 }
 .project-github-img>img {
     width: 100%;
 }
 .project-github-content {
     width: 30%;
+    min-width: 630px; /* 모니터에 따라 계속 작아져서 min-width 주기 */
 }
 .project-github-title {
     display: flex;
@@ -501,13 +480,11 @@ a {
     border-bottom: 2px solid #000;
 }
 .project-github-title h3{
-    font-weight: 700;
-    font-size: 24px;
     margin: 0;
     padding: 0; /* 제목의 여백 제거 */
 }
 .project-github-title p {
-    font-size: 22px;
+    font-size: 20px; /* 날짜 높이 맞추기 */
     margin: 0 0 0 20px;
 }
 .project-github-skills-top {
@@ -517,8 +494,6 @@ a {
     height: 60px;
 }
 .project-github-skills-top p {
-    font-size: 18px;
-    font-weight: 700;
     margin: 0 10px 0 0;
     line-height: 60px;
 }
@@ -531,8 +506,6 @@ a {
     height: 60px;
 }
 .project-github-skills-btm p {
-    font-size: 18px;
-    font-weight: 700;
     margin: 0 25px 0 0;
     line-height: 60px;
 }
@@ -558,13 +531,15 @@ a {
     transform: translate(-50%, -50%);
 }
 .project-rwd-img {
-    width: 30%;
+    width: 30%; /* 이미지와 내용이 30%씩 가져갈 건데, */
+    min-width: 630px; /* 모니터에 따라 계속 작아져서 min-width 주기 */
 }
 .project-rwd-img>img {
     width: 100%;
 }
 .project-rwd-content {
     width: 30%;
+    min-width: 630px; /* 모니터에 따라 계속 작아져서 min-width 주기 */
 }
 .project-rwd-title {
     display: flex;
@@ -574,13 +549,11 @@ a {
     border-bottom: 2px solid #000;
 }
 .project-rwd-title h3 {
-    font-weight: 700;
-    font-size: 24px;
     margin: 0;
     padding: 0; /* 제목의 여백 제거 */
 }
 .project-rwd-title p {
-    font-size: 22px;
+    font-size: 20px; /* 날짜 높이 맞추기 */
     margin: 0 0 0 20px;
 }
 .project-rwd-skills-top {
@@ -590,8 +563,6 @@ a {
     height: 60px;
 }
 .project-rwd-skills-top p {
-    font-size: 18px;
-    font-weight: 700;
     margin: 0 10px 0 0;
     line-height: 60px;
 }
@@ -604,8 +575,6 @@ a {
     height: 60px;
 }
 .project-rwd-skills-btm p {
-    font-size: 18px;
-    font-weight: 700;
     margin: 0 25px 0 0;
     line-height: 60px;
 }
@@ -630,7 +599,8 @@ a {
     transform: translate(-50%, -50%);
 }
 .project-js-img {
-    width: 30%;
+    width: 30%; /* 이미지와 내용이 30%씩 가져갈 건데, */
+    min-width: 630px; /* 모니터에 따라 계속 작아져서 min-width 주기 */
     text-align: center; /* 살짝 이미지 작게 주고 가로 가운데 정렬 */
 }
 .project-js-img>img {
@@ -638,6 +608,7 @@ a {
 }
 .project-js-content {
     width: 30%;
+    min-width: 630px; /* 모니터에 따라 계속 작아져서 min-width 주기 */
 }
 .project-js-title {
     display: flex;
@@ -647,13 +618,11 @@ a {
     border-bottom: 2px solid #000;
 }
 .project-js-title h3 {
-    font-weight: 700;
-    font-size: 24px;
     margin: 0;
     padding: 0; /* 제목의 여백 제거 */
 }
 .project-js-title p {
-    font-size: 22px;
+    font-size: 20px; /* 날짜 높이 맞추기 */
     margin: 0 0 0 20px;
 }
 .project-js-skills-top {
@@ -663,8 +632,6 @@ a {
     height: 60px;
 }
 .project-js-skills-top p {
-    font-size: 18px;
-    font-weight: 700;
     margin: 0 10px 0 0;
     line-height: 60px;
 }
@@ -676,8 +643,6 @@ a {
     flex-direction: row;
 }
 .project-js-skills-btm p {
-    font-size: 18px;
-    font-weight: 700;
     margin: 0 25px 0 0;
     line-height: 60px;
 }
@@ -710,7 +675,8 @@ a {
     transform: translate(-50%, -50%);
 }
 .project-react-img {
-    width: 30%;
+    width: 30%; /* 이미지와 내용이 30%씩 가져갈 건데, */
+    min-width: 630px; /* 모니터에 따라 계속 작아져서 min-width 주기 */
     text-align: center;
 }
 .project-react-img>img {
@@ -719,6 +685,7 @@ a {
 }
 .project-react-content {
     width: 30%;
+    min-width: 630px; /* 모니터에 따라 계속 작아져서 min-width 주기 */
 }
 .project-react-title {
     display: flex;
@@ -728,13 +695,11 @@ a {
     border-bottom: 2px solid #000;
 }
 .project-react-title h3 {
-    font-weight: 700;
-    font-size: 24px;
     margin: 0;
     padding: 0; /* 제목의 여백 제거 */
 }
 .project-react-title p {
-    font-size: 22px;
+    font-size: 20px; /* 날짜 높이 맞추기 */
     margin: 0 0 0 20px;
 }
 .project-react-skills-top {
@@ -744,8 +709,6 @@ a {
     height: 60px;
 }
 .project-react-skills-top p {
-    font-size: 18px;
-    font-weight: 700;
     margin: 0 10px 0 0;
     line-height: 60px;
 }
@@ -758,8 +721,6 @@ a {
     height: 60px;
 }
 .project-react-skills-btm p {
-    font-size: 18px;
-    font-weight: 700;
     margin: 0 25px 0 0;
     line-height: 60px;
 }
@@ -784,13 +745,15 @@ a {
     transform: translate(-50%, -50%);
 }
 .project-portfolio-img {
-    width: 30%;
+    width: 30%; /* 이미지와 내용이 30%씩 가져갈 건데, */
+    min-width: 630px; /* 모니터에 따라 계속 작아져서 min-width 주기 */
 }
 .project-portfolio-img>img {
     width: 100%;
 }
 .project-portfolio-content {
     width: 30%;
+    min-width: 630px; /* 모니터에 따라 계속 작아져서 min-width 주기 */
 }
 .project-portfolio-title {
     display: flex;
@@ -800,13 +763,11 @@ a {
     border-bottom: 2px solid #000;
 }
 .project-portfolio-title h3 {
-    font-weight: 700;
-    font-size: 24px;
     margin: 0;
     padding: 0; /* 제목의 여백 제거 */
 }
 .project-portfolio-title p {
-    font-size: 22px;
+    font-size: 20px; /* 날짜 높이 맞추기 */
     margin: 0 0 0 20px;
 }
 .project-portfolio-skills-top {
@@ -816,8 +777,6 @@ a {
     height: 60px;
 }
 .project-portfolio-skills-top p {
-    font-size: 18px;
-    font-weight: 700;
     margin: 0 10px 0 0;
     line-height: 60px;
 }
@@ -830,8 +789,6 @@ a {
     height: 60px;
 }
 .project-portfolio-skills-btm p {
-    font-size: 18px;
-    font-weight: 700;
     margin: 0 25px 0 0;
     line-height: 60px;
 }
@@ -865,8 +822,8 @@ a {
     perspective: 1000px; /* 카드 플립 애니메이션, 원근감 줌 */
 }
 .contact-card-front {
-    width: 543px;
-    height: 307px;
+    width: 543px; /* 1087px 반 */
+    height: 307px; /* 614px 반 */
     background-color: #333;
     position: relative;
     backface-visibility: hidden; /* 카드 플립 애니메이션, 뒷면 안 보이게 처리 */
@@ -1000,7 +957,7 @@ footer {
     color: #333;
 }
 .footer-content a {
-    font-size: 12px;
+    font-size: 14px;
     color: #333;
     margin: 0;
     padding: 0;
