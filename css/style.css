@@ -37,9 +37,11 @@ a {
     flex-direction: row;
 }
 .gnb li {
-    cursor: pointer;
+    font-size: 18px;
+    font-weight: 400;
     margin: 0 10px;
     transition: 0.2s;
+    cursor: pointer;
 }
 .gnb li:hover {
     color: #0071e3;
@@ -109,10 +111,12 @@ a {
     padding: 0;
 }
 .profile-information dt {
+    font-size: 18px;
     color: #000;
     float: left;
 }
 .profile-information dd {
+    /* font-size: 16px 기본 */
     margin-left: 150px;
     color: #333;
 }
@@ -144,6 +148,7 @@ a {
     width: 380px; /* 줄어들면서 section을 밀어 다른 section을 침범하기 때문에, 33% 비율인, 380px씩 분배 */
 }
 .skills-left h3 {
+    font-size: 18px;
     font-weight: 400;
     cursor: pointer;
     transition: 0.2s;
@@ -174,7 +179,7 @@ a {
     transition: 0.2s;
 }
 .skills-developer li>p {
-    font-size: 12px;
+    font-size: 12px; /* 작은 p 태그 텍스트들은 전부 12px */
     color: #333;
     text-align: center;
     margin: 0;
@@ -185,6 +190,7 @@ a {
     width: 380px; /* 줄어들면서 section을 밀어 다른 section을 침범하기 때문에, 33% 비율인, 380px씩 분배 */
 }
 .skills-mid h3 {
+    font-size: 18px;
     font-weight: 400;
     cursor: pointer;
     transition: 0.2s;
@@ -214,7 +220,7 @@ a {
     transition: 0.2s;
 }
 .skills-communicator li>p {
-    font-size: 12px;
+    font-size: 12px; /* 작은 p 태그 텍스트들은 전부 12px */
     color: #333;
     text-align: center;
     margin: 0;
@@ -225,6 +231,7 @@ a {
     width: 380px; /* 줄어들면서 section을 밀어 다른 section을 침범하기 때문에, 33% 비율인, 380px씩 분배 */
 }
 .skills-right h3 {
+    font-size: 18px;
     font-weight: 400;
     cursor: pointer;
     transition: 0.2s;
@@ -254,7 +261,7 @@ a {
     transition: 0.2s;
 }
 .skills-license li>p {
-    font-size: 11px;
+    font-size: 11px; /* 한글이라 11px 주기 */
     color: #333;
     text-align: center;
     margin: 0;
@@ -340,6 +347,7 @@ a {
     width: 350px;
 }
 .project-tistory-title h3 {
+    font-size: 18px;
     font-weight: 700;
     margin: 0;
     padding: 0; /* 제목의 여백 제거 */
@@ -411,6 +419,7 @@ a {
     border-bottom: 2px solid #000;
 }
 .project-underarmour-title h3{
+    font-size: 18px;
     font-weight: 700;
     margin: 0;
     padding: 0; /* 제목의 여백 제거 */
@@ -480,6 +489,8 @@ a {
     border-bottom: 2px solid #000;
 }
 .project-github-title h3{
+    font-size: 18px;
+    font-weight: 700;
     margin: 0;
     padding: 0; /* 제목의 여백 제거 */
 }
@@ -549,6 +560,8 @@ a {
     border-bottom: 2px solid #000;
 }
 .project-rwd-title h3 {
+    font-size: 18px;
+    font-weight: 700;
     margin: 0;
     padding: 0; /* 제목의 여백 제거 */
 }
@@ -618,6 +631,8 @@ a {
     border-bottom: 2px solid #000;
 }
 .project-js-title h3 {
+    font-size: 18px;
+    font-weight: 700;
     margin: 0;
     padding: 0; /* 제목의 여백 제거 */
 }
@@ -695,6 +710,8 @@ a {
     border-bottom: 2px solid #000;
 }
 .project-react-title h3 {
+    font-size: 18px;
+    font-weight: 700;
     margin: 0;
     padding: 0; /* 제목의 여백 제거 */
 }
@@ -763,6 +780,8 @@ a {
     border-bottom: 2px solid #000;
 }
 .project-portfolio-title h3 {
+    font-size: 18px;
+    font-weight: 700;
     margin: 0;
     padding: 0; /* 제목의 여백 제거 */
 }
