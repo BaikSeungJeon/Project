@@ -13,7 +13,7 @@ import Footer from './components/Footer/Footer.js'; /* Footer import 해 오기 
 
 function App() {
 
-  const repository = "/clonecoding-react-mts";
+  const repository = "/project-react-mts";
 
   return (
     <div className="App">

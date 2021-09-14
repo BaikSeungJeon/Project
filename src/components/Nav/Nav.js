@@ -8,7 +8,7 @@ import './Nav.css';
 
 function Nav() {
 
-    const repository = "/clonecoding-react-mts";
+    const repository = "/project-react-mts";
 
     return (
         <div className="nav">
