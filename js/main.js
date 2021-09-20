@@ -1,3 +1,4 @@
+/* javascript 작성 */
 document.querySelector('.slide-btn1').addEventListener('click', () => {
     document.querySelector('.timeline-slide').style.transform = 'translateX(0)';
 })
@@ -25,4 +26,6 @@ document.querySelector('.slide-btn6').addEventListener('click', () => {
 document.querySelector('.slide-btn7').addEventListener('click', () => {
     document.querySelector('.timeline-slide').style.transform = 'translateX(-600vw)';
 })
+
+/* jquery 작성*/
 

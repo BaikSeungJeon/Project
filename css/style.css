@@ -46,6 +46,7 @@ a {
 .gnb li:hover {
     color: #0071e3;
 }
+
 /*section1 introduce*/
 #sec1 {
     min-width: 1480px;  /* 1480px 이상 안 줄어들게끔 */
