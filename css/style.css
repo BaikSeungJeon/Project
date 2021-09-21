@@ -36,14 +36,16 @@ a {
     display: flex;
     flex-direction: row;
 }
-.gnb li {
+.gnb-item {
     font-size: 18px;
     font-weight: 400;
     margin: 0 10px;
     transition: 0.2s;
-    cursor: pointer;
 }
-.gnb li:hover {
+.gnb-item:hover a {
+    color: #0071e3;
+}
+.gnb-item.active a {
     color: #0071e3;
 }
 
