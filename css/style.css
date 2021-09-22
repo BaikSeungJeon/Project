@@ -54,6 +54,7 @@ a {
     min-width: 1480px;  /* 1480px 이상 안 줄어들게끔 */
     height: 100vh; /* 무조건 한 페이지 높이 다 가져가게끔 */
     position: relative;
+    overflow: hidden; /* 높이 작아짐으로써 다른 section 넘는 것을 방지 */
 }
 .introduce {
     text-align: center; /* 가로 가운데 정렬 */
@@ -71,12 +72,14 @@ a {
 }
 .introduce-content {
     color: #333;
+    text-align: left;
 }
 /* section2 profle*/
 #sec2 {
     min-width: 1480px; /* 1480px 이상 안 줄어들게끔 */
     height: 100vh;
     position: relative;
+    overflow: hidden; /* 높이 작아짐으로써 다른 section 넘는 것을 방지 */
 }
 .profile {
     position: absolute;
@@ -128,6 +131,7 @@ a {
     min-width: 1480px; /* 1480px 이상 안 줄어들게끔 */
     height: 100vh;
     position: relative;
+    overflow: hidden; /* 높이 작아짐으로써 다른 section 넘는 것을 방지 */
 }
 .skills {
     position: absolute;
@@ -169,7 +173,7 @@ a {
     width: 60px;
     height: 100px;
     padding: 10px;
-    box-shadow: 1px 1px 10px 1px #ddd;
+    box-shadow: 1px 1px 10px 1px #eee;
     border-radius: 20px;
     margin: 0 20px 20px 0; /* 스택들 사이 간격 */
     cursor: pointer;
@@ -210,7 +214,7 @@ a {
     width: 60px;
     height: 100px;
     padding: 10px;
-    box-shadow: 1px 1px 10px 1px #ddd;
+    box-shadow: 1px 1px 10px 1px #eee;
     border-radius: 20px;
     margin: 0 20px 20px 0;
     cursor: pointer;
@@ -251,7 +255,7 @@ a {
     width: 60px;
     height: 100px;
     padding: 10px;
-    box-shadow: 1px 1px 10px 1px #ddd;
+    box-shadow: 1px 1px 10px 1px #eee;
     border-radius: 20px;
     margin: 0 20px 20px 0;
     cursor: pointer;
@@ -275,7 +279,7 @@ a {
     min-width: 1480px; /* 1480px 이상 안 줄어들게끔 */
     height: 100vh;
     position: relative;
-    overflow: hidden;
+    overflow: hidden; /* 높이 작아짐으로써 다른 section 넘는 것을 방지 */
 }
 .timeline {
     width: 100%;
@@ -823,6 +827,7 @@ a {
     min-width: 1480px; /* 1480px 이상 안 줄어들게끔 */
     height: 90vh; /* footer랑 같이 보이게끔 */
     position: relative;
+    overflow: hidden; /* 높이 작아짐으로써 다른 section 넘는 것을 방지 */
 }
 .contact {
     text-align: center; /* 가로 가운데 정렬 */
@@ -941,11 +946,6 @@ a {
 .contact-email {
     margin: 0 auto;
     width: 50%;
-}
-.contact-email img {
-    width: 100%;
-    border-radius: 20px;
-    box-shadow: 1px 1px 10px 1px #999;
 }
 .contact-email input {
     border: none;
