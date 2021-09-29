@@ -21,29 +21,6 @@ document.querySelector('.slide-btn7').addEventListener('click', () => {
     document.querySelector('.timeline-slide').style.transform = 'translateX(-600vw)';
 })
 
-/* menu 클릭 시 font color 변경 */
-// let currentNav;
-// let nav = document.querySelectorAll('.gnb-item');
-
-// function clickNavHandler() {
-//     if (currentNav) {
-//         currentNav.classList.remove('active');
-//     }
-//     this.classList.add('active');
-//     currentNav = this;
-// }
-
-// for (let i = 0; i < nav.length; i++) {
-//     nav[i].addEventListener('click', clickNavHandler);
-// }
-
-/* scroll 위치 구하기 */
-// document.addEventListener('scroll', () => {
-//     let currentScrollValue = document.documentElement.scrollTop; // 스크롤 위치 구하기
-
-//     console.log('currentScrollValue is ' + currentScrollValue);
-// });
-
 /* introduce 클릭 시 content-box 내용 보이기 */
 
 let introBtn = document.querySelector('.introduce-content-btn');

@@ -51,7 +51,7 @@ a {
 
 /*section1 introduce*/
 #sec1 {
-    min-width: 1480px;  /* 1480px 이상 안 줄어들게끔 */
+    min-width: 1280px;  /* 1480px 이상 안 줄어들게끔 */
     height: 100vh; /* 무조건 한 페이지 높이 다 가져가게끔 */
     position: relative;
     overflow: hidden; /* 높이 작아짐으로써 다른 section 넘는 것을 방지 */
@@ -97,7 +97,7 @@ a {
 }
 /* section2 profle*/
 #sec2 {
-    min-width: 1480px; /* 1480px 이상 안 줄어들게끔 */
+    min-width: 1280px; /* 1480px 이상 안 줄어들게끔 */
     height: 100vh;
     position: relative;
     overflow: hidden; /* 높이 작아짐으로써 다른 section 넘는 것을 방지 */
@@ -149,7 +149,7 @@ a {
 }
 /* section3 skills*/
 #sec3 {
-    min-width: 1480px; /* 1480px 이상 안 줄어들게끔 */
+    min-width: 1280px; /* 1480px 이상 안 줄어들게끔 */
     height: 100vh;
     position: relative;
     overflow: hidden; /* 높이 작아짐으로써 다른 section 넘는 것을 방지 */
@@ -297,7 +297,7 @@ a {
 }
 /* section4 timeline */
 #sec4 {
-    min-width: 1480px; /* 1480px 이상 안 줄어들게끔 */
+    min-width: 1280px; /* 1480px 이상 안 줄어들게끔 */
     height: 100vh;
     position: relative;
     overflow: hidden; /* 높이 작아짐으로써 다른 section 넘는 것을 방지 */
@@ -845,7 +845,7 @@ a {
 /* timeline - 포트폴리오 */
 /* section5 contact */
 #sec5 {
-    min-width: 1480px; /* 1480px 이상 안 줄어들게끔 */
+    min-width: 1280px; /* 1480px 이상 안 줄어들게끔 */
     height: 90vh; /* footer랑 같이 보이게끔 */
     position: relative;
     overflow: hidden; /* 높이 작아짐으로써 다른 section 넘는 것을 방지 */
