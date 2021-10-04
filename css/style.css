@@ -51,7 +51,7 @@ a {
 
 /*section1 introduce*/
 #sec1 {
-    min-width: 1280px;  /* 1480px 이상 안 줄어들게끔 */
+    min-width: 1280px; /* 1280px 이상 안 줄어들게끔 */
     height: 100vh; /* 무조건 한 페이지 높이 다 가져가게끔 */
     position: relative;
     overflow: hidden; /* 높이 작아짐으로써 다른 section 넘는 것을 방지 */
@@ -88,7 +88,6 @@ a {
     width: 65px;
 }
 .introduce-content-box {
-    color: #333;
     text-align: left;
     display: none;
 }
@@ -97,7 +96,7 @@ a {
 }
 /* section2 profle*/
 #sec2 {
-    min-width: 1280px; /* 1480px 이상 안 줄어들게끔 */
+    min-width: 1280px; /* 1280px 이상 안 줄어들게끔 */
     height: 100vh;
     position: relative;
     overflow: hidden; /* 높이 작아짐으로써 다른 section 넘는 것을 방지 */
@@ -119,7 +118,6 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    
 }
 .profile-photo {
     width: 450px; /* 사진 크기는 안 변하니 고정값 450px */
@@ -129,27 +127,23 @@ a {
     border-radius: 20px;
 }
 .profile-information {
-    padding-left: 50px;
+    width: 450px; /* profile-photo와 같은 width */
+    padding-left: 50px; /* profile-photo와의 간격 */
 }
 .profile-information dl {
-    line-height: 52px;
     width: 150%; /* 한 줄에 다 들어갈 수 있도록 */
-    margin: 0;
-    padding: 0;
 }
 .profile-information dt {
     font-size: 18px;
-    color: #000;
     float: left;
 }
 .profile-information dd {
     /* font-size: 16px 기본 */
-    margin-left: 150px;
-    color: #333;
+    margin: 0 0 50px 150px;
 }
 /* section3 skills*/
 #sec3 {
-    min-width: 1280px; /* 1480px 이상 안 줄어들게끔 */
+    min-width: 1280px; /* 1280px 이상 안 줄어들게끔 */
     height: 100vh;
     position: relative;
     overflow: hidden; /* 높이 작아짐으로써 다른 section 넘는 것을 방지 */
@@ -297,7 +291,7 @@ a {
 }
 /* section4 timeline */
 #sec4 {
-    min-width: 1280px; /* 1480px 이상 안 줄어들게끔 */
+    min-width: 1280px; /* 1280px 이상 안 줄어들게끔 */
     height: 100vh;
     position: relative;
     overflow: hidden; /* 높이 작아짐으로써 다른 section 넘는 것을 방지 */
@@ -372,7 +366,7 @@ a {
     flex-direction: row;
     justify-content: start;
     border-bottom: 2px solid #000;
-    width: 350px;
+    width: 300px;
 }
 .project-tistory-title h3 {
     font-size: 18px;
@@ -443,7 +437,7 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: start;
-    width: 500px;
+    width: 400px;
     border-bottom: 2px solid #000;
 }
 .project-underarmour-title h3{
@@ -513,7 +507,7 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: start;
-    width: 350px;
+    width: 300px;
     border-bottom: 2px solid #000;
 }
 .project-github-title h3{
@@ -584,7 +578,7 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: start;
-    width: 500px;
+    width: 400px;
     border-bottom: 2px solid #000;
 }
 .project-rwd-title h3 {
@@ -655,7 +649,7 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: start;
-    width: 500px;
+    width: 400px;
     border-bottom: 2px solid #000;
 }
 .project-js-title h3 {
@@ -734,7 +728,7 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: start;
-    width: 550px;
+    width: 450px;
     border-bottom: 2px solid #000;
 }
 .project-react-title h3 {
@@ -804,7 +798,7 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: start;
-    width: 500px;
+    width: 400px;
     border-bottom: 2px solid #000;
 }
 .project-portfolio-title h3 {
@@ -845,7 +839,7 @@ a {
 /* timeline - 포트폴리오 */
 /* section5 contact */
 #sec5 {
-    min-width: 1280px; /* 1480px 이상 안 줄어들게끔 */
+    min-width: 1280px; /* 1280px 이상 안 줄어들게끔 */
     height: 90vh; /* footer랑 같이 보이게끔 */
     position: relative;
     overflow: hidden; /* 높이 작아짐으로써 다른 section 넘는 것을 방지 */
