@@ -34,7 +34,6 @@ a {
             width: 100%;
             height: 100px;
             position: fixed;
-            background-color: #fff;
             li {
                 width: 25%;
                 line-height: 100px;
@@ -45,4 +44,9 @@ a {
             }
         }
     }
+}
+.home {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 }
