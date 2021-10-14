@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    text-align: center; /* 중앙 배치 */
+}
+.inner {
+    margin: 0 auto; /* 본인을 중앙 */
+    max-width: 1980px; /* 최대 width 1980px 고정 */
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+#header {
+    .inner {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        .logo {
+            width: 100px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
