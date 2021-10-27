@@ -20,6 +20,7 @@ body {
   /* 본인을 중앙 */
   max-width: 1980px;
   /* 최대 width 1980px 고정 */
+  min-width: 1480px;
 }
 
 li {
@@ -83,11 +84,11 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 10%;
+  gap: 100px;
 }
 
 #section1 .home .home-photo {
-  width: 40%;
+  width: 30%;
 }
 
 #section1 .home .home-photo img {
@@ -95,7 +96,7 @@ a {
 }
 
 #section1 .home .home-contents {
-  width: 40%;
+  width: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -122,7 +123,7 @@ a {
           justify-content: start;
 }
 
-#section1 .home .home-contents .home-desc .desc-list {
+#section1 .home .home-contents .home-desc .home-desc-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -135,13 +136,17 @@ a {
           justify-content: start;
 }
 
-#section1 .home .home-contents .home-desc .desc-list .desc-list-title {
+#section1 .home .home-contents .home-desc .home-desc-list .home-desc-list-title {
   width: 30%;
   text-align: left;
 }
 
-#section1 .home .home-contents .home-desc .desc-list .desc-list-data {
+#section1 .home .home-contents .home-desc .home-desc-list .home-desc-list-data {
   width: 70%;
+  text-align: left;
+}
+
+#section1 .home .home-contents .home-introduce {
   text-align: left;
 }
 /*# sourceMappingURL=style.css.map */
