@@ -1,173 +1,122 @@
 @charset "utf-8";
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* border: 1px solid red; */
 }
-ul {
+li {
     list-style: none;
 }
 a {
     text-decoration: none;
-    color: black;
-}
-.clear::after {
-    content: "";
-    display: block;
-    clear: both;
-}
-#wrap {
-    min-width: 1200px;
-}
-.inner {
-    width: 1200px;
-    margin: 0 auto;
-}
+    color: #000;
+} /* reset */
 
-.header_top {
-    overflow: hidden;
-    background-color:
-    black; height: 40px;
+.header-top {
+    background-color : #000;
+    padding: 10px 0; /* height 40px */
     position: relative;
 }
-/*.header_top h3 {
-    float: left;
-    margin-top: 10px;
-    color: #ddd;
-    font-size: 12px;
-    font-weight: bold;
-}*/
-.header_top h3 {
+.header-top h3 {
     text-align: center;
     color: #eee;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 40px;
-    position: relative;
 }
-.header_top:hover h3 {
+.header-top:hover h3 {
     transform: scale(1.02);
 }
-#country {
-    margin-top: 11px;
-    margin-left: 10px;
-    background-color: black;
+.header-top-menu {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+#select-country {
+    background-color: #000;
     border: none;
     color: #ddd;
-    position: absolute;
-    top: 0; 
-    right: 140px;
 }
-.top_menu {
-    position: absolute;
-    top: 0;
-    right: 10px;
+.header-top-login {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 10px;
 }
-/*.top_menu li {
-    float: left;
-    margin: 7px 10px
-}*/
-.top_menu li {
-    float: left;
-    margin: 7px 10px 0;
-}
-/*.top_menu li:nth-of-type(2) {
-    margin-right: 50px;
-}*/
-.top_menu li a {
+.header-top-login li a {
     color: #ddd;
-    font-size: 12px;
-    font-weight: bold;
-}
-.header_btm {
+    font-size: 14px;
+} /* header-top */
+
+.header-btm {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
     border-bottom: 1px solid #999;
 }
+.logo {
+    width: 50px;
+}
 .logo img {
-    float: left;
-    width: 40px;
-    margin: 10px 0 0 20px;
+    width: 100%;
 }
-.main_menu {
+.main-menu {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 50px;
     text-align: center;
-    padding-left: 250px;
-    line-height: 1.5;
 }
-.main_menu>.slider.on {
-    border-bottom: 4px solid red;
-    box-sizing: border-box;
+.main-menu li {
+    position: relative; /* sub menu */
+    line-height: 58px; /* 개발자 도구에서 측정한 값 */
 }
-.main_menu>li {
-    float: left;
-    margin: 10px 0 ;
-    position: relative;
-    width: 90px;
-    height: 25px;
-    /* border-bottom: 4px solid red; */
+.main-menu li a {
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
 }
-.main_menu>li:hover>a {
+.main-menu li:hover>a {
+    /* main-menu의 자식 a만 선택해야 하므로 */
     color: red;
     transition: 0.2s;
 }
-/* .main_menu>li:hover .sub_menu {
-    display: block;
-    background-color: white;
-    z-index: 1;
-} */
-/* .main_menu>li:nth-of-type(1) {
-    margin-left: 10px;
-}
-.main_menu>li:nth-of-type(6) {
-    margin-right: 20px;
-}
-.main_menu>li:nth-of-type(7) {
-    margin-right: 10px;
-} */
-.main_menu>li>a {
-    font-size: 14px;
-    font-weight: bold;
-    text-align: cen;
-}
-.sub_menu {
+.sub-menu {
+    width: 300%;
     display: none;
     text-align: center;
     position: absolute;
-    top: 25px;
-    left: -1px;
-    z-index: 1;
-    background-color: white;
-    /* border-top: 4px solid red; */
-    width: 90px; /*부모인 main_menu width 사이즈 따라가기*/
+    top: 70%;
+    z-index: 999;
+    background-color: #fff;
 }
-.sub_menu>li {
-    line-height: 2.5;
+.sub-menu li {
 }
-.sub_menu>li:hover a {
+.sub-menu li:hover a {
     color: red;
     transition: 0.2s;
 }
-.sub_menu>li>a {
-    font-size: 13px;
-    font-weight: bold;
+.sub-menu li a {
+    font-size: 16px;
+    font-weight: 700;
 }
-.header_btm {
-    height: 40px;
+.header-btm input {
+    width: 250px;
+    height: 25px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 10px;
+    outline: none; /* 클릭 시 생기는 outline 제거 */
 }
-.header_btm form {
-    float: right;
-    margin: -35px 50px 0 0;
-}
-.header_btm form input {
-    width: 200px;
-    height: 15px;
-    background-color: white;
-    border: 1px solid #555;
-    border-radius: 3px;
-}
-.header_btm form input:hover {
-    border: none;
-    border: 2px solid red;
-    border-radius: 3px;
-}
+.header-btm form input:hover {
+    border: 1px solid red;
+} /* header-btm */
+
 #visual {
     width: 1200px;
     height: 550px;
@@ -175,213 +124,154 @@ a {
     overflow: hidden;
     margin: 0 auto;
 }
-.visual_img {
+.visual-img {
     width: 3600px;
     position: absolute;
     left: 0;
     top: 0;
-    /* animation: slide 8s ease infinite;  */
     transform: translateX(0);
 }
-.visual_img li {
+.visual-img li {
     width: 1200px;
     float: left;
 }
-.visual_img li img{
+.visual-img li img{
     width: 100%;
 }
-/* @keyframes slide {
-    0% {
-        left: 0;
-    }
-    50% {
-        left: -1200px;
-    }
-    100% {
-        left: 0;
-    }
-} */
-#content {
-    width: 100%;
-}
-/*#content .banner_img img {
-    width: 100%;
-    margin: 0 auto;
-}*/
-#content section {
-    position: relative;
-}
-#content .main_btn {
+.slide-btn {
     position: absolute;
-    bottom: 50px;
-    right: 415px;
-}
-#content .main_btn li {
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+} /* visual을 부모로 가져가야 하니 slide btn을 여기에 주기 */
+.slide-btn li {
     float: left;
     background-color: #333;
     margin: 0 10px;
-    padding: 8px 12px;
+    padding: 10px;
     border-radius: 5px;
 }
-#content .main_btn li a {
-    color: white;
+.slide-btn li a {
+    color: #fff;
     font-weight: bold;
     font-size: 13px;
 }
-/*#content .main_btn li:hover {
-    transform: scale(1.2);
-}*/
-#content .main_btn li:hover {
-    background-color: white;
+.slide-btn li:hover {
+    background-color: #fff;
     transition: 0.5s;
 }
-#content .main_btn li:hover a {
+.slide-btn li:hover a {
     color: #333;
     transition: 0.5s;
+} /* #visual */
+
+#section1 {
+    padding: 100px 0;
 }
-.sell_title {
-    text-align: center;
-    margin-bottom: 20px;
-}
-.sell_img li {
-    width: 200px;
-    float: left;
-    margin: 0 10px 30px;
-    overflow: hidden;
-}
-.sell_img li:nth-of-type(1) {
-    margin-left: 60px;
-}
-.sell_img li a {
-    overflow: hidden;
-}
-.sell_img h3 {
-    font-size: 14px;
-    text-align: center;
-    color: #333;
-}
-.sell_img p {
-    font-size: 13px;
-    text-align: center;
-    color: #777;
-}
-.sell_img img {
-    width: 100%;
-    margin-bottom: 10px;
-}
-.sell_img li:hover img {
-    transform: scale(1.05);
-    transition: 0.3s;
-}
-footer {
-    height: 100vh;
-    background-color: #ddd;
-    border-top: 3px solid #333;
-    padding: 30px 0;
-    overflow: hidden;
-}
-footer form {
-    text-align: center;
-}
-footer label {
-    color: #333;
-    font-size: 12px;
-}
-footer input {
-    height: 35px;
-    border-radius: 5px;
-    border: 1px solid #999
-} 
-footer input:hover {
-    border: 2px solid red;
-}
-footer button {
-    background-color: red;
-    border: 0;
-    padding: 8px 20px;
-    border-radius: 5px;
-    color: white;
-}
-footer button:hover {
-    transform: scale(1.03);
-}
-/*footer .btm_list1 {
-    width: 100%;
+.sell-items {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    max-width: 1980px;
     margin: 0 auto;
 }
-footer .btm_list1 li {
-    float: left;
+.sell-title {
+    text-align: center;
+    margin-bottom: 100px;
+}
+.sell-item {
+    width: 15%;
+    overflow: hidden;
+}
+.sell-item img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.sell-item h3 {
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    color: #000;
+}
+.sell-item p {
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    color: #555;
+}
+.sell-item:hover img {
+    transform: scale(1.05);
+    transition: 0.3s;
+} /* section1 */
+
+#footer {
+    background-color: #ddd;
+    padding: 100px 0;
+}
+#footer form {
+    text-align: center;
+}
+#footer label {
     color: #333;
-    font-size: 12px;
-    font-weight: bold;
-    margin: 20px 5px;
-    border-right: 1px solid #333;
-    padding-right: 11px;
+    font-size: 14px;
 }
-footer .btm_list1 li {
-    float: left;
-    color: #333;
-    font-size: 12px;
-    font-weight: bold;
-    margin: 20px 5px;
-    border-right: 1px solid #333;
-    padding-right: 11px;
-}
-footer .btm_list1 li:nth-of-type(1) {
-    margin-left: 1000px;
-}
-footer .btm_list1 li:nth-of-type(5) {
-    border: none;
-}
-footer .btm_list2 li {
-    float: left;
-    color: #222;
-    font-size: 12px;
-    font-weight: bold;
+#footer input {
+    width: 250px;
+    height: 35px;
+    border-radius: 15px;
+    border: 1px solid #999;
+    outline: none;
     margin: 0 10px;
-}*/
-footer p {
+} 
+#footer input[type=search]:hover {
+    border: 1px solid red;
+}
+#footer button {
+    background-color: red;
+    border: 0;
+    height: 35px;
+    padding: 0 10px;
+    border-radius: 5px;
+    color: #fff;
+}
+#footer p {
     color: #333;
-    font-size: 11px;
-    font-weight: bold;
+    font-size: 12px;
     text-align: center;
     line-height: 2.5;
 }
-footer .ft_ment1 {
-    margin-top: 30px;
-}
+#footer .ft-txt1 {
+    margin-top: 50px;
+} /* footer */
 
 #popup {
     position: fixed;   
     top: 0;
     right: 0;
-    bottom: 0;    
+    bottom: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.7);
     display: none;
 }
-.modal h1 {
-    margin-bottom: 35px;
-}
 .modal {
-    width: 300px;
-    height: 200px;
-    padding: 50px;
-    margin: 100px auto;
+    width: 500px;
+    height: 400px;
+    padding: 50px 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    background-color: white;
+    background-color: #fff;
     font-size: 18px;
     border-radius: 10px;
     cursor: pointer;
 }
-.modal_con {
-    line-height: 1.8;
+.modal-txt {
+    margin: 50px 0;
+    line-height: 2;
 }
-.modal_close {
-    margin-top: 20px;
-    font-weight: bold;
+.modal-close {
+    font-weight: 700;
     font-size: 18px;
-}
-.modal_close:hover {
-    color: red;
-}
+} /* modal */
