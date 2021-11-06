@@ -1,15 +1,15 @@
 /* eslint-disable */
 
-import React, {useState, useMemo} from 'react'; /* 호가 state 때문에 useState 추가해주기 */
+import React, {useState, useMemo} from 'react' /* 호가 state 때문에 useState 추가해주기 */
 /* select 때문에 useMemo 추가 */
-import styled from 'styled-components'; /* css */
-import { Link } from 'react-router-dom'; /* router dom */
-import Select from "react-select";  /* react-select */
-import AskingPrice from './askingPrice'; /* 호가 가격 import 해 오기 */
-import TitleStocks from './TitleStocks.js'; /* RecStocks import 해 오기 */
-import Price from '../../price.js'; /* Price(홈 주식 가격) import 해 오기 */
-import './Order.css';
-import Modal from './Modal'; /* modal import 해 오기 */
+import styled from 'styled-components' /* css */
+import { Link } from 'react-router-dom' /* router dom */
+import Select from "react-select"  /* react-select */
+import AskingPrice from './askingPrice' /* 호가 가격 import 해 오기 */
+import TitleStocks from './TitleStocks.js' /* RecStocks import 해 오기 */
+import Price from '../../price.js' /* Price(홈 주식 가격) import 해 오기 */
+import './Order.css'
+import Modal from './Modal' /* modal import 해 오기 */
 
 
 function Order(props) {

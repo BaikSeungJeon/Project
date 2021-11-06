@@ -3,15 +3,11 @@
     padding: 0;
 }
 .order-nav {
-    position: fixed;
-    top: 30px; /* header height 30px로부터 띄움 */
     display: flex;
     flex-direction: row;
-    width: 375px;
     height: 40px;
     border-bottom: 1px solid #ddd;
     background-color: #fff;
-    z-index: 9999; /* 99999보다 하나 빼서 아래 단계로 */
 }
 .order-nav-lbtn {
     width: 10%;
@@ -69,8 +65,7 @@
     margin-top: 70px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: 375px;
+    justify-content: start;
     height: 70px;
 }
 .order-hd-lbtn {
@@ -106,10 +101,6 @@
 .order-ux {
     display: flex;
     flex-direction: column;
-}
-.order-ux-top {
-    padding-top: 10px;
-    height: 50%;
 }
 .order-ux-top ul{
     display: flex;
@@ -147,11 +138,8 @@
     font-weight: 700;
     line-height: 20px;
 }
-.order-ux-top ul li:nth-of-type(4) {
-    margin-left: 5px;
-}
 .order-ux-top ul li:nth-of-type(5) {
-    margin: 0 5px;
+    margin: 0 10px;
 }
 .order-ux-btm {
     display: flex;
@@ -610,18 +598,13 @@
     background-color: #fff;
 }
 
-
-
-
 /* order 하단 매수 주문 버튼 바 */
 .order-btn-bar {
-    width: 375px;
+    /* width: 375px; */
     height: 40px; /* height를 50px 줄 건데, padding 위 아래 5px 주고 높이는 40px로 줘서 맞추기 */
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    position: fixed; /* 매매 시 멋대로 움직이면 안되니까 고정시켜 주기 */
-    top: 692px; /* top으로부터 692px 띄우기 */
+    justify-content: space-around;
     background-color: #e9b7ce;
     margin: 0; /* 여백 제거 */
     padding: 5px 0; /* 위 아래 5px padding 줘서 합 10px 주기 */

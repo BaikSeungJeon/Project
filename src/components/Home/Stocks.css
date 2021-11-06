@@ -1,7 +1,8 @@
-.stock-box {
+.stock-container {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    text-align: center;
     margin: 0;
     padding: 0;
 }

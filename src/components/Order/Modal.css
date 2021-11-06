@@ -4,7 +4,7 @@
     z-index: 99999; /* order-nav가 9999이니, 걔보다 위인 99999 주기 */
     margin: 0;
     padding: 0;
-    width: 375px;
+    /* width: 375px; */
     height: 30px;
     line-height: 30px; 
     font-size: 14px;

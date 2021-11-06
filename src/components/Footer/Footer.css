@@ -1,24 +1,21 @@
 .footer {
-    position: fixed;
-    top: 782px;
-    width: 375px;
     height: 30px;
     background-color: #000;
-    z-index: 99999;
+    padding-top: 15px;
 }
 .footer span {
     display: block;
-    width: 150px;
+    width: 50%;
     height: 4px;
+    margin: 0 auto;
     background-color: #fff;
     border-radius: 20px;
-    margin: 20px auto 0;
 }
-.footer span:hover {
+.footer:hover {
     animation: homeBar 0.3s; /* 아이폰 메뉴 바 ui 동작 구현 */
 }
 @keyframes homeBar {
     100% {
-        margin-top: 15px;
+        padding-top: 0;
     }
 }

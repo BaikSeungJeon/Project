@@ -1,11 +1,11 @@
 /* eslint-disable */
 
-import React, {useState} from 'react';
-import './Stocks.css';
+import React, {useState} from 'react'
+import './Stocks.css'
 
 function Stocks(props) {
     return (
-        <div className="stock-box">
+        <div className="stock-container">
             <div className="stock-box-1">
                 <p>{props.price[0].name}</p>
                 <p>{props.price[0].price}</p>

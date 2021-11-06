@@ -1,19 +1,18 @@
 /* eslint-disable */
 
-import React from 'react';
-import { Link } from 'react-router-dom'; /* router dom */
-import './Nav.css';
-
+import React from 'react'
+import { Link } from 'react-router-dom' // router dom
+import './Nav.css'
 
 
 function Nav() {
 
-    const repository = "/project-react-mts";
+    const repository = "/project-react-mts"; // 깃허브 페이지 배포를 위해 레파지토리명을 변수에 담아 Route 붙이기
 
     return (
         <div className="nav">
             <div className="nav-menu">
-                <img src="images/kiwoom.png"/>
+                <img src='images/kiwoom.png'/>
                 <p>메뉴</p>
             </div>
             <ul className="gnb">

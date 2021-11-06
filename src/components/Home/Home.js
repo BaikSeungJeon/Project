@@ -57,7 +57,7 @@ function Home() {
                         <img src="https://img.icons8.com/ios-glyphs/30/000000/chevron-right.png"/>
                     </li>
                     </ul>
-            </div>
+            </div> 
         
             <div className="section2">
                 <div className="sec2-hd">

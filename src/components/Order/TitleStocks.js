@@ -1,7 +1,7 @@
 /* eslint-disable */
 
-import React, {useState} from 'react';
-import './Order.css';
+import React, {useState} from 'react'
+import './Order.css'
 
 function TitleStocks(props) {
     return (
