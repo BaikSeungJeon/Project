@@ -22,7 +22,7 @@ function Order(props) {
         <div>
             <div className="order-nav">
                 <div className="order-nav-lbtn">
-                    <img src="https://img.icons8.com/ios/20/000000/back--v1.png"/>
+                    <img src="https://img.icons8.com/ios/28/000000/back--v1.png"/>
                 </div>
                 <div className="order-nav-md">
                     <ul>
@@ -36,33 +36,35 @@ function Order(props) {
                     </ul>
                 </div>
                 <div className="order-nav-rbtn">
-                    <img src="https://img.icons8.com/ios/24/000000/more-than.png"/>
-                    <img src="https://img.icons8.com/material-rounded/24/000000/menu-2.png"/>
+                    <img src="https://img.icons8.com/ios/30/000000/more-than.png"/>
+                    <img src="https://img.icons8.com/material-rounded/30/000000/menu-2.png"/>
                 </div>
             </div>
 
             <div className="order-hd">
                 <div className="order-hd-lbtn">
-                    <img src="https://img.icons8.com/ios/16/000000/back--v1.png"/>
-                    <img src="https://img.icons8.com/officel/30/000000/candle-sticks.png"/>
+                    <img src="https://img.icons8.com/ios/28/000000/back--v1.png"/>
                 </div>
                 <div className="order-ux">
-                    <div className="order-ux-top">
-                        <ul>
-                            <li>무료</li>
-                            <li>증100</li>
-                            <li>AAPL/NASDAQ</li>
-                            <li><img src="https://img.icons8.com/material-outlined/24/000000/appointment-reminders--v1.png"/></li>
-                            <li><img src="https://img.icons8.com/material-outlined/24/000000/star--v2.png"/></li>
-                            <li><img src="https://img.icons8.com/ios-glyphs/24/000000/search--v1.png"/></li>
-                        </ul>
-                    </div>
-                    <div className="order-ux-btm">
-                        <TitleStocks price={price[0]}/>
+                    <img src="https://img.icons8.com/officel/30/000000/candle-sticks.png"/>
+                    <div className="order-ux-container">
+                        <div className="order-ux-top">
+                            <ul>
+                                <li>무료</li>
+                                <li>증100</li>
+                                <li>AAPL/NASDAQ</li>
+                                <li><img src="https://img.icons8.com/material-outlined/24/000000/appointment-reminders--v1.png"/></li>
+                                <li><img src="https://img.icons8.com/material-outlined/24/000000/star--v2.png"/></li>
+                                <li><img src="https://img.icons8.com/ios-glyphs/24/000000/search--v1.png"/></li>
+                            </ul>
+                        </div>
+                        <div className="order-ux-btm">
+                            <TitleStocks price={price[0]}/>
+                        </div>
                     </div>
                 </div>
                 <div className="order-hd-rbtn">
-                    <img src="https://img.icons8.com/ios/20/000000/more-than.png"/>
+                    <img src="https://img.icons8.com/ios/30/000000/more-than.png"/>
                 </div>
             </div>
             
