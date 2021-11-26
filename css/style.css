@@ -2,15 +2,11 @@
 
 html {
     scroll-behavior: smooth; /* nav 눌렀을 때 스크롤 부드럽게 */
-    scroll-snap-type: y mandatory; /*스크롤 스냅*/
 }
 body {
     min-width: 1280px; /* 반응형 말고 적응형으로 감 */
     padding: 0;
     margin: 0;
-}
-.section {
-    scroll-snap-align: start; /* timeline의 start 부분부터 보여줘야 해서 */
 }
 .clear::after {
     content: "";
@@ -24,17 +20,22 @@ a {
     text-decoration: none;
     color: #000;
 }
+
 /* nav */
-.navbar {
+header {
+    margin-bottom: 100px; /* nav랑 간격 주기 */
+}
+nav {
     position: fixed;
     top: 10px;
     right: 10px; /* position fixed로 위치 고정, 오른쪽 상단에 위치시키기*/
-    z-index: 99999; /* 우선 순위 */
+    z-index: 999; /* 우선 순위 */
 }
 .gnb {
     font-weight: 700;
     display: flex;
     flex-direction: row;
+    margin-bottom: 100px;
 }
 .gnb-item {
     font-size: 18px;
@@ -51,28 +52,18 @@ a {
 
 /*section1 introduce*/
 #sec1 {
-    min-width: 1280px; /* 1280px 이상 안 줄어들게끔 */
-    height: 100vh; /* 무조건 한 페이지 높이 다 가져가게끔 */
+    margin: 50px 0; /* section 위 아래 margin 주기 */
+    padding: 50px 0; /* section 위 아래 padding 주기 */
     position: relative;
-    overflow: hidden; /* 높이 작아짐으로써 다른 section 넘는 것을 방지 */
-}
-.introduce {
-    text-align: center; /* 가로 가운데 정렬 */
-    position: absolute; /* 여기서부터 중앙 배치 */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
 }
 .introduce h1 {
     font-weight: 700;
     font-size: 36px;
-    margin: 0 auto;
-    margin-bottom: 50px;
     text-align: center;
 }
 .introduce-content {
+    text-align: center;
     color: #000;
-    text-align: left;
 }
 .introduce-content-btn {
     border: none;
@@ -88,7 +79,8 @@ a {
     width: 65px;
 }
 .introduce-content-box {
-    text-align: left;
+    text-align: center;
+    padding: 50px 0;
     display: none;
 }
 .introduce-content-box.on {
@@ -96,23 +88,17 @@ a {
 }
 /* section2 profle*/
 #sec2 {
-    min-width: 1280px; /* 1280px 이상 안 줄어들게끔 */
-    height: 100vh;
+    margin: 50px 0; /* section 위 아래 margin 주기 */
+    padding: 50px 0; /* section 위 아래 padding 주기 */
     position: relative;
-    overflow: hidden; /* 높이 작아짐으로써 다른 section 넘는 것을 방지 */
 }
 .profile {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 .profile h1 {
     font-weight: 700;
     font-size: 36px;
-    margin: auto;
+    margin: 0 auto;
     text-align: center;
-    margin-bottom: 30px; /* 프로필과 간격 두기 */
 }
 .profile-content {
     display: flex;
@@ -143,23 +129,17 @@ a {
 }
 /* section3 skills*/
 #sec3 {
-    min-width: 1280px; /* 1280px 이상 안 줄어들게끔 */
-    height: 100vh;
+    margin: 50px 0; /* section 위 아래 margin 주기 */
+    padding: 50px 0; /* section 위 아래 padding 주기 */
     position: relative;
-    overflow: hidden; /* 높이 작아짐으로써 다른 section 넘는 것을 방지 */
 }
 .skills {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 .skills h1 {
     font-weight: 700;
     font-size: 36px;
     margin: auto;
     text-align: center;
-    margin-bottom: 30px;
 }
 .skills-content {
     display: flex;
@@ -291,10 +271,9 @@ a {
 }
 /* section4 timeline */
 #sec4 {
-    min-width: 1280px; /* 1280px 이상 안 줄어들게끔 */
-    height: 100vh;
+    margin: 50px 0; /* section 위 아래 margin 주기 */
+    padding: 50px 0; /* section 위 아래 padding 주기 */
     position: relative;
-    overflow: hidden; /* 높이 작아짐으로써 다른 section 넘는 것을 방지 */
 }
 .timeline {
     width: 100%;
@@ -302,560 +281,24 @@ a {
 }
 .timeline h1 {
     /* section4만 가로로 길게 슬라이드가 들어가서 제목이 상위에 있음 */
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -20%); /* 가로 세로니, left, top 순서 */
     font-weight: 700;
     font-size: 36px;
 }
-.slide-btn-box {
-    position: absolute;
-    left: 50%;
-    bottom: 20%;
-    transform: translate(-50%, -5%);
-}
-.slide-btn-box input {
-    width: 20px;
-    height: 20px;
-    transition: all .3s;
-}
-/* timeline btn */
-.timeline-slide {
-    width: 700vw; /* = width 700% */
-    height: 100vh;
-    display: flex;
-    flex-flow: row;
-    justify-content: start; /* 여기서 모든 프로젝트들 다 가로로 flex */
-    transition: all 1s; /* slide 애니메이션 */
-}
-.timeline-tistory {
-    width: 100%; /* 7등분 해서 먹기 */
-    height: 100vh;
-    position: relative;
-}
-.timeline-tistory-box {
-    width: 100%;
-    height: 330px; /* 높이 막기 */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
-}
-.timeline-tistory-box h1 {
-    font-weight: 700;
-    font-size: 36px;
-}
-.project-tistory-img {
-    width: 30%; /* 이미지와 내용이 30%씩 가져갈 건데, */
-    min-width: 630px; /* 모니터에 따라 계속 작아져서 min-width 주기 */
-}
-.project-tistory-img>img {
-    width: 100%; /* 이미지 꽉 채우기 */
-}
-.project-tistory-content {
-    width: 30%;
-    min-width: 630px; /* 모니터에 따라 계속 작아져서 min-width 주기 */
-}
-.project-tistory-title {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    border-bottom: 2px solid #000;
-    width: 300px;
-}
-.project-tistory-title h3 {
-    font-size: 18px;
-    font-weight: 700;
-    margin: 0;
-    padding: 0; /* 제목의 여백 제거 */
-}
-.project-tistory-title p {
-    font-size: 20px; /* 날짜 높이 맞추기 */
-    margin: 0 0 0 20px;
-}
-.project-tistory-skills-top {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    height: 60px;
-}
-.project-tistory-skills-top p {
-    margin: 0 10px 0 0;
-    padding: 0;
-    line-height: 60px;
-}
-.project-tistory-skills-top img {
-    width: 60px; /* 너비 60px 고정해야 안 퍼짐 */
-}
-.project-tistory-skills-btm {
-    display: flex;
-    flex-direction: row;
-    height: 60px;
-}
-.project-tistory-skills-btm p {
-    margin: 0 25px 0 0;
-    line-height: 60px;
-}
-.project-tistory-skills-btm img {
-    width: 60px; /* 너비 60px 고정해야 안 퍼짐 */
-}
-    
-/* timeline - 티스토리 */
-.timeline-underarmour {
-    width: 100%; /* 7등분 해서 먹기 */
-    height: 100vh;
-    position: relative;
-}
-.timeline-underarmour-box {
-    width: 100%;
-    height: 330px; /* 높이 막기 */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.project-underarmour-img {
-    width: 30%; /* 이미지와 내용이 30%씩 가져갈 건데, */
-    min-width: 630px; /* 모니터에 따라 계속 작아져서 min-width 주기 */
-}
-.project-underarmour-img>img {
-    width: 100%;
-}
-.project-underarmour-content {
-    width: 30%;
-    min-width: 630px; /* 모니터에 따라 계속 작아져서 min-width 주기 */
-}
-.project-underarmour-title {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    width: 400px;
-    border-bottom: 2px solid #000;
-}
-.project-underarmour-title h3{
-    font-size: 18px;
-    font-weight: 700;
-    margin: 0;
-    padding: 0; /* 제목의 여백 제거 */
-}
-.project-underarmour-title p {
-    font-size: 20px; /* 날짜 높이 맞추기 */
-    margin: 0 0 0 20px;
-}
-.project-underarmour-skills-top {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    height: 60px;
-}
-.project-underarmour-skills-top p {
-    margin: 0 10px 0 0;
-    line-height: 60px;
-}
-.project-underarmour-skills-top img{
-    width: 60px; /* 너비 60px 고정해야 안 퍼짐 */
-}
-.project-underarmour-skills-btm {
-    display: flex;
-    flex-direction: row;
-    height: 60px;
-}
-.project-underarmour-skills-btm p {
-    margin: 0 25px 0 0;
-    line-height: 60px;
-}
-.project-underarmour-skills-btm img {
-    width: 60px; /* 너비 60px 고정해야 안 퍼짐 */
-}
-/* timeline - 언더아머 */
-.timeline-github {
-    width: 100%; /* 7등분 해서 먹기 */
-    height: 100vh;
-    position: relative;
-}
-.timeline-github-box {
-    width: 100%;
-    height: 330px; /* 높이 막기 */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.project-github-img {
-    width: 30%; /* 이미지와 내용이 30%씩 가져갈 건데, */
-    min-width: 630px; /* 모니터에 따라 계속 작아져서 min-width 주기 */
-}
-.project-github-img>img {
-    width: 100%;
-}
-.project-github-content {
-    width: 30%;
-    min-width: 630px; /* 모니터에 따라 계속 작아져서 min-width 주기 */
-}
-.project-github-title {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    width: 300px;
-    border-bottom: 2px solid #000;
-}
-.project-github-title h3{
-    font-size: 18px;
-    font-weight: 700;
-    margin: 0;
-    padding: 0; /* 제목의 여백 제거 */
-}
-.project-github-title p {
-    font-size: 20px; /* 날짜 높이 맞추기 */
-    margin: 0 0 0 20px;
-}
-.project-github-skills-top {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    height: 60px;
-}
-.project-github-skills-top p {
-    margin: 0 10px 0 0;
-    line-height: 60px;
-}
-.project-github-skills-top img {
-    width: 60px; /* 너비 60px 고정해야 안 퍼짐 */
-}
-.project-github-skills-btm {
-    display: flex;
-    flex-direction: row;
-    height: 60px;
-}
-.project-github-skills-btm p {
-    margin: 0 25px 0 0;
-    line-height: 60px;
-}
-.project-github-skills-btm img {
-    width: 60px; /* 너비 60px 고정해야 안 퍼짐 */
-}
-/* timeline - 깃허브 */
-.timeline-rwd {
-    scroll-snap-align: start;
-    width: 100%; /* 7등분 해서 먹기 */
-    height: 100vh;
-    position: relative;
-}
-.timeline-rwd-box {
-    width: 100%;
-    height: 330px; /* 높이 막기 */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.project-rwd-img {
-    width: 30%; /* 이미지와 내용이 30%씩 가져갈 건데, */
-    min-width: 630px; /* 모니터에 따라 계속 작아져서 min-width 주기 */
-}
-.project-rwd-img>img {
-    width: 100%;
-}
-.project-rwd-content {
-    width: 30%;
-    min-width: 630px; /* 모니터에 따라 계속 작아져서 min-width 주기 */
-}
-.project-rwd-title {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    width: 400px;
-    border-bottom: 2px solid #000;
-}
-.project-rwd-title h3 {
-    font-size: 18px;
-    font-weight: 700;
-    margin: 0;
-    padding: 0; /* 제목의 여백 제거 */
-}
-.project-rwd-title p {
-    font-size: 20px; /* 날짜 높이 맞추기 */
-    margin: 0 0 0 20px;
-}
-.project-rwd-skills-top {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    height: 60px;
-}
-.project-rwd-skills-top p {
-    margin: 0 10px 0 0;
-    line-height: 60px;
-}
-.project-rwd-skills-top img {
-    width: 60px; /* 너비 60px 고정해야 안 퍼짐 */
-}
-.project-rwd-skills-btm {
-    display: flex;
-    flex-direction: row;
-    height: 60px;
-}
-.project-rwd-skills-btm p {
-    margin: 0 25px 0 0;
-    line-height: 60px;
-}
-.project-rwd-skills-btm img {
-    width: 60px; /* 너비 60px 고정해야 안 퍼짐 */
-}
-/* timeline - 반응형 */
-.timeline-js {
-    width: 100%; /* 7등분 해서 먹기 */
-    height: 100vh;
-    position: relative;
-}
-.timeline-js-box {
-    width: 100%;
-    height: 330px; /* 높이 막기 */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.project-js-img {
-    width: 30%; /* 이미지와 내용이 30%씩 가져갈 건데, */
-    min-width: 630px; /* 모니터에 따라 계속 작아져서 min-width 주기 */
-    text-align: center; /* 살짝 이미지 작게 주고 가로 가운데 정렬 */
-}
-.project-js-img>img {
-    width: 90%; /* 이미지가 프로젝트 설명과 많이 붙어서 살짝 작게 줌 */
-}
-.project-js-content {
-    width: 30%;
-    min-width: 630px; /* 모니터에 따라 계속 작아져서 min-width 주기 */
-}
-.project-js-title {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    width: 400px;
-    border-bottom: 2px solid #000;
-}
-.project-js-title h3 {
-    font-size: 18px;
-    font-weight: 700;
-    margin: 0;
-    padding: 0; /* 제목의 여백 제거 */
-}
-.project-js-title p {
-    font-size: 20px; /* 날짜 높이 맞추기 */
-    margin: 0 0 0 20px;
-}
-.project-js-skills-top {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    height: 60px;
-}
-.project-js-skills-top p {
-    margin: 0 10px 0 0;
-    line-height: 60px;
-}
-.project-js-skills-top img {
-    width: 60px; /* 너비 60px 고정해야 안 퍼짐 */
-}
-.project-js-skills-btm {
-    display: flex;
-    flex-direction: row;
-}
-.project-js-skills-btm p {
-    margin: 0 25px 0 0;
-    line-height: 60px;
-}
-.project-js-skills-btm img {
-    width: 60px; /* 너비 60px 고정해야 안 퍼짐 */
-}
-.project-js-skills-btm-menu {
-    display: flex;
-    flex-direction: row;
-}
-.project-js-skills-btm-list {
-    display: flex;
-    flex-direction: row;
-}
-/* timeline - 자스 */
-.timeline-react {
-    width: 100%; /* 7등분 해서 먹기 */
-    height: 100vh;
-    position: relative;
-}
-.timeline-react-box {
-    width: 100%;
-    height: 330px; /* 높이 막기 */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.project-react-img {
-    width: 30%; /* 이미지와 내용이 30%씩 가져갈 건데, */
-    min-width: 630px; /* 모니터에 따라 계속 작아져서 min-width 주기 */
-    text-align: center;
-}
-.project-react-img>img {
-    width: 45%;
-    
-}
-.project-react-content {
-    width: 30%;
-    min-width: 630px; /* 모니터에 따라 계속 작아져서 min-width 주기 */
-}
-.project-react-title {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    width: 450px;
-    border-bottom: 2px solid #000;
-}
-.project-react-title h3 {
-    font-size: 18px;
-    font-weight: 700;
-    margin: 0;
-    padding: 0; /* 제목의 여백 제거 */
-}
-.project-react-title p {
-    font-size: 20px; /* 날짜 높이 맞추기 */
-    margin: 0 0 0 20px;
-}
-.project-react-skills-top {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    height: 60px;
-}
-.project-react-skills-top p {
-    margin: 0 10px 0 0;
-    line-height: 60px;
-}
-.project-react-skills-top img {
-    width: 60px; /* 너비 60px 고정해야 안 퍼짐 */
-}
-.project-react-skills-btm {
-    display: flex;
-    flex-direction: row;
-    height: 60px;
-}
-.project-react-skills-btm p {
-    margin: 0 25px 0 0;
-    line-height: 60px;
-}
-.project-react-skills-btm img {
-    width: 60px; /* 너비 60px 고정해야 안 퍼짐 */
-}
-/* timeline - 리액트 */
-.timeline-portfolio {
-    width: 100%; /* 7등분 해서 먹기 */
-    height: 100vh;
-    position: relative;
-}
-.timeline-portfolio-box {
-    width: 100%;
-    height: 330px; /* 높이 막기 */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.project-portfolio-img {
-    width: 30%; /* 이미지와 내용이 30%씩 가져갈 건데, */
-    min-width: 630px; /* 모니터에 따라 계속 작아져서 min-width 주기 */
-}
-.project-portfolio-img>img {
-    width: 100%;
-}
-.project-portfolio-content {
-    width: 30%;
-    min-width: 630px; /* 모니터에 따라 계속 작아져서 min-width 주기 */
-}
-.project-portfolio-title {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    width: 400px;
-    border-bottom: 2px solid #000;
-}
-.project-portfolio-title h3 {
-    font-size: 18px;
-    font-weight: 700;
-    margin: 0;
-    padding: 0; /* 제목의 여백 제거 */
-}
-.project-portfolio-title p {
-    font-size: 20px; /* 날짜 높이 맞추기 */
-    margin: 0 0 0 20px;
-}
-.project-portfolio-skills-top {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    height: 60px;
-}
-.project-portfolio-skills-top p {
-    margin: 0 10px 0 0;
-    line-height: 60px;
-}
-.project-portfolio-skills-top img {
-    width: 60px; /* 너비 60px 고정해야 안 퍼짐 */
-}
-.project-portfolio-skills-btm {
-    display: flex;
-    flex-direction: row;
-    height: 60px;
-}
-.project-portfolio-skills-btm p {
-    margin: 0 25px 0 0;
-    line-height: 60px;
-}
-.project-portfolio-skills-btm img {
-    width: 60px; /* 너비 60px 고정해야 안 퍼짐 */
-}
+
 /* timeline - 포트폴리오 */
 /* section5 contact */
 #sec5 {
-    min-width: 1280px; /* 1280px 이상 안 줄어들게끔 */
-    height: 90vh; /* footer랑 같이 보이게끔 */
+    margin: 50px 0; /* section 위 아래 margin 주기 */
+    padding: 50px 0; /* section 위 아래 padding 주기 */
     position: relative;
-    overflow: hidden; /* 높이 작아짐으로써 다른 section 넘는 것을 방지 */
 }
 .contact {
     text-align: center; /* 가로 가운데 정렬 */
-    position: absolute; /* 여기서부터 중앙 배치 */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
 }
-.contact>h1 {
+.contact h1 {
     font-weight: 700;
     font-size: 36px;
     margin: 0 auto;
-    margin-bottom: 50px; /* 여백 */
     text-align: center;
 }
 .contact-card {
@@ -872,10 +315,6 @@ a {
     transition: 1s; /* 카드 플립 애니메이션 */
 }
 .contact-card-front-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: row;
 }
@@ -906,10 +345,6 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 .contact-card-back-left {
     width: 50%;
