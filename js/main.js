@@ -1,33 +1,20 @@
-/* project 부분 가로 슬라이드 구현 */
-document.querySelector('.slide-btn1').addEventListener('click', () => {
-    document.querySelector('.timeline-slide').style.transform = 'translateX(0)';
-})
-document.querySelector('.slide-btn2').addEventListener('click', () => {
-    document.querySelector('.timeline-slide').style.transform = 'translateX(-100vw)';
-})
-document.querySelector('.slide-btn3').addEventListener('click', () => {
-    document.querySelector('.timeline-slide').style.transform = 'translateX(-200vw)';
-})
-document.querySelector('.slide-btn4').addEventListener('click', () => {
-    document.querySelector('.timeline-slide').style.transform = 'translateX(-300vw)';
-})
-document.querySelector('.slide-btn5').addEventListener('click', () => {
-    document.querySelector('.timeline-slide').style.transform = 'translateX(-400vw)';
-})
-document.querySelector('.slide-btn6').addEventListener('click', () => {
-    document.querySelector('.timeline-slide').style.transform = 'translateX(-500vw)';
-})
-document.querySelector('.slide-btn7').addEventListener('click', () => {
-    document.querySelector('.timeline-slide').style.transform = 'translateX(-600vw)';
-})
-
-/* introduce 클릭 시 content-box 내용 보이기 */
-
+// introduce 클릭 시 content-box 내용 보이기
 let introBtn = document.querySelector('.introduce-content-btn');
 let introBox = document.querySelector('.introduce-content-box');
 
 introBtn.addEventListener("click", () => {
-
     introBox.classList.toggle('on');
-    
 });
+
+// swiper
+let swiper = new Swiper(".mySwiper", {
+    pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar",
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
+
