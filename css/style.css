@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+/* reset */
 html {
     scroll-behavior: smooth; /* nav 눌렀을 때 스크롤 부드럽게 */
 }
@@ -7,6 +8,10 @@ body {
     min-width: 1280px; /* 반응형 말고 적응형으로 감 */
     padding: 0;
     margin: 0;
+}
+.inner {
+    max-width: 1920px;
+    margin: 0 auto;
 }
 .clear::after {
     content: "";
@@ -60,9 +65,12 @@ nav {
     font-weight: 700;
     font-size: 36px;
     text-align: center;
+    margin: 50px 0; /* 제목 기준으로 제목과 본문 위 아래 margin */
 }
 .introduce-content {
-    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+    text-align: left;
     color: #000;
 }
 .introduce-content-btn {
@@ -79,7 +87,9 @@ nav {
     width: 65px;
 }
 .introduce-content-box {
-    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+    text-align: left;
     padding: 50px 0;
     display: none;
 }
@@ -92,12 +102,10 @@ nav {
     padding: 50px 0; /* section 위 아래 padding 주기 */
     position: relative;
 }
-.profile {
-}
 .profile h1 {
     font-weight: 700;
     font-size: 36px;
-    margin: 0 auto;
+    margin: 50px 0; /* 제목 기준으로 제목과 본문 위 아래 margin */
     text-align: center;
 }
 .profile-content {
@@ -133,12 +141,10 @@ nav {
     padding: 50px 0; /* section 위 아래 padding 주기 */
     position: relative;
 }
-.skills {
-}
 .skills h1 {
     font-weight: 700;
     font-size: 36px;
-    margin: auto;
+    margin: 50px 0; /* 제목 기준으로 제목과 본문 위 아래 margin */
     text-align: center;
 }
 .skills-content {
@@ -150,6 +156,7 @@ nav {
     width: 380px; /* 줄어들면서 section을 밀어 다른 section을 침범하기 때문에, 33% 비율인, 380px씩 분배 */
 }
 .skills-left h3 {
+    text-align: center;
     font-size: 18px;
     font-weight: 400;
     cursor: pointer;
@@ -161,7 +168,7 @@ nav {
     display: flex;
     flex-flow: row wrap; /* 자격증 section은 flex-flow 사용 */
     justify-content: start;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
 }
 .skills-developer li {
@@ -170,7 +177,7 @@ nav {
     padding: 10px;
     box-shadow: 1px 1px 10px 1px #eee;
     border-radius: 20px;
-    margin: 0 20px 20px 0; /* 스택들 사이 간격 */
+    margin: 20px; /* 스택들 사이 간격 */
     cursor: pointer;
 }
 .skills-developer li:hover img {
@@ -192,6 +199,7 @@ nav {
     width: 380px; /* 줄어들면서 section을 밀어 다른 section을 침범하기 때문에, 33% 비율인, 380px씩 분배 */
 }
 .skills-mid h3 {
+    text-align: center;
     font-size: 18px;
     font-weight: 400;
     cursor: pointer;
@@ -211,7 +219,7 @@ nav {
     padding: 10px;
     box-shadow: 1px 1px 10px 1px #eee;
     border-radius: 20px;
-    margin: 0 20px 20px 0;
+    margin: 20px; /* 스택들 사이 간격 */
     cursor: pointer;
 }
 .skills-communicator li:hover img {
@@ -233,6 +241,7 @@ nav {
     width: 380px; /* 줄어들면서 section을 밀어 다른 section을 침범하기 때문에, 33% 비율인, 380px씩 분배 */
 }
 .skills-right h3 {
+    text-align: center;
     font-size: 18px;
     font-weight: 400;
     cursor: pointer;
@@ -252,7 +261,7 @@ nav {
     padding: 10px;
     box-shadow: 1px 1px 10px 1px #eee;
     border-radius: 20px;
-    margin: 0 20px 20px 0;
+    margin: 20px; /* 스택들 사이 간격 */
     cursor: pointer;
 }
 .skills-license li:hover img {
@@ -281,6 +290,8 @@ nav {
 }
 .timeline h1 {
     /* section4만 가로로 길게 슬라이드가 들어가서 제목이 상위에 있음 */
+    margin: 50px 0; /* 제목 기준으로 제목과 본문 위 아래 margin */
+    text-align: center;
     font-weight: 700;
     font-size: 36px;
 }
@@ -296,14 +307,15 @@ nav {
     text-align: center; /* 가로 가운데 정렬 */
 }
 .contact h1 {
+    margin: 50px 0; /* 제목 기준으로 제목과 본문 위 아래 margin */
     font-weight: 700;
     font-size: 36px;
-    margin: 0 auto;
     text-align: center;
 }
 .contact-card {
     width: 543px; /* 1087px 반 */
     height: 307px; /* 614px 반 */
+    margin: 0 auto;
     perspective: 1000px; /* 카드 플립 애니메이션, 원근감 줌 */
 }
 .contact-card-front {
@@ -317,6 +329,10 @@ nav {
 .contact-card-front-content {
     display: flex;
     flex-direction: row;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .contact-card-front-content p {
     font-size: 20px;
@@ -345,6 +361,10 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .contact-card-back-left {
     width: 50%;
@@ -437,4 +457,64 @@ footer {
 }
 .footer-content a:hover {
     color: #0071e3;
+}
+
+/* swiper */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+
+    /* 내가 추가한 코드 */
+    padding: 100px 0;
+}
+.swiper-slide img {
+    width: 100%;
+    object-fit: cover;
+}
+.swiper-slide {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+}
+.swiper-slide-img {
+    width: 40%;
+}
+.timeline-react-img {
+    width: 20%;
+}
+.swiper-slide-content {
+    width: 40%;
+}
+.timeline-js-content span {
+    text-decoration: underline;
+    color: blue;
+}
+.timeline-react-content {
+    width: 20%;
+}
+.swiper-slide-content>h3 {
+    text-align: left;
+}
+.swiper-slide-content>p {
+    text-align: left;
 }
