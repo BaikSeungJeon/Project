@@ -1,11 +1,10 @@
 .App {
-  max-width: 1024px;
-  min-width: 480px;
+  max-width: 414px; /* iPhone XR */
+  min-width: 375px; /* iPhone SE */
   box-sizing: border-box;
   margin: 0 auto; /* 중앙 배치 */
   padding: 0;
   position: relative;
-  overflow: hidden; /* 초기에 개발자 도구 들어가기 전까지 이 외에 것들 안 보여주기 위해서 */
 }
 li {
   list-style: none;

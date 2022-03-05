@@ -1,44 +1,59 @@
 .nav {
+    height: 50px;
+    overflow: auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: start;
+    align-items: center;
     background-color: #fff;
     border-top: 1px solid #000;
 }
-.nav-menu {
-    width: 10%;
-    display: flex;
-    flex-direction: column;
+
+/* 로고 */
+.nav-logo {
+    width: 60px;
+    margin: 0;
+    padding: 0;
     text-align: center;
 }
-.nav-menu img {
-    width: 30px;
-    margin: 0 auto;
+.nav-logo img {
+    width: 50%;
 }
-.nav-menu p {
+.nav-logo p {
     font-size: 14px;
     font-weight: 700;
     color: #143776;
-}
-.gnb {
-    width: 90%;
-    box-sizing: border-box;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: center;
     margin: 0;
     padding: 0;
-    /* overflow auto를 줌으로써 li 개수가 초과돼도 스크롤 만들기*/
 }
-.gnb li {
+
+/* 메뉴 */
+.nav-menu {
+    width: 80%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: start;
+    margin: 0;
+    padding: 0;
+}
+.nav-menu li {
+    width: 60px;
+    height: 50px;
+    line-height: 50px;
     font-weight: 700;
     font-size: 14px;
-    text-overflow: ellipsis;
+    white-space: nowrap; /* 글자수 무시하고 텍스트 겹치기 */
+    overflow: hidden; /* 글자수 길면 삭제하기  */
+    text-overflow: ellipsis; /* 글자수 길면 ...로 표시 */
+    border-left: 1px solid #ccc;
+    margin: 0;
+    padding: 0;
 }
-.gnb li:hover {
+.nav-menu li:hover {
     color: #d12c7d;
 }
-.gnb li:visited {
+.nav-menu li:visited {
     color: #d12c7d;
 }
