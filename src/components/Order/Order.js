@@ -19,6 +19,7 @@ function Order(props) {
     let [modal, modalChange] = useState(false);
 
     return (
+        
         <div className='order'>
 
             {/* 주문창의 네비게이션 */}

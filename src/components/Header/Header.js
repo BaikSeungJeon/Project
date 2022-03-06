@@ -5,8 +5,10 @@ import './Header.css'
 import styled from 'styled-components'
 
 function Header() {
+
     return (
         <div className="header">
+
             {/* 시간 */}
             <div className="header-time">
                 <p>22:50</p>

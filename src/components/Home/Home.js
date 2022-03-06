@@ -15,6 +15,7 @@ function Home() {
 
     return (
         <div className='home'>
+            
             {/* 메인 화면 상단 */}
             <div className="home-top">
 

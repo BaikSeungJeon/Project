@@ -13,7 +13,7 @@ import Footer from './components/Footer/Footer.js' // Footer
 
 function App() {
 
-  const repository = "/project-react-mts"; // 깃허브 페이지 배포를 위해 레파지토리명을 변수에 담아 Route 프로퍼티에 지정
+  const repository = "/project-react-mts1.5"; // 깃허브 페이지 배포를 위해 레파지토리명을 변수에 담아 Route 프로퍼티에 지정
   
   return (
     <div className="App">

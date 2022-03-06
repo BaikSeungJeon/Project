@@ -5,8 +5,10 @@ import './Footer.css'
 function Footer() {
     return (
         <div className="footer">
+
             {/* 아이폰 페이지 이동 바 */}
             <span/>
+            
         </div>
     )
 }

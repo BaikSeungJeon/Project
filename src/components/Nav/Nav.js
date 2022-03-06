@@ -6,7 +6,7 @@ import './Nav.css'
 
 function Nav() {
 
-    const repository = "/project-react-mts";
+    const repository = "/project-react-mts1.5";
 
     return (
         <div className="nav">
