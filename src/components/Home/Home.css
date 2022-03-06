@@ -1,7 +1,13 @@
-/* home-top */
-.home-top {
-    
+.home {
+    max-height: 712px;
+    overflow: auto;
 }
+
+/**********************/
+/**********************/
+/* home-top */
+/**********************/
+/**********************/
 .home-setting-nav {
     display: flex;
     flex-direction: row;
@@ -135,7 +141,11 @@
     margin : 0 15px 2px;
 }
 
+/**********************/
+/**********************/
 /* home-btm */
+/**********************/
+/**********************/
 .home-btm {
     background-color: rgb(233, 233, 233);
     padding: 25px 5px;

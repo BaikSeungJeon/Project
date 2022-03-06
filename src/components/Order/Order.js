@@ -1,30 +1,33 @@
 /* eslint-disable */
 
-import React, {useState, useMemo} from 'react' /* 호가 state 때문에 useState 추가해주기 */
-/* select 때문에 useMemo 추가 */
-import styled from 'styled-components' /* css */
-import { Link } from 'react-router-dom' /* router dom */
-import Select from "react-select"  /* react-select */
-import AskingPrice from './askingPrice' /* 호가 가격 import 해 오기 */
-import TitleStocks from './TitleStocks.js' /* RecStocks import 해 오기 */
-import Price from '../../price.js' /* Price(홈 주식 가격) import 해 오기 */
+import React, {useState, useMemo} from 'react' // 호가 state 때문에 useState 추가해주기
+// select 때문에 useMemo 추가
+import styled from 'styled-components' // css
+import { Link } from 'react-router-dom' // router dom
+import Select from "react-select"  // react-select
+import AskingPrice from './askingPrice' // 호가 가격
+import TitleStocks from './TitleStocks.js' // 추천 종목
+import Price from '../../price.js' // Price(홈 주식 가격)
 import './Order.css'
-import Modal from './Modal' /* modal import 해 오기 */
+import Modal from './Modal' // 체결 모달
 
 
 function Order(props) {
     
     let [price, priceChange] = useState(Price);
-    let [askingPrice, askingPriceChange] = useState(AskingPrice); /* 호가, 호가 변경 state 해 오기*/
+    let [askingPrice, askingPriceChange] = useState(AskingPrice); // 호가, 호가 변경 state 해 오기
     let [modal, modalChange] = useState(false);
 
     return (
-        <div>
-            <div className="order-nav">
-                <div className="order-nav-lbtn">
-                    <img src="https://img.icons8.com/ios/28/000000/back--v1.png"/>
+        <div className='order'>
+
+            {/* 주문창의 네비게이션 */}
+            <div className="order-nav"> 
+                <div className="order-nav-lbtn"> {/* 왼쪽 버튼 */} 
+                    <img src="https://img.icons8.com/ios/26/000000/back--v1.png"/>
                 </div>
-                <div className="order-nav-md">
+
+                <div className="order-nav-md"> {/* 메인 네비게이션 */}
                     <ul>
                         <Link to = "/"><li>주식주문</li></Link>
                         <Link to = "/"><li>주식미체결</li></Link>
@@ -35,20 +38,24 @@ function Order(props) {
                         <Link to = "/"><li>미국주식 자동감시주문</li></Link>
                     </ul>
                 </div>
-                <div className="order-nav-rbtn">
+
+                <div className="order-nav-rbtn"> {/* 오른쪽 버튼 */}
                     <img src="https://img.icons8.com/ios/30/000000/more-than.png"/>
                     <img src="https://img.icons8.com/material-rounded/30/000000/menu-2.png"/>
                 </div>
             </div>
-
-            <div className="order-hd">
+            
+            {/* 주문 hd 쪽 ui */}
+            <div className="order-hd"> 
                 <div className="order-hd-lbtn">
-                    <img src="https://img.icons8.com/ios/28/000000/back--v1.png"/>
+                    <img src="https://img.icons8.com/ios/26/000000/back--v1.png"/>
                 </div>
-                <div className="order-ux">
+
+                {/* 주문 hd 쪽 정보 */}
+                <div className="order-info"> 
                     <img src="https://img.icons8.com/officel/30/000000/candle-sticks.png"/>
-                    <div className="order-ux-container">
-                        <div className="order-ux-top">
+                    <div className="order-info-container">
+                        <div className="order-info-top">
                             <ul>
                                 <li>무료</li>
                                 <li>증100</li>
@@ -58,7 +65,7 @@ function Order(props) {
                                 <li><img src="https://img.icons8.com/ios-glyphs/24/000000/search--v1.png"/></li>
                             </ul>
                         </div>
-                        <div className="order-ux-btm">
+                        <div className="order-info-btm">
                             <TitleStocks price={price[0]}/>
                         </div>
                     </div>
@@ -78,8 +85,11 @@ function Order(props) {
                 </ul>
             </div>
 
+            {/* 메인 */}
             <div className="order-main">
-                <div className="asking-price">
+
+                {/* 호가창 */}
+                <div className="order-asking-price">
                     <div className="ap-chart">
                         <img src="images/chart.png"/>
                         <div className="ap-btn">
@@ -88,6 +98,8 @@ function Order(props) {
                             <button>체결</button>
                         </div>
                     </div>
+
+                    {/* 호가창 박스 */}
                     <div className="ap-box">
                         <div className="sell-box">
                             <div className="sell-left">
@@ -263,26 +275,29 @@ function Order(props) {
                     </div>
                 </div>
 
-                <div className="order-tab">
+                {/* 오른쪽 계좌 정보 등 */}
+                <div className="order-acc-info">
+                    {/* 계좌 선택 */}
                     <div className="order-select-account">
-                        <select defaultValue="1234-5678[종합]">
+                        <select defaultValue="1">
                             <option value="1">1234-5678[종합]</option>
                             <option value="2">1357-2468[주식]</option>
                         </select>
                     </div>
+                    {/* 계좌 비밀번호 */}
                     <div className="order-pw">
                         <input type="button" value="설정" />
                         <input type="password" placeholder="비밀번호"/>
                     </div>
-
+                    {/* 계좌 입력창들 */}
                     <div className="order-input">
                         <dl className="order-input-type">
                             <dt>종류</dt>
                             <dd>
-                                <select defaultValue="지정가">
-                                    <option value="3">지정가</option>
-                                    <option value="4">시장가</option>
-                                    <option value="5">LOC</option>
+                                <select defaultValue="3">
+                                    <option value="1">지정가</option>
+                                    <option value="2">시장가</option>
+                                    <option value="3">LOC</option>
                                 </select>
                                 <input type="checkbox" />
                                 미수
@@ -296,12 +311,12 @@ function Order(props) {
                                 <input type="button" value="+" />
 
                                 <div className="order-input-can-btn">
-                                    <select defaultValue="가능">
-                                        <option>25%</option>
-                                        <option>50%</option>
-                                        <option>75%</option>
-                                        <option>100%</option>
-                                        <option>가능</option>
+                                    <select defaultValue="5">
+                                        <option value="1">25%</option>
+                                        <option value="2">50%</option>
+                                        <option value="3">75%</option>
+                                        <option value="4">100%</option>
+                                        <option value="5">가능</option>
                                     </select>
                                     <input type="button" value="가능"/> 
                                 </div>
@@ -324,50 +339,38 @@ function Order(props) {
                             </dd>
                         </dl>
                     </div>
-
-                    <div className="exchange-rate">
-                        <div className="ex-top">
-                            <div>
-                                환율
-                            </div>
-                            <div>
-                                $
-                            </div>
-                            <div>
-                                0.0000
-                            </div>
+                    {/* 계좌 환율 정보 */}
+                    <div className="order-exchange-rate">
+                        <div className="order-exchange-rate-top">
+                            <div> 환율 </div>
+                            <div> $ </div>
+                            <div> 0.0000 </div>
                         </div>
-
-                        <div className="ex-btm">
-                            <div>
-                                1,167.00
-                            </div>
-                            <div>
-                                ￦
-                            </div>
-                            <div>
-                                0
-                            </div>
+                        <div className="order-exchange-rate-btm">
+                            <div> 1,167.00 </div>
+                            <div> ￦ </div>
+                            <div> 0 </div>
                         </div>
                     </div>
                 </div>
             </div>
 
+            {/* 네비게이션 웨 하단 버튼 바 */}
             <ul className="order-btn-bar">
                 <li>안내</li>
                 <li>잔고</li>
                 <li>환전</li>
                 <li>주문번호</li>
-                <li onClick={() => {
-                    modalChange(true)
-                    }}>매수 주문</li>
+                <li>매수 주문</li>
             </ul>
 
-            {
+            {/* {
                 modal === true
                 ? <Modal/>
                 : null
-            }
+            } */}
+            {/* 매수 주문 클릭 시 모달창 출력 임시 삭제 */}
+
         </div>
     )
 }

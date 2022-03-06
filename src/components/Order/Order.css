@@ -1,7 +1,10 @@
-* {
-    margin: 0;
-    padding: 0;
+.order {
+    max-height: 712px;
+    overflow: auto;
 }
+/**********************/
+/* 주문창 상단 네비게이션 */
+/**********************/
 .order-nav {
     display: flex;
     flex-direction: row;
@@ -11,10 +14,13 @@
     background-color: #fff;
 }
 .order-nav-lbtn img {
-    width: 28px;
-    height : 28px;
+    width: 26px;
+    height : 26px;
     /* < btn */
-    /* 같은 30px이라도 사이즈 자체가 달라서 l btn들만 28px 주기 */
+    /* 같은 30px이라도 사이즈 자체가 달라서 l btn들만 26px 주기 */
+}
+.order-nav-rbtn {
+    display: flex;
 }
 .order-nav-rbtn img {
     width: 30px;
@@ -52,53 +58,56 @@
     /* hover 했을 때 on 클래스 붙이기 */
 }
 
-/* order-hd */
+/**********************/
+/* 주문창 상단 UI 및 주가 정보 */
+/**********************/
 .order-hd {
-    margin: 30px;
+    margin: 20px auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
+    text-align: center;
 }
 .order-hd-lbtn img {
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
     /* < btn */
-    /* 같은 30px이라도 사이즈 자체가 달라서 l btn들만 28px 주기 */
+    /* 같은 30px이라도 사이즈 자체가 달라서 l btn들만 26px 주기 */
 }
 .order-hd-rbtn img {
     width: 30px;
     height: 30px;
     /* > btn */
 }
-.order-ux {
+.order-info {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 20px;
 }
-.order-ux>img {
+/* candlestick */
+.order-info>img {
     width: 30px;
     height: 30px;
     margin: auto;
-    /* candlestick */
 }
-.order-ux-container {
+.order-info-container {
     display: flex;
     flex-direction: column;
 }
-.order-ux-top ul{
+.order-info-top ul{
     display: flex;
     flex-direction: row;
     justify-content: start;
     margin: 0;
     padding: 0;
 }
-.order-ux-top ul li {
+.order-info-top ul li {
     font-size: 11px;
 }
-.order-ux-top ul li:nth-of-type(1) {
+.order-info-top ul li:nth-of-type(1) {
     border: 1px solid #aaa;
     border-radius: 10px;
     color: #aaa;
@@ -108,7 +117,7 @@
     text-align: center;
     line-height: 20px;
 }
-.order-ux-top ul li:nth-of-type(2) {
+.order-info-top ul li:nth-of-type(2) {
     border: 1px solid rgb(182, 100, 199);
     border-radius: 10px;
     color: rgb(182, 100, 199);
@@ -118,22 +127,22 @@
     line-height: 20px;
     margin: 0 5px; /* 양 사이드에 마진 ('무료'랑 티커) */
 }
-.order-ux-top ul li:nth-of-type(3) {
+.order-info-top ul li:nth-of-type(3) {
     color: #777;
     font-size: 12px;
     font-weight: 700;
     line-height: 20px;
 }
-.order-ux-top ul li:nth-of-type(5) {
+.order-info-top ul li:nth-of-type(5) {
     margin: 0 10px;
 }
-.order-ux-btm {
+.order-info-btm {
     display: flex;
     flex-direction: row;
+    margin: 0;
+    padding: 0;
 }
-
-/*order-ux-btm*/
-.order-ux-btm {
+.order-info-btm {
     height: 50%; /* 높이 반반 먹기 */
     width: 100%; /* 너비 다 주기 */
     margin: 0;
@@ -150,6 +159,7 @@
 }
 .order-title-stocks p {
     color: #385ad8;
+    margin: 0;
 }
 .order-title-stocks p:nth-of-type(1) {
     color: #000;
@@ -193,32 +203,35 @@
     border-bottom: 3px solid #fff;
 }
 
-
-/* order main */
+/**********************/
+/* 호가창 + 계좌 정보 등 */
+/**********************/
 .order-main {
+    max-height: 70%;
+    overflow: auto;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     margin: 0;
     padding: 0;
-    width: 100%;
 }
-.asking-price {
+/* 호가창 */
+.order-asking-price {
     width: 40%; /* 호가창 40%만 주기 */
+    box-sizing: border-box;
     border: 1px solid #eee;
     padding-right: 1px;
 }
 .ap-chart {
-    height: 11%;
     text-align: center;
 }
 .ap-chart img {
-    margin-top: -40px; /* 사진 올리기 */
+    margin-top: -30px; /* 사진 올리기 */
     width: 150px;
-    height: 128px;
+    height: 120px;
 }
 .ap-btn {
-    margin-top: -39px; /* 버튼 올리기 */
-    width: 100%;
+    margin-top: -30px; /* 버튼 올리기 */
 }
 .ap-btn button {
     border: 1px solid rgb(68, 94, 141);
@@ -236,7 +249,7 @@
 }
 .ap-box {
     width: 100%;
-    height: 75%;
+    height: 350px;
     overflow: auto;
 }
 .sell-box {
@@ -250,7 +263,7 @@
     width: 70%;
     border-right: 1px solid #ddd;
     text-align: right;
-    padding-right: 3px; /* 매도 호가창 달러 text-align right 한 거 오른쪽 살짝 띄우기 */
+    padding-right: 3px; /* 매도 호가창 달러 text-align right 한 거 오른쪽 살짝 패딩 지정 */
 }
 .sell-box p {
     height: 13px;
@@ -273,9 +286,6 @@
     line-height: 30px; /* 매도 호가창 퍼센티지 세로 가운데 정렬 */
     text-align: center;
 }
-
-
-
 .buy-box {
     background-color: rgb(255, 242, 242);
     display: flex;
@@ -287,7 +297,7 @@
     width: 70%;
     border-right: 1px solid #ddd;
     text-align: right;
-    padding-right: 3px; /* 매수 호가창 달러 text-align에서 살짝 띄우기 */
+    padding-right: 3px; /* 매수 호가창 달러 text-align에서 살짝 패딩 지정 */
 }
 .buy-box p {
     height: 13px;
@@ -310,9 +320,10 @@
     line-height: 30px; /* 매도 호가창 퍼센티지 세로 가운데 정렬 */
 }
 
-/* order input과 button */
-.order-tab {
+/* 계좌 정보 */
+.order-acc-info {
     width: 60%; /* 주문창 60%*/
+    box-sizing: border-box;
     padding: 10px;
 }
 .order-select-account {
@@ -361,7 +372,7 @@
 }
 /* 여기까지 dt dd 30% 70% 나누기 */
 
-/* input 종류 */
+/* input '종류' */
 .order-input-type {
     display: flex;
     flex-direction: row;
@@ -390,7 +401,7 @@
     margin-top: 8px; /* 체크 박스 세로 가운데 정렬 */
 }
 
-/* input 수량 */
+/* input '수량' */
 .order-input-vol {
     display: flex;
     flex-direction: row;
@@ -518,27 +529,15 @@
     height: 30px;
     border: 1px solid #ccc;
 }
-
-
-
-
-
-
 .order-input-usd {
     display: flex;
     flex-direction: row;
 }
-.order-input-usd dt {}
-.order-input-usd dd {}
-
 .order-input-krw {
     display: flex;
     flex-direction: row;
 }
-.order-input-krw dt {}
-.order-input-krw dd {}
-
-.exchange-rate {
+.order-exchange-rate {
     display: flex;
     flex-direction: column;
     background-color: rgb(255, 242, 242);
@@ -547,38 +546,38 @@
     font-weight: 400;
     font-size: 13px;
 }
-.ex-top {
+.order-exchange-rate-top {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 3px; /* 아래 ex-btm과의 간격 */
 }
-.ex-top div {
+.order-exchange-rate-top div {
     width: 20%;
 }
-.ex-top div:nth-of-type(1) {
+.order-exchange-rate-top div:nth-of-type(1) {
     width: 40%;
     text-align: left;
 }
-.ex-top div:nth-of-type(3) {
+.order-exchange-rate-top div:nth-of-type(3) {
     width: 40%;
     text-align: right;
     background-color: #fff;
 }
-.ex-btm {
+.order-exchange-rate-btm {
     display: flex;
     flex-direction: row;
     justify-content: space-between
 }
-.ex-btm div {
+.order-exchange-rate-btm div {
     width: 20%;
 }
-.ex-btm div:nth-of-type(1) {
+.order-exchange-rate-btm div:nth-of-type(1) {
     width: 40%;
     text-align: right;
     background-color: #fff;
 }
-.ex-btm div:nth-of-type(3) {
+.order-exchange-rate-btm div:nth-of-type(3) {
     width: 40%;
     text-align: right;
     background-color: #fff;
@@ -586,7 +585,6 @@
 
 /* order 하단 매수 주문 버튼 바 */
 .order-btn-bar {
-    /* width: 375px; */
     height: 40px; /* height를 50px 줄 건데, padding 위 아래 5px 주고 높이는 40px로 줘서 맞추기 */
     display: flex;
     flex-direction: row;
@@ -595,6 +593,7 @@
     margin: 0; /* 여백 제거 */
     padding: 5px 0; /* 위 아래 5px padding 줘서 합 10px 주기 */
     line-height: 30px; /* height 40 - padding 10 = 30px 주기 */
+    cursor: pointer;
 }
 .order-btn-bar li {
     padding: 0 8px;
@@ -617,5 +616,4 @@
     background-color: rgb(228, 81, 154);
     font-size: 17px;
     font-weight: 700;
-    
 }

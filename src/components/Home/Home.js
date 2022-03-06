@@ -14,9 +14,12 @@ function Home() {
     // 그리고 그 안에 import 해온 Price 넣기
 
     return (
-        <div>
-            <div className="home-top"> {/* 메인 화면 상단 */}
-                <div className="home-setting-nav"> {/* 초기 화면 설정 */}
+        <div className='home'>
+            {/* 메인 화면 상단 */}
+            <div className="home-top">
+
+                {/* 상단 알람, 로그인, 설정 부분 */}
+                <div className="home-setting-nav"> 
                     <img src="https://img.icons8.com/material-outlined/24/000000/appointment-reminders--v1.png"/>
                     <div className="home-setting">
                         <h3>초기화면설정</h3>
@@ -25,26 +28,31 @@ function Home() {
                     </div>
                 </div>
 
-                <ul className="home-first-tab"> {/* 상단 쪽 첫 번째 탭 */}
+                {/* 상단 첫 번째 탭 */}
+                <ul className="home-first-tab"> 
                     <li>해외주식</li>
                     <li>해외선물옵션</li>
                     <li>FX마진</li>
-                </ul>   
-                <ul className="home-second-tab"> {/* 상단 쪽 두 번째 탭 */}
+                </ul>
+
+                {/* 상단 두 번째 탭 */}
+                <ul className="home-second-tab"> 
                     <li>관심종목</li>
                     <li>최근조회종목</li>
                 </ul>
 
-                
-                <Stocks price={price}/> {/* 주가 */}
-                
-                <div className="home-page-icon"> {/* '...' 페이지 아이콘 */}
+                {/* 주가 박스 */}
+                <Stocks price={price}/> 
+
+                {/* '...' 페이지 아이콘 */}
+                <div className="home-page-icon"> 
                     <div>.</div>
                     <div>.</div>
                     <div>.</div>
                 </div>
 
-                <ul className="home-sub-nav"> {/* 메인 화면에서 서브 네비게이션 */}
+                {/* 메인 화면 중간에 위치한 네비게이션 */}
+                <ul className="home-sub-nav"> 
                     <li>
                         관심종목
                         <img src="https://img.icons8.com/ios-glyphs/30/000000/chevron-right.png"/>
@@ -59,9 +67,12 @@ function Home() {
                     </li>
                     </ul>
             </div> 
-        
-            <div className="home-btm"> {/* 메인 화면 하단 */}
-                <div className="home-btm-rec"> {/* 메인 화면 하단의 추천 종목 */}
+
+            {/* 메인 화면 하단 */}
+            <div className="home-btm"> 
+
+                {/* 메인 화면 하단의 추천 종목 */}
+                <div className="home-btm-rec"> 
                     <h1>해외주식 추천종목</h1>
                     <ul>
                         <li>미국</li>
@@ -83,6 +94,7 @@ function Home() {
                     </div>
                 </div>
             </div>
+            
         </div>
     )
 }

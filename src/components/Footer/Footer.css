@@ -2,6 +2,7 @@
     height: 30px;
     background-color: #000;
     padding-top: 15px;
+    z-index: 999;
 }
 .footer span {
     display: block;

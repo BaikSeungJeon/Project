@@ -10,10 +10,14 @@ function Nav() {
 
     return (
         <div className="nav">
+
+            {/* 로고 */}
             <div className="nav-logo">
                 <img src='images/kiwoom.png'/>
                 <p>메뉴</p>
             </div>
+
+            {/* 네비게이션 */}
             <ul className="nav-menu">
                 <Link to = {repository + "/"}><li>관심 종목</li></Link>
                 <Link to = {repository + "/order"}><li>주문</li></Link>
@@ -24,6 +28,7 @@ function Nav() {
                 <Link to = {repository + "/"}><li>ETF 조건검색</li></Link>
                 <Link to = {repository + "/"}><li>원화주문</li></Link>
             </ul>
+
         </div>
     )
 }
