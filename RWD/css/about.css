@@ -1,0 +1,10 @@
+/* 모바일 ~ 649px + 공통 */
+#content {
+    padding: 0 50px;
+}
+.site-introduce {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100%;
+}

@@ -1,0 +1,71 @@
+/* 모바일 ~ 649px + 공통 */
+.img-box {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.img-box li {
+    position: relative;
+    display: block;
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.img-box li img {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+    transition: 0.5s;
+}
+.img-box .txt {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: 0.5s;
+    color: #eee;
+    font-size: 3vw;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img-box li:hover .txt {
+    opacity: 1;
+}
+.img-box li:hover img {
+    filter: grayscale(0);
+}
+
+/* 태블릿 650px ~ 1023px */
+@media screen and (min-width: 650px) {
+    .img-box {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    .img-box li {
+        box-sizing: border-box;
+        width: 33.33333%;
+    }
+    .img-box img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* PC 1024px ~ */
+@media screen and (min-width: 1024px) {
+    .img-box {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    .img-box li {
+        box-sizing: border-box;
+        width: 25%;
+    }
+}
