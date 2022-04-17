@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    text-align: center; /* 중앙 배치 */
+}
+.inner {
+    margin: 0 auto; /* 본인을 중앙 */
+    max-width: 1980px; /* 최대 width 1980px 고정 */
+    min-width: 1480px;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+#header {
+    .inner {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        .gnb {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            width: 100%;
+            background-color: #fff;
+            li {
+                width: 25%;
+                line-height: 100px;
+                a {
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+#section1 {
+    padding: 100px 0;
+    .home {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 100px;
+        .home-photo {
+            width: 30%;
+            img {
+                width: 100%;
+            }
+        }
+        .home-contents {
+            width: 30%;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: start;
+            gap: 50px;
+            .home-desc {
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: start;
+                .home-desc-list {
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: start;
+                    .home-desc-list-title {
+                        width: 30%;
+                        text-align: left;
+                    }
+                    .home-desc-list-data {
+                        width: 70%;
+                        text-align: left;
+                    }
+                }
+            }
+            .home-introduce {
+                text-align: left;
+            }
+        }
+    }
+}
