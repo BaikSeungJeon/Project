@@ -1,0 +1,210 @@
+.home {
+    max-height: 712px;
+    overflow: auto;
+}
+
+/**********************/
+/**********************/
+/* home-top */
+/**********************/
+/**********************/
+.home-setting-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 24px;
+    padding: 5px 10px 0;
+    margin-bottom: 20px;
+}
+.home-setting-nav img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+.home-setting {
+    display: flex;
+    flex-direction: row;
+}
+.home-setting h3 {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 24px;
+}
+.home-setting img:nth-of-type(1) {
+    margin: 0 5px; /* 전원 버튼 기준 양쪽 마진 */
+}
+/* .home-setting img {
+    width: 24px;
+    height: 24px;
+} */
+.home-first-tab {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+}
+.home-first-tab li {
+    font-size: 16px;
+    font-weight: 700;
+    color: #999;
+    cursor: pointer;
+}
+.home-first-tab li:hover {
+    color: #000; /* 클릭해서 이동 했을 때 색 변경 */
+}
+.home-first-tab li:visited {
+    color: #000; /* 클릭해서 이동 했을 때 색 변경 */
+}
+.home-first-tab li:nth-of-type(1) {
+    color: #000; /* 메인 홈은 첫 번째가 검은색이니 */
+}
+.home-first-tab li:nth-of-type(2) {
+    margin: 0 20px; /* 양쪽 마진 */
+}
+.home-second-tab {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+}
+.home-second-tab li {
+    margin: 0 10px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #999;
+    cursor: pointer;
+}
+.home-second-tab li:hover {
+    color: #d12c7d;
+}
+.home-second-tab li:visited {
+    color: #d12c7d;
+}
+.home-second-tab li:nth-of-type(1) {
+    color: #d12c7d;
+}
+.home-page-icon {
+    width: 34px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 20px 0;
+    cursor: pointer;
+}
+.home-page-icon div {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 50%;
+    text-indent: -10000px; /* text 밖으로 보내기 */
+}
+.home-page-icon div:hover {
+    background-color: #d12c7d;
+}
+.home-page-icon div:visited {
+    background-color: #d12c7d; /* 클릭해서 이 페이지로 넘어가면 */
+}
+.home-page-icon div:nth-of-type(1) {
+    background-color: #d12c7d;
+}
+.home-page-icon div:nth-of-type(2) {
+    margin: 0 2px;
+}
+.home-sub-nav {
+    margin: 0;
+    padding: 0;
+    height: 35px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.home-sub-nav li {
+    width: 33%;
+    font-size: 14px;
+    font-weight: 700;
+    border-right: 1px solid #ddd;
+    line-height: 35px;
+    cursor: pointer;
+}
+
+.home-sub-nav li:nth-of-type(3) {
+    border: none;
+}
+.home-sub-nav li img {
+    width: 15px;
+    margin : 0 15px 2px;
+}
+
+/**********************/
+/**********************/
+/* home-btm */
+/**********************/
+/**********************/
+.home-btm {
+    background-color: rgb(233, 233, 233);
+    padding: 25px 5px;
+    /* height: 100vh; */ /* 812짜리에 100vh 줘서 812px만큼 또 생겼네 */
+    overflow: auto;
+}
+.home-btm-rec {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding-bottom: 20px;
+}
+.home-btm-rec h1 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+}
+.home-btm-rec ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+.home-btm-rec ul li {
+    font-size: 14px;
+    font-weight: 700;
+    color: #aaa;
+    padding-left: 15px;
+    cursor: pointer;
+}
+.home-btm-rec ul li:hover {
+    color: #d12c7d;
+}
+.home-btm-rec ul li:visited { /* 방문 시 색 들어오게 */
+    color: #d12c7d;
+}
+.home-btm-rec ul li:nth-of-type(1) {
+    color: #d12c7d; /* 초기 색 설정해주기 */
+    padding: 0;
+}
+
+.home-btm-rec-more {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.home-btm-rec-more h3 {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    line-height: 20px;
+    color: #333;
+    font-weight: 700;
+}
+.home-btm-rec-more img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
