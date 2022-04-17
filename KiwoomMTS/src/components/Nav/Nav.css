@@ -1,0 +1,44 @@
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #fff;
+    border-top: 1px solid #000;
+}
+.nav-menu {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.nav-menu img {
+    width: 30px;
+    margin: 0 auto;
+}
+.nav-menu p {
+    font-size: 14px;
+    font-weight: 700;
+    color: #143776;
+}
+.gnb {
+    width: 90%;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    /* overflow auto를 줌으로써 li 개수가 초과돼도 스크롤 만들기*/
+}
+.gnb li {
+    font-weight: 700;
+    font-size: 14px;
+    text-overflow: ellipsis;
+}
+.gnb li:hover {
+    color: #d12c7d;
+}
+.gnb li:visited {
+    color: #d12c7d;
+}
